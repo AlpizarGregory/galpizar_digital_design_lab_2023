@@ -37,6 +37,11 @@ begin
         a_tb <= "1111";
         b_tb <= "0001";
         wait for 10 ns;
+		  
+		  -- Prueba 5
+		  a_tb <= "0010";
+		  b_tb <= "0001";
+		  wait for 10 ns;
 
         wait;
     end process stimulus;

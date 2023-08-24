@@ -43,4 +43,5 @@ begin
 	 sum4 <= a(0) xor b(0) xor carry33;
 	 
 	 sum <= sum4 & sum32 & sum22 & sum1; 
+	 sum <= a + b;
 end Behavioral;

@@ -1,5 +1,5 @@
 Analysis & Elaboration report for adder
-Wed Aug 23 22:17:04 2023
+Wed Aug 23 23:43:31 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                 ;
 +-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Wed Aug 23 22:17:04 2023          ;
+; Analysis & Elaboration Status ; Successful - Wed Aug 23 23:43:31 2023          ;
 ; Quartus Prime Version         ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                 ; adder                                          ;
 ; Top-level Entity Name         ; sumador_4bits                                  ;
@@ -161,7 +161,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Wed Aug 23 22:16:59 2023
+    Info: Processing started: Wed Aug 23 23:43:25 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off adder -c adder --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -173,9 +173,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file sumador
     Info (12023): Found entity 1: sumador_4bits_tb File: C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Exp2/sumador_4bits_tb.vhd Line: 4
 Info (12127): Elaborating entity "sumador_4bits" for the top level hierarchy
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4841 megabytes
-    Info: Processing ended: Wed Aug 23 22:17:04 2023
-    Info: Elapsed time: 00:00:05
+    Info: Peak virtual memory: 4857 megabytes
+    Info: Processing ended: Wed Aug 23 23:43:31 2023
+    Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:07
 
 

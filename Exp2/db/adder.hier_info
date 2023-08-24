@@ -13,9 +13,9 @@ b[2] => sum21.IN1
 b[2] => carry21.IN1
 b[3] => sum1.IN1
 b[3] => carry1.IN1
-sum[0] <= sum1.DB_MAX_OUTPUT_PORT_TYPE
-sum[1] <= sum22.DB_MAX_OUTPUT_PORT_TYPE
-sum[2] <= sum32.DB_MAX_OUTPUT_PORT_TYPE
-sum[3] <= sum4.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] << sum1.DB_MAX_OUTPUT_PORT_TYPE
+sum[1] << sum22.DB_MAX_OUTPUT_PORT_TYPE
+sum[2] << sum32.DB_MAX_OUTPUT_PORT_TYPE
+sum[3] << sum4.DB_MAX_OUTPUT_PORT_TYPE
 
 

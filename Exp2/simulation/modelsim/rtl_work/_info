@@ -25,9 +25,9 @@ VnHILc]QWMY>@FJm<TQZiA3
 !s100 PohXdX:JLO^4?kGdhafGA2
 Z8 OV;C;2020.1;71
 31
-Z9 !s110 1692850911
+Z9 !s110 1692855823
 !i10b 1
-Z10 !s108 1692850911.000000
+Z10 !s108 1692855823.000000
 Z11 !s90 -reportprogress|300|-93|-work|work|C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Exp2/sumador_4bits.vhd|
 Z12 !s107 C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Exp2/sumador_4bits.vhd|
 !i113 1
@@ -55,7 +55,7 @@ R12
 R13
 R14
 Esumador_4bits_tb
-Z15 w1692845877
+Z15 w1692855805
 R4
 R5
 !i122 1
@@ -68,10 +68,10 @@ VF[^>:iAzo9U^khVgf4e6T0
 !s100 H`IIJHKCIS7^f;Mzfm6FM1
 R8
 31
-R9
+Z18 !s110 1692855824
 !i10b 1
-R10
-Z18 !s90 -reportprogress|300|-93|-work|work|C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Exp2/sumador_4bits_tb.vhd|
+Z19 !s108 1692855824.000000
+Z20 !s90 -reportprogress|300|-93|-work|work|C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Exp2/sumador_4bits_tb.vhd|
 !s107 C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Exp2/sumador_4bits_tb.vhd|
 !i113 1
 R13
@@ -82,16 +82,16 @@ R5
 DEx4 work 16 sumador_4bits_tb 0 22 F[^>:iAzo9U^khVgf4e6T0
 !i122 1
 l16
-L7 38
-V]E[EO@5FD`7YRdX>0F03z0
-!s100 jZA<b48^kl51VZgCS4V9=3
+L7 43
+VVLhDXa2K@4eGPn]J:Y@UL0
+!s100 D1oIHUQV7THXYIVP<NHFg0
 R8
 31
-R9
-!i10b 1
-R10
 R18
-Z19 !s107 C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Exp2/sumador_4bits_tb.vhd|
+!i10b 1
+R19
+R20
+Z21 !s107 C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Exp2/sumador_4bits_tb.vhd|
 !i113 1
 R13
 R14
