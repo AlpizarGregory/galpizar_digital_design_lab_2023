@@ -47,6 +47,7 @@ begin
 	 sum <= not (a+b);
 	        --abcdefg
 	 with a+b select disp <=
+	  --
 		"0000001" when "0000", --0
 		"1001111" when "0001", --1
 		"0010010" when "0010", --2
