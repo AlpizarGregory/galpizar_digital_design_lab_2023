@@ -1,0 +1,18 @@
+module countdownNbits_tb();
+
+	logic clk, reset, [8:0] first, [8:0] current;
+	
+	countdownNbits #(8) modulo(clk, reset, first, current);
+	
+	initial begin
+	clk = 0; reset = 0; first = 10001000;
+	#20
+	clk = 1;
+	#20
+	clk = 0;
+	#20
+	clk = 1;
+	
+	end
+
+endmodule
