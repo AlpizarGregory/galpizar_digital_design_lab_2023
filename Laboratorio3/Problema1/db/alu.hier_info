@@ -1,0 +1,61 @@
+|n_bit_adder
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => carry[0].IN1
+sum[0] <= full_adder_1bit:adder_gen[0].adder_inst.sum
+sum[1] <= full_adder_1bit:adder_gen[1].adder_inst.sum
+sum[2] <= full_adder_1bit:adder_gen[2].adder_inst.sum
+sum[3] <= full_adder_1bit:adder_gen[3].adder_inst.sum
+cout <= full_adder_1bit:adder_gen[3].adder_inst.cout
+
+
+|n_bit_adder|full_adder_1bit:adder_gen[0].adder_inst
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_adder|full_adder_1bit:adder_gen[1].adder_inst
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_adder|full_adder_1bit:adder_gen[2].adder_inst
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|n_bit_adder|full_adder_1bit:adder_gen[3].adder_inst
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
