@@ -9,80 +9,80 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/simulation/modelsim
-vfull_adder_1bit
+vbit_comparator
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1693927791
+Z2 !s110 1694202689
 !i10b 1
-!s100 VJIDJT3RKg6m1mc;7m6eX2
+!s100 CiP==CeZVM8[gkBQH69Fe1
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IThgVeNSHBb;gfgT^CaXXh1
+IVF9inH5l;b:8@k1mPbHMe3
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1693867749
-8C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/full_adder_1bit.sv
-FC:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/full_adder_1bit.sv
+w1694202462
+8C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/bit_comparator.sv
+FC:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/bit_comparator.sv
 !i122 0
-L0 1 10
+L0 1 7
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1693927791.000000
-!s107 C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/full_adder_1bit.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1|C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/full_adder_1bit.sv|
+Z6 !s108 1694202689.000000
+!s107 C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/bit_comparator.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1|C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/bit_comparator.sv|
 !i113 1
 Z7 o-sv -work work
 Z8 !s92 -sv -work work +incdir+C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1
 Z9 tCvgOpt 0
-vn_bit_subtractor
+vcomparator
 R1
 R2
 !i10b 1
-!s100 hSeIIZ0WRlNe1=3OJUj182
+!s100 P1EPzWD[2;n7CF<4GNb2W0
 R3
-IAaQ=XFIOd^_B^=a3dEX_z0
+I6>Z2bhUIdd05TdS`k;4<M1
 R4
 S1
 R0
-w1693927649
-8C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/n_bit_subtractor.sv
-FC:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/n_bit_subtractor.sv
+w1694202566
+8C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/comparator.sv
+FC:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/comparator.sv
 !i122 1
-L0 1 44
+L0 1 32
 R5
 r1
 !s85 0
 31
 R6
-!s107 C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/n_bit_subtractor.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1|C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/n_bit_subtractor.sv|
+!s107 C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/comparator.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1|C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/comparator.sv|
 !i113 1
 R7
 R8
 R9
-vn_bit_subtractor_tb
+vcomparator_tb
 R1
 R2
 !i10b 1
-!s100 ]Lj5;0fTHBb;H7HFG^l:O1
+!s100 jEDdk[>i2ULgi_ZXFITlF2
 R3
-Ikg2D=U<H;SHoX_=Jejlmg3
+IU_75G=Ld0]_MV3TdOMQ7f3
 R4
 S1
 R0
-w1693927732
-8C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/n_bit_subtractor_tb.sv
-FC:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/n_bit_subtractor_tb.sv
+w1694202599
+8C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/comparator_tb.sv
+FC:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/comparator_tb.sv
 !i122 2
-L0 1 38
+L0 1 33
 R5
 r1
 !s85 0
 31
 R6
-!s107 C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/n_bit_subtractor_tb.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1|C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/n_bit_subtractor_tb.sv|
+!s107 C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/comparator_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1|C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/comparator_tb.sv|
 !i113 1
 R7
 R8
