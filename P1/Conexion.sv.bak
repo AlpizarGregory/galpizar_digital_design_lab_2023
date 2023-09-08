@@ -1,0 +1,34 @@
+//A.v
+module A(inA, outA);
+	input logic inA;
+	output logic outA;
+
+	logic outB_to_inC;
+
+	B B_inst(.inB(inA), .outB(outB_to_inC));
+
+	C C_inst(.inC(outB_to_inC), .outC(outA));
+
+endmodule
+
+/////
+
+//B.v
+module B (inB, outB);
+	input logic inB;
+	output logic outB;
+
+//... more code here
+
+endmodule
+
+/////
+
+//C.v
+module C (inC, outC);
+	input logic inC;
+	output logic outC;
+
+//... more code here
+
+endmodule

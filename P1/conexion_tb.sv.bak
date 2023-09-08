@@ -1,0 +1,16 @@
+module conexion_tb();
+
+	logic inA, outA; 
+	
+	Conexion InstanceConexion(inA, outA);
+
+	
+	//always #20 clk = ~clk;
+	initial begin
+	inA = 0000;
+	#40
+	inA = 0111;
+	
+	end
+
+endmodule

@@ -1,0 +1,309 @@
+|NbitMultiplier
+a[0] => partial_products.OUTPUTSELECT
+a[0] => partial_products.OUTPUTSELECT
+a[0] => partial_products.OUTPUTSELECT
+a[1] => partial_products.OUTPUTSELECT
+a[1] => partial_products.OUTPUTSELECT
+a[1] => partial_products.OUTPUTSELECT
+a[2] => partial_products.OUTPUTSELECT
+a[2] => partial_products.OUTPUTSELECT
+a[2] => partial_products.OUTPUTSELECT
+b[0] => partial_products.DATAB
+b[0] => partial_products.DATAB
+b[0] => partial_products.DATAB
+b[1] => partial_products.DATAB
+b[1] => partial_products.DATAB
+b[1] => partial_products.DATAB
+b[2] => partial_products.DATAB
+b[2] => partial_products.DATAB
+b[2] => partial_products.DATAB
+result[0] << suma:generate_partial_sums[2].sum_instance.sum
+result[1] << suma:generate_partial_sums[2].sum_instance.sum
+result[2] << suma:generate_partial_sums[2].sum_instance.sum
+result[3] << suma:generate_partial_sums[2].sum_instance.sum
+result[4] << suma:generate_partial_sums[2].sum_instance.sum
+result[5] << suma:generate_partial_sums[2].sum_instance.sum
+
+
+|NbitMultiplier|suma:generate_partial_sums[0].sum_instance
+a[0] => a[0].IN2
+a[1] => a[1].IN2
+a[2] => a[2].IN2
+a[3] => a[3].IN2
+a[4] => a[4].IN2
+a[5] => a[5].IN2
+b[0] => b[0].IN2
+b[1] => b[1].IN2
+b[2] => b[2].IN2
+b[3] => b[3].IN2
+b[4] => b[4].IN2
+b[5] => b[5].IN2
+sum[0] <= XorGate:generate_gates[0].xor_gates.y
+sum[1] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[2] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[3] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[4] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[5] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[6] <= carry_out_i.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NbitMultiplier|suma:generate_partial_sums[0].sum_instance|AndGate:generate_gates[0].and_gates
+a[0] => y.IN0
+b[0] => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NbitMultiplier|suma:generate_partial_sums[0].sum_instance|XorGate:generate_gates[0].xor_gates
+a[0] => y.IN0
+b[0] => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NbitMultiplier|suma:generate_partial_sums[0].sum_instance|AndGate:generate_gates[1].and_gates
+a[0] => y.IN0
+b[0] => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NbitMultiplier|suma:generate_partial_sums[0].sum_instance|XorGate:generate_gates[1].xor_gates
+a[0] => y.IN0
+b[0] => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NbitMultiplier|suma:generate_partial_sums[0].sum_instance|AndGate:generate_gates[2].and_gates
+a[0] => y.IN0
+b[0] => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NbitMultiplier|suma:generate_partial_sums[0].sum_instance|XorGate:generate_gates[2].xor_gates
+a[0] => y.IN0
+b[0] => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NbitMultiplier|suma:generate_partial_sums[0].sum_instance|AndGate:generate_gates[3].and_gates
+a[0] => y.IN0
+b[0] => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NbitMultiplier|suma:generate_partial_sums[0].sum_instance|XorGate:generate_gates[3].xor_gates
+a[0] => y.IN0
+b[0] => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NbitMultiplier|suma:generate_partial_sums[0].sum_instance|AndGate:generate_gates[4].and_gates
+a[0] => y.IN0
+b[0] => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NbitMultiplier|suma:generate_partial_sums[0].sum_instance|XorGate:generate_gates[4].xor_gates
+a[0] => y.IN0
+b[0] => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NbitMultiplier|suma:generate_partial_sums[0].sum_instance|AndGate:generate_gates[5].and_gates
+a[0] => y.IN0
+b[0] => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NbitMultiplier|suma:generate_partial_sums[0].sum_instance|XorGate:generate_gates[5].xor_gates
+a[0] => y.IN0
+b[0] => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NbitMultiplier|suma:generate_partial_sums[1].sum_instance
+a[0] => a[0].IN2
+a[1] => a[1].IN2
+a[2] => a[2].IN2
+a[3] => a[3].IN2
+a[4] => a[4].IN2
+a[5] => a[5].IN2
+b[0] => b[0].IN2
+b[1] => b[1].IN2
+b[2] => b[2].IN2
+b[3] => b[3].IN2
+b[4] => b[4].IN2
+b[5] => b[5].IN2
+sum[0] <= XorGate:generate_gates[0].xor_gates.y
+sum[1] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[2] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[3] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[4] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[5] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[6] <= carry_out_i.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NbitMultiplier|suma:generate_partial_sums[1].sum_instance|AndGate:generate_gates[0].and_gates
+a[0] => y.IN0
+b[0] => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NbitMultiplier|suma:generate_partial_sums[1].sum_instance|XorGate:generate_gates[0].xor_gates
+a[0] => y.IN0
+b[0] => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NbitMultiplier|suma:generate_partial_sums[1].sum_instance|AndGate:generate_gates[1].and_gates
+a[0] => y.IN0
+b[0] => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NbitMultiplier|suma:generate_partial_sums[1].sum_instance|XorGate:generate_gates[1].xor_gates
+a[0] => y.IN0
+b[0] => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NbitMultiplier|suma:generate_partial_sums[1].sum_instance|AndGate:generate_gates[2].and_gates
+a[0] => y.IN0
+b[0] => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NbitMultiplier|suma:generate_partial_sums[1].sum_instance|XorGate:generate_gates[2].xor_gates
+a[0] => y.IN0
+b[0] => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NbitMultiplier|suma:generate_partial_sums[1].sum_instance|AndGate:generate_gates[3].and_gates
+a[0] => y.IN0
+b[0] => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NbitMultiplier|suma:generate_partial_sums[1].sum_instance|XorGate:generate_gates[3].xor_gates
+a[0] => y.IN0
+b[0] => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NbitMultiplier|suma:generate_partial_sums[1].sum_instance|AndGate:generate_gates[4].and_gates
+a[0] => y.IN0
+b[0] => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NbitMultiplier|suma:generate_partial_sums[1].sum_instance|XorGate:generate_gates[4].xor_gates
+a[0] => y.IN0
+b[0] => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NbitMultiplier|suma:generate_partial_sums[1].sum_instance|AndGate:generate_gates[5].and_gates
+a[0] => y.IN0
+b[0] => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NbitMultiplier|suma:generate_partial_sums[1].sum_instance|XorGate:generate_gates[5].xor_gates
+a[0] => y.IN0
+b[0] => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NbitMultiplier|suma:generate_partial_sums[2].sum_instance
+a[0] => a[0].IN2
+a[1] => a[1].IN2
+a[2] => a[2].IN2
+a[3] => a[3].IN2
+a[4] => a[4].IN2
+a[5] => a[5].IN2
+b[0] => b[0].IN2
+b[1] => b[1].IN2
+b[2] => b[2].IN2
+b[3] => b[3].IN2
+b[4] => b[4].IN2
+b[5] => b[5].IN2
+sum[0] <= XorGate:generate_gates[0].xor_gates.y
+sum[1] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[2] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[3] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[4] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[5] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[6] <= carry_out_i.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NbitMultiplier|suma:generate_partial_sums[2].sum_instance|AndGate:generate_gates[0].and_gates
+a[0] => y.IN0
+b[0] => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NbitMultiplier|suma:generate_partial_sums[2].sum_instance|XorGate:generate_gates[0].xor_gates
+a[0] => y.IN0
+b[0] => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NbitMultiplier|suma:generate_partial_sums[2].sum_instance|AndGate:generate_gates[1].and_gates
+a[0] => y.IN0
+b[0] => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NbitMultiplier|suma:generate_partial_sums[2].sum_instance|XorGate:generate_gates[1].xor_gates
+a[0] => y.IN0
+b[0] => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NbitMultiplier|suma:generate_partial_sums[2].sum_instance|AndGate:generate_gates[2].and_gates
+a[0] => y.IN0
+b[0] => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NbitMultiplier|suma:generate_partial_sums[2].sum_instance|XorGate:generate_gates[2].xor_gates
+a[0] => y.IN0
+b[0] => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NbitMultiplier|suma:generate_partial_sums[2].sum_instance|AndGate:generate_gates[3].and_gates
+a[0] => y.IN0
+b[0] => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NbitMultiplier|suma:generate_partial_sums[2].sum_instance|XorGate:generate_gates[3].xor_gates
+a[0] => y.IN0
+b[0] => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NbitMultiplier|suma:generate_partial_sums[2].sum_instance|AndGate:generate_gates[4].and_gates
+a[0] => y.IN0
+b[0] => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NbitMultiplier|suma:generate_partial_sums[2].sum_instance|XorGate:generate_gates[4].xor_gates
+a[0] => y.IN0
+b[0] => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NbitMultiplier|suma:generate_partial_sums[2].sum_instance|AndGate:generate_gates[5].and_gates
+a[0] => y.IN0
+b[0] => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|NbitMultiplier|suma:generate_partial_sums[2].sum_instance|XorGate:generate_gates[5].xor_gates
+a[0] => y.IN0
+b[0] => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
