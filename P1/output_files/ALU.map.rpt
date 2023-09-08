@@ -1,5 +1,5 @@
 Analysis & Elaboration report for ALU
-Fri Sep  8 15:37:32 2023
+Fri Sep  8 16:37:32 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -9,51 +9,9 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   1. Legal Notice
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
-  4. Parameter Settings for User Entity Instance: Top-level Entity: |NbitMultiplier
-  5. Parameter Settings for User Entity Instance: suma:generate_partial_sums[0].sum_instance
-  6. Parameter Settings for User Entity Instance: suma:generate_partial_sums[0].sum_instance|AndGate:generate_gates[0].and_gates
-  7. Parameter Settings for User Entity Instance: suma:generate_partial_sums[0].sum_instance|XorGate:generate_gates[0].xor_gates
-  8. Parameter Settings for User Entity Instance: suma:generate_partial_sums[0].sum_instance|AndGate:generate_gates[1].and_gates
-  9. Parameter Settings for User Entity Instance: suma:generate_partial_sums[0].sum_instance|XorGate:generate_gates[1].xor_gates
- 10. Parameter Settings for User Entity Instance: suma:generate_partial_sums[0].sum_instance|AndGate:generate_gates[2].and_gates
- 11. Parameter Settings for User Entity Instance: suma:generate_partial_sums[0].sum_instance|XorGate:generate_gates[2].xor_gates
- 12. Parameter Settings for User Entity Instance: suma:generate_partial_sums[0].sum_instance|AndGate:generate_gates[3].and_gates
- 13. Parameter Settings for User Entity Instance: suma:generate_partial_sums[0].sum_instance|XorGate:generate_gates[3].xor_gates
- 14. Parameter Settings for User Entity Instance: suma:generate_partial_sums[0].sum_instance|AndGate:generate_gates[4].and_gates
- 15. Parameter Settings for User Entity Instance: suma:generate_partial_sums[0].sum_instance|XorGate:generate_gates[4].xor_gates
- 16. Parameter Settings for User Entity Instance: suma:generate_partial_sums[0].sum_instance|AndGate:generate_gates[5].and_gates
- 17. Parameter Settings for User Entity Instance: suma:generate_partial_sums[0].sum_instance|XorGate:generate_gates[5].xor_gates
- 18. Parameter Settings for User Entity Instance: suma:generate_partial_sums[1].sum_instance
- 19. Parameter Settings for User Entity Instance: suma:generate_partial_sums[1].sum_instance|AndGate:generate_gates[0].and_gates
- 20. Parameter Settings for User Entity Instance: suma:generate_partial_sums[1].sum_instance|XorGate:generate_gates[0].xor_gates
- 21. Parameter Settings for User Entity Instance: suma:generate_partial_sums[1].sum_instance|AndGate:generate_gates[1].and_gates
- 22. Parameter Settings for User Entity Instance: suma:generate_partial_sums[1].sum_instance|XorGate:generate_gates[1].xor_gates
- 23. Parameter Settings for User Entity Instance: suma:generate_partial_sums[1].sum_instance|AndGate:generate_gates[2].and_gates
- 24. Parameter Settings for User Entity Instance: suma:generate_partial_sums[1].sum_instance|XorGate:generate_gates[2].xor_gates
- 25. Parameter Settings for User Entity Instance: suma:generate_partial_sums[1].sum_instance|AndGate:generate_gates[3].and_gates
- 26. Parameter Settings for User Entity Instance: suma:generate_partial_sums[1].sum_instance|XorGate:generate_gates[3].xor_gates
- 27. Parameter Settings for User Entity Instance: suma:generate_partial_sums[1].sum_instance|AndGate:generate_gates[4].and_gates
- 28. Parameter Settings for User Entity Instance: suma:generate_partial_sums[1].sum_instance|XorGate:generate_gates[4].xor_gates
- 29. Parameter Settings for User Entity Instance: suma:generate_partial_sums[1].sum_instance|AndGate:generate_gates[5].and_gates
- 30. Parameter Settings for User Entity Instance: suma:generate_partial_sums[1].sum_instance|XorGate:generate_gates[5].xor_gates
- 31. Parameter Settings for User Entity Instance: suma:generate_partial_sums[2].sum_instance
- 32. Parameter Settings for User Entity Instance: suma:generate_partial_sums[2].sum_instance|AndGate:generate_gates[0].and_gates
- 33. Parameter Settings for User Entity Instance: suma:generate_partial_sums[2].sum_instance|XorGate:generate_gates[0].xor_gates
- 34. Parameter Settings for User Entity Instance: suma:generate_partial_sums[2].sum_instance|AndGate:generate_gates[1].and_gates
- 35. Parameter Settings for User Entity Instance: suma:generate_partial_sums[2].sum_instance|XorGate:generate_gates[1].xor_gates
- 36. Parameter Settings for User Entity Instance: suma:generate_partial_sums[2].sum_instance|AndGate:generate_gates[2].and_gates
- 37. Parameter Settings for User Entity Instance: suma:generate_partial_sums[2].sum_instance|XorGate:generate_gates[2].xor_gates
- 38. Parameter Settings for User Entity Instance: suma:generate_partial_sums[2].sum_instance|AndGate:generate_gates[3].and_gates
- 39. Parameter Settings for User Entity Instance: suma:generate_partial_sums[2].sum_instance|XorGate:generate_gates[3].xor_gates
- 40. Parameter Settings for User Entity Instance: suma:generate_partial_sums[2].sum_instance|AndGate:generate_gates[4].and_gates
- 41. Parameter Settings for User Entity Instance: suma:generate_partial_sums[2].sum_instance|XorGate:generate_gates[4].xor_gates
- 42. Parameter Settings for User Entity Instance: suma:generate_partial_sums[2].sum_instance|AndGate:generate_gates[5].and_gates
- 43. Parameter Settings for User Entity Instance: suma:generate_partial_sums[2].sum_instance|XorGate:generate_gates[5].xor_gates
- 44. Analysis & Elaboration Settings
- 45. Port Connectivity Checks: "suma:generate_partial_sums[2].sum_instance"
- 46. Port Connectivity Checks: "suma:generate_partial_sums[1].sum_instance"
- 47. Port Connectivity Checks: "suma:generate_partial_sums[0].sum_instance"
- 48. Analysis & Elaboration Messages
+  4. Parameter Settings for User Entity Instance: Top-level Entity: |shift_right
+  5. Analysis & Elaboration Settings
+  6. Analysis & Elaboration Messages
 
 
 
@@ -80,10 +38,10 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                 ;
 +-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Fri Sep  8 15:37:32 2023          ;
+; Analysis & Elaboration Status ; Successful - Fri Sep  8 16:37:32 2023          ;
 ; Quartus Prime Version         ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                 ; ALU                                            ;
-; Top-level Entity Name         ; NbitMultiplier                                 ;
+; Top-level Entity Name         ; shift_right                                    ;
 ; Family                        ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)   ; N/A until Partition Merge                      ;
 ; Total registers               ; N/A until Partition Merge                      ;
@@ -111,403 +69,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |NbitMultiplier ;
-+----------------+-------+-------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                  ;
-+----------------+-------+-------------------------------------------------------+
-; N              ; 3     ; Signed Integer                                        ;
-+----------------+-------+-------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[0].sum_instance ;
-+----------------+-------+----------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                           ;
-+----------------+-------+----------------------------------------------------------------+
-; N              ; 6     ; Signed Integer                                                 ;
-+----------------+-------+----------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[0].sum_instance|AndGate:generate_gates[0].and_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[0].sum_instance|XorGate:generate_gates[0].xor_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[0].sum_instance|AndGate:generate_gates[1].and_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[0].sum_instance|XorGate:generate_gates[1].xor_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[0].sum_instance|AndGate:generate_gates[2].and_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[0].sum_instance|XorGate:generate_gates[2].xor_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[0].sum_instance|AndGate:generate_gates[3].and_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[0].sum_instance|XorGate:generate_gates[3].xor_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[0].sum_instance|AndGate:generate_gates[4].and_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[0].sum_instance|XorGate:generate_gates[4].xor_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[0].sum_instance|AndGate:generate_gates[5].and_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[0].sum_instance|XorGate:generate_gates[5].xor_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[1].sum_instance ;
-+----------------+-------+----------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                           ;
-+----------------+-------+----------------------------------------------------------------+
-; N              ; 6     ; Signed Integer                                                 ;
-+----------------+-------+----------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[1].sum_instance|AndGate:generate_gates[0].and_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[1].sum_instance|XorGate:generate_gates[0].xor_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[1].sum_instance|AndGate:generate_gates[1].and_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[1].sum_instance|XorGate:generate_gates[1].xor_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[1].sum_instance|AndGate:generate_gates[2].and_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[1].sum_instance|XorGate:generate_gates[2].xor_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[1].sum_instance|AndGate:generate_gates[3].and_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[1].sum_instance|XorGate:generate_gates[3].xor_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[1].sum_instance|AndGate:generate_gates[4].and_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[1].sum_instance|XorGate:generate_gates[4].xor_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[1].sum_instance|AndGate:generate_gates[5].and_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[1].sum_instance|XorGate:generate_gates[5].xor_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[2].sum_instance ;
-+----------------+-------+----------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                           ;
-+----------------+-------+----------------------------------------------------------------+
-; N              ; 6     ; Signed Integer                                                 ;
-+----------------+-------+----------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[2].sum_instance|AndGate:generate_gates[0].and_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[2].sum_instance|XorGate:generate_gates[0].xor_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[2].sum_instance|AndGate:generate_gates[1].and_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[2].sum_instance|XorGate:generate_gates[1].xor_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[2].sum_instance|AndGate:generate_gates[2].and_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[2].sum_instance|XorGate:generate_gates[2].xor_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[2].sum_instance|AndGate:generate_gates[3].and_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[2].sum_instance|XorGate:generate_gates[3].xor_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[2].sum_instance|AndGate:generate_gates[4].and_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[2].sum_instance|XorGate:generate_gates[4].xor_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[2].sum_instance|AndGate:generate_gates[5].and_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: suma:generate_partial_sums[2].sum_instance|XorGate:generate_gates[5].xor_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |shift_right ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; N              ; 8     ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -517,7 +85,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; NbitMultiplier     ; ALU                ;
+; Top-level entity name                                                           ; shift_right        ; ALU                ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -598,46 +166,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "suma:generate_partial_sums[2].sum_instance"                                                                               ;
-+---------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                                                                ;
-+---------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
-; b[1..0] ; Input  ; Info     ; Stuck at GND                                                                                                           ;
-; b[5]    ; Input  ; Info     ; Stuck at GND                                                                                                           ;
-; sum     ; Output ; Warning  ; Output or bidir port (7 bits) is wider than the port expression (6 bits) it drives; bit(s) "sum[6..6]" have no fanouts ;
-+---------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "suma:generate_partial_sums[1].sum_instance"                                                                               ;
-+---------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                                                                ;
-+---------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
-; b[5..4] ; Input  ; Info     ; Stuck at GND                                                                                                           ;
-; b[0]    ; Input  ; Info     ; Stuck at GND                                                                                                           ;
-; sum     ; Output ; Warning  ; Output or bidir port (7 bits) is wider than the port expression (6 bits) it drives; bit(s) "sum[6..6]" have no fanouts ;
-+---------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "suma:generate_partial_sums[0].sum_instance"                                                                               ;
-+---------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                                                                ;
-+---------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
-; a       ; Input  ; Info     ; Stuck at GND                                                                                                           ;
-; b[5..3] ; Input  ; Info     ; Stuck at GND                                                                                                           ;
-; sum     ; Output ; Warning  ; Output or bidir port (7 bits) is wider than the port expression (6 bits) it drives; bit(s) "sum[6..6]" have no fanouts ;
-+---------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
-
-
 +---------------------------------+
 ; Analysis & Elaboration Messages ;
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Fri Sep  8 15:37:13 2023
+    Info: Processing started: Fri Sep  8 16:37:13 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -657,21 +192,19 @@ Info (12021): Found 4 design units, including 4 entities, in source file nbitmul
     Info (12023): Found entity 2: NbitMultiplier File: C:/Users/Bryan Gomez/Documents/Lab3/P1/NbitMultiplier.sv Line: 73
 Info (12021): Found 1 design units, including 1 entities, in source file nbitmultiplier_tb.sv
     Info (12023): Found entity 1: NbitMultiplier_tb File: C:/Users/Bryan Gomez/Documents/Lab3/P1/NbitMultiplier_tb.sv Line: 1
-Info (12127): Elaborating entity "NbitMultiplier" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at NbitMultiplier.sv(90): truncated value with size 32 to match size of target (6) File: C:/Users/Bryan Gomez/Documents/Lab3/P1/NbitMultiplier.sv Line: 90
-Info (12128): Elaborating entity "suma" for hierarchy "suma:generate_partial_sums[0].sum_instance" File: C:/Users/Bryan Gomez/Documents/Lab3/P1/NbitMultiplier.sv Line: 105
-Warning (10036): Verilog HDL or VHDL warning at Conexion.sv(115): object "carry_out" assigned a value but never read File: C:/Users/Bryan Gomez/Documents/Lab3/P1/Conexion.sv Line: 115
-Warning (10036): Verilog HDL or VHDL warning at Conexion.sv(116): object "carry_in" assigned a value but never read File: C:/Users/Bryan Gomez/Documents/Lab3/P1/Conexion.sv Line: 116
-Warning (10230): Verilog HDL assignment warning at Conexion.sv(143): truncated value with size 7 to match size of target (1) File: C:/Users/Bryan Gomez/Documents/Lab3/P1/Conexion.sv Line: 143
-Warning (10230): Verilog HDL assignment warning at Conexion.sv(146): truncated value with size 7 to match size of target (1) File: C:/Users/Bryan Gomez/Documents/Lab3/P1/Conexion.sv Line: 146
-Warning (10230): Verilog HDL assignment warning at Conexion.sv(152): truncated value with size 7 to match size of target (1) File: C:/Users/Bryan Gomez/Documents/Lab3/P1/Conexion.sv Line: 152
-Info (12128): Elaborating entity "AndGate" for hierarchy "suma:generate_partial_sums[0].sum_instance|AndGate:generate_gates[0].and_gates" File: C:/Users/Bryan Gomez/Documents/Lab3/P1/Conexion.sv Line: 127
-Info (12128): Elaborating entity "XorGate" for hierarchy "suma:generate_partial_sums[0].sum_instance|XorGate:generate_gates[0].xor_gates" File: C:/Users/Bryan Gomez/Documents/Lab3/P1/Conexion.sv Line: 132
-Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 4784 megabytes
-    Info: Processing ended: Fri Sep  8 15:37:32 2023
+Info (12021): Found 1 design units, including 1 entities, in source file shift_left.sv
+    Info (12023): Found entity 1: shift_left File: C:/Users/Bryan Gomez/Documents/Lab3/P1/shift_left.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file shift_left_tb.sv
+    Info (12023): Found entity 1: shift_left_tb File: C:/Users/Bryan Gomez/Documents/Lab3/P1/shift_left_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file shift_right.sv
+    Info (12023): Found entity 1: shift_right File: C:/Users/Bryan Gomez/Documents/Lab3/P1/shift_right.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file shift_right_tb.sv
+    Info (12023): Found entity 1: shift_right_tb File: C:/Users/Bryan Gomez/Documents/Lab3/P1/shift_right_tb.sv Line: 1
+Info (12127): Elaborating entity "shift_right" for the top level hierarchy
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4788 megabytes
+    Info: Processing ended: Fri Sep  8 16:37:32 2023
     Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:34
+    Info: Total CPU time (on all processors): 00:00:35
 
 

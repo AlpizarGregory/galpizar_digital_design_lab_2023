@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Successful - Fri Sep  8 15:37:32 2023
+Analysis & Elaboration Status : Successful - Fri Sep  8 16:37:32 2023
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : ALU
-Top-level Entity Name : NbitMultiplier
+Top-level Entity Name : shift_right
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A until Partition Merge
 Total registers : N/A until Partition Merge

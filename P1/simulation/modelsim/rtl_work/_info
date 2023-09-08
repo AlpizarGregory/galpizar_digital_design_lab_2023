@@ -9,271 +9,55 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/Bryan Gomez/Documents/Lab3/P1/simulation/modelsim
-vAnd
+vshift_right
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1694209218
+!s110 1694212711
 !i10b 1
-!s100 ;fnoAT0i19CC94`8h3X:22
-Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IdgD9Rfg5XEUERlG2AM?;L1
-Z4 VDg1SIo80bB@j0V0VzS_@n1
+!s100 lddh0oN@OnS16F72BHkS61
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I4ebc>mgZ3^3k`iMbhRLS80
+Z3 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-Z5 w1694208764
-Z6 8C:/Users/Bryan Gomez/Documents/Lab3/P1/NbitMultiplier.sv
-Z7 FC:/Users/Bryan Gomez/Documents/Lab3/P1/NbitMultiplier.sv
-!i122 1
-L0 1 7
-Z8 OV;L;2020.1;71
-r1
-!s85 0
-31
-Z9 !s108 1694209217.000000
-Z10 !s107 C:/Users/Bryan Gomez/Documents/Lab3/P1/NbitMultiplier.sv|
-Z11 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/Lab3/P1|C:/Users/Bryan Gomez/Documents/Lab3/P1/NbitMultiplier.sv|
-!i113 1
-Z12 o-sv -work work
-Z13 !s92 -sv -work work {+incdir+C:/Users/Bryan Gomez/Documents/Lab3/P1}
-Z14 tCvgOpt 0
-n@and
-vAndGate
-R1
-Z15 !s110 1694209217
-!i10b 1
-!s100 Dhg@z^j51dK;dQF>io4N01
-R3
-I6MRV`9R>d=zczlk7fBUU51
-R4
-S1
-R0
-Z16 w1694206958
-Z17 8C:/Users/Bryan Gomez/Documents/Lab3/P1/Conexion.sv
-Z18 FC:/Users/Bryan Gomez/Documents/Lab3/P1/Conexion.sv
+w1694212139
+8C:/Users/Bryan Gomez/Documents/Lab3/P1/shift_right.sv
+FC:/Users/Bryan Gomez/Documents/Lab3/P1/shift_right.sv
 !i122 0
-L0 87 7
-R8
+L0 1 18
+Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-R9
-Z19 !s107 C:/Users/Bryan Gomez/Documents/Lab3/P1/Conexion.sv|
-Z20 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/Lab3/P1|C:/Users/Bryan Gomez/Documents/Lab3/P1/Conexion.sv|
+Z5 !s108 1694212711.000000
+!s107 C:/Users/Bryan Gomez/Documents/Lab3/P1/shift_right.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/Lab3/P1|C:/Users/Bryan Gomez/Documents/Lab3/P1/shift_right.sv|
 !i113 1
-R12
-R13
-R14
-n@and@gate
-vConexion
+Z6 o-sv -work work
+Z7 !s92 -sv -work work {+incdir+C:/Users/Bryan Gomez/Documents/Lab3/P1}
+Z8 tCvgOpt 0
+vshift_right_tb
 R1
-R15
+!s110 1694212712
 !i10b 1
-!s100 f58?L=o`Y8o5h>3VmaUOF0
-R3
-I2fLoe=@kN7b=Ag;AO_hQl0
-R4
-S1
-R0
-R16
-R17
-R18
-!i122 0
-L0 159 46
-R8
-r1
-!s85 0
-31
-R9
-R19
-R20
-!i113 1
-R12
-R13
-R14
-n@conexion
-vNbitMultiplier
-R1
+!s100 `?Chz@h_4z;<l>Ifb_:5@3
 R2
-!i10b 1
-!s100 Z[V>3kV;TVV]EZThM0E<U2
+IMcg1S7nJeO2[h0kZ^g<730
 R3
-Ie2k?aB6@]1;Ke^^E[Q=B^2
-R4
 S1
 R0
+w1694212231
+8C:/Users/Bryan Gomez/Documents/Lab3/P1/shift_right_tb.sv
+FC:/Users/Bryan Gomez/Documents/Lab3/P1/shift_right_tb.sv
+!i122 1
+L0 1 23
+R4
+r1
+!s85 0
+31
 R5
+!s107 C:/Users/Bryan Gomez/Documents/Lab3/P1/shift_right_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/Lab3/P1|C:/Users/Bryan Gomez/Documents/Lab3/P1/shift_right_tb.sv|
+!i113 1
 R6
 R7
-!i122 1
-L0 73 42
 R8
-r1
-!s85 0
-31
-R9
-R10
-R11
-!i113 1
-R12
-R13
-R14
-n@nbit@multiplier
-vNbitMultiplier_tb
-R1
-R2
-!i10b 1
-!s100 k=6llFQD5Oh`XlZ3:65`33
-R3
-I@`WDn5;z`QAK>mXiKYc;21
-R4
-S1
-R0
-w1694209160
-8C:/Users/Bryan Gomez/Documents/Lab3/P1/NbitMultiplier_tb.sv
-FC:/Users/Bryan Gomez/Documents/Lab3/P1/NbitMultiplier_tb.sv
-!i122 2
-L0 1 24
-R8
-r1
-!s85 0
-31
-!s108 1694209218.000000
-!s107 C:/Users/Bryan Gomez/Documents/Lab3/P1/NbitMultiplier_tb.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/Lab3/P1|C:/Users/Bryan Gomez/Documents/Lab3/P1/NbitMultiplier_tb.sv|
-!i113 1
-R12
-R13
-R14
-n@nbit@multiplier_tb
-vPartialAdder
-R1
-R2
-!i10b 1
-!s100 5Q]IiOd`D3W[I;U_dj9VW0
-R3
-IGn:@:3eG?8_SY_YmY@zMe2
-R4
-S1
-R0
-R5
-R6
-R7
-!i122 1
-L0 19 53
-R8
-r1
-!s85 0
-31
-R9
-R10
-R11
-!i113 1
-R12
-R13
-R14
-n@partial@adder
-vshift_left_with_truncate
-R1
-R15
-!i10b 1
-!s100 FQ<IK7^h[D0_`NbGzTljm3
-R3
-IF4eJ=0NDjgPK1I5281TJ42
-R4
-S1
-R0
-R16
-R17
-R18
-!i122 0
-L0 207 18
-R8
-r1
-!s85 0
-31
-R9
-R19
-R20
-!i113 1
-R12
-R13
-R14
-vsuma
-R1
-R15
-!i10b 1
-!s100 ?MM;5ibMY2hSTCh3z3]=e1
-R3
-IKePd;4XBdZhihY=6e;h=W1
-R4
-S1
-R0
-R16
-R17
-R18
-!i122 0
-L0 105 53
-R8
-r1
-!s85 0
-31
-R9
-R19
-R20
-!i113 1
-R12
-R13
-R14
-vXor
-R1
-R2
-!i10b 1
-!s100 h_<@3g>2KdWD@CL^b0BRY2
-R3
-Ik:z7@b>Aj;oYX3M2gzlU60
-R4
-S1
-R0
-R5
-R6
-R7
-!i122 1
-L0 10 7
-R8
-r1
-!s85 0
-31
-R9
-R10
-R11
-!i113 1
-R12
-R13
-R14
-n@xor
-vXorGate
-R1
-R15
-!i10b 1
-!s100 zbo[glNaMRSlBC8_GlWX62
-R3
-Id4enK3oXjXfQG4>Qbz=1W2
-R4
-S1
-R0
-R16
-R17
-R18
-!i122 0
-L0 96 7
-R8
-r1
-!s85 0
-31
-R9
-R19
-R20
-!i113 1
-R12
-R13
-R14
-n@xor@gate
