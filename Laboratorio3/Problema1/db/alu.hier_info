@@ -1,0 +1,66 @@
+|comparator
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+aeqb << bit_comparator:bit_comparation[3].bit_comp_inst.eq
+agtb << bit_comparator:bit_comparation[3].bit_comp_inst.agtb
+altb << bit_comparator:bit_comparation[3].bit_comp_inst.altb
+
+
+|comparator|bit_comparator:bit_comparation[0].bit_comp_inst
+a => aeqb.IN0
+a => agtb.IN0
+a => altb.IN0
+b => aeqb.IN1
+b => altb.IN1
+b => agtb.IN1
+eq => aeqb.IN1
+aeqb <= aeqb.DB_MAX_OUTPUT_PORT_TYPE
+altb <= altb.DB_MAX_OUTPUT_PORT_TYPE
+agtb <= agtb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|comparator|bit_comparator:bit_comparation[1].bit_comp_inst
+a => aeqb.IN0
+a => agtb.IN0
+a => altb.IN0
+b => aeqb.IN1
+b => altb.IN1
+b => agtb.IN1
+eq => aeqb.IN1
+aeqb <= aeqb.DB_MAX_OUTPUT_PORT_TYPE
+altb <= altb.DB_MAX_OUTPUT_PORT_TYPE
+agtb <= agtb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|comparator|bit_comparator:bit_comparation[2].bit_comp_inst
+a => aeqb.IN0
+a => agtb.IN0
+a => altb.IN0
+b => aeqb.IN1
+b => altb.IN1
+b => agtb.IN1
+eq => aeqb.IN1
+aeqb <= aeqb.DB_MAX_OUTPUT_PORT_TYPE
+altb <= altb.DB_MAX_OUTPUT_PORT_TYPE
+agtb <= agtb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|comparator|bit_comparator:bit_comparation[3].bit_comp_inst
+a => aeqb.IN0
+a => agtb.IN0
+a => altb.IN0
+b => aeqb.IN1
+b => altb.IN1
+b => agtb.IN1
+eq => aeqb.IN1
+aeqb <= aeqb.DB_MAX_OUTPUT_PORT_TYPE
+altb <= altb.DB_MAX_OUTPUT_PORT_TYPE
+agtb <= agtb.DB_MAX_OUTPUT_PORT_TYPE
+
+
