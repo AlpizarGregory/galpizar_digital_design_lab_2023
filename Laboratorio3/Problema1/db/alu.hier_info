@@ -7,9 +7,9 @@ b[0] => b[0].IN1
 b[1] => b[1].IN1
 b[2] => b[2].IN1
 b[3] => b[3].IN1
-aeqb <= bit_comparator:bit_comparation[3].bit_comp_inst.eq
-agtb <= bit_comparator:bit_comparation[3].bit_comp_inst.agtb
-altb <= bit_comparator:bit_comparation[3].bit_comp_inst.altb
+aeqb << bit_comparator:bit_comparation[3].bit_comp_inst.eq
+agtb << bit_comparator:bit_comparation[3].bit_comp_inst.agtb
+altb << bit_comparator:bit_comparation[3].bit_comp_inst.altb
 
 
 |comparator|bit_comparator:bit_comparation[0].bit_comp_inst

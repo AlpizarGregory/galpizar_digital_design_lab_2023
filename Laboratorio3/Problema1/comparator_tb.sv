@@ -16,6 +16,9 @@ module comparator_tb;
         $display("Testing comparator");
         a = 4'b0000;
         b = 4'b0000;
+        aeqb = 1'b1;
+        altb = 1'b0;
+        agtb = 1'b0;
 
         repeat (34) begin
             #10;

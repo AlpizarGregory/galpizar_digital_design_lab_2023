@@ -1,5 +1,5 @@
 Flow report for alu
-Fri Sep  8 13:50:59 2023
+Fri Sep  8 20:44:35 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -41,10 +41,10 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------+
 ; Flow Summary                                                                 ;
 +-----------------------------+------------------------------------------------+
-; Flow Status                 ; Successful - Fri Sep  8 13:50:59 2023          ;
+; Flow Status                 ; Flow Failed - Fri Sep  8 20:44:35 2023         ;
 ; Quartus Prime Version       ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name               ; alu                                            ;
-; Top-level Entity Name       ; comparator                                     ;
+; Top-level Entity Name       ; divider                                        ;
 ; Family                      ; Cyclone V                                      ;
 ; Device                      ; 5CSEMA5F31C6                                   ;
 ; Timing Models               ; Final                                          ;
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/08/2023 13:50:50 ;
+; Start date & time ; 09/08/2023 20:44:18 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; alu                 ;
 +-------------------+---------------------+
@@ -74,7 +74,8 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 238300910873173.169420265012348        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 238300910873173.169422745815164        ; --            ; --          ; --                                ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; divider_tb                        ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; n_bit_adder_tb                    ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; n_bit_subtractor_tb               ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; comparator_tb                     ;
@@ -83,14 +84,16 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_symbol           ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; comparator_tb                          ; --            ; --          ; eda_simulation                    ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; divider_tb                             ; --            ; --          ; eda_simulation                    ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                      ; --            ; --          ; eda_simulation                    ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim (SystemVerilog)               ; <None>        ; --          ; --                                ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_FILE                  ; divider_tb.sv                          ; --            ; --          ; divider_tb                        ;
 ; EDA_TEST_BENCH_FILE                  ; n_bit_adder_tb.sv                      ; --            ; --          ; n_bit_adder_tb                    ;
 ; EDA_TEST_BENCH_FILE                  ; n_bit_subtractor_tb.sv                 ; --            ; --          ; n_bit_subtractor_tb               ;
 ; EDA_TEST_BENCH_FILE                  ; comparator_tb.sv                       ; --            ; --          ; comparator_tb                     ;
 ; EDA_TEST_BENCH_FILE                  ; full_adder_1bit_tb.sv                  ; --            ; --          ; full_adder_1bit_tb                ;
+; EDA_TEST_BENCH_MODULE_NAME           ; divider_tb                             ; --            ; --          ; divider_tb                        ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; n_bit_adder_tb                         ; --            ; --          ; n_bit_adder_tb                    ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; n_bit_subtractor_tb                    ; --            ; --          ; n_bit_subtractor_tb               ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; comparator_tb                          ; --            ; --          ; comparator_tb                     ;
@@ -99,16 +102,17 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_TEST_BENCH_NAME                  ; n_bit_adder_tb                         ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_NAME                  ; n_bit_subtractor_tb                    ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_NAME                  ; comparator_tb                          ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; divider_tb                             ; --            ; --          ; eda_simulation                    ;
 ; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation                    ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --                                ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --                                ;
-; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; comparator  ; Top                               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; comparator  ; Top                               ;
-; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; comparator  ; Top                               ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; divider     ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; divider     ; Top                               ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; divider     ; Top                               ;
 ; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --          ; --                                ;
 ; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --                                ;
 ; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --          ; --                                ;
-; TOP_LEVEL_ENTITY                     ; comparator                             ; alu           ; --          ; --                                ;
+; TOP_LEVEL_ENTITY                     ; divider                                ; alu           ; --          ; --                                ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 
 
@@ -117,8 +121,8 @@ https://fpgasoftware.intel.com/eula.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:09     ; 1.0                     ; 4781 MB             ; 00:00:15                           ;
-; Total                  ; 00:00:09     ; --                      ; --                  ; 00:00:15                           ;
+; Analysis & Elaboration ; 00:00:18     ; 1.0                     ; 4781 MB             ; 00:00:13                           ;
+; Total                  ; 00:00:18     ; --                      ; --                  ; 00:00:13                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
