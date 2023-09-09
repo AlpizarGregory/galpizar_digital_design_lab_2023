@@ -2,6 +2,7 @@ module n_bit_subtractor (
   input logic [3:0] a,
   input logic [3:0] b,
   input logic aorb,
+  input logic doit;
   output logic [3:0] res,
   output logic negout
   
@@ -29,7 +30,7 @@ module n_bit_subtractor (
     for (i = 0; i < 4; i++) begin : adder_gen
       full_adder_1bit adder_inst(
         .a(a2[i]),
-        .b(b2[i]),
+        .b(b2[i] & doit),
         .cin(carry[i]),
         .sum(res[i]),
         .cout(carry[i+1])

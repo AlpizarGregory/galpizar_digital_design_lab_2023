@@ -1,5 +1,5 @@
 Analysis & Elaboration report for alu
-Fri Sep  8 20:44:35 2023
+Sat Sep  9 11:54:20 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                 ;
 +-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Failed - Fri Sep  8 20:44:35 2023              ;
+; Analysis & Elaboration Status ; Failed - Sat Sep  9 11:54:20 2023              ;
 ; Quartus Prime Version         ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                 ; alu                                            ;
 ; Top-level Entity Name         ; divider                                        ;
@@ -161,7 +161,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Fri Sep  8 20:44:17 2023
+    Info: Processing started: Sat Sep  9 11:54:15 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu -c alu --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -185,24 +185,16 @@ Info (12021): Found 1 design units, including 1 entities, in source file compara
     Info (12023): Found entity 1: comparator_tb File: C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/comparator_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file bit_comparator_tb.sv
     Info (12023): Found entity 1: bit_comparator_tb File: C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/bit_comparator_tb.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file divider.sv
-    Info (12023): Found entity 1: divider File: C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/divider.sv Line: 1
+Error (10170): Verilog HDL syntax error at divider.sv(24) near text: "(";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/divider.sv Line: 24
+Error (10170): Verilog HDL syntax error at divider.sv(32) near text: "(";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/divider.sv Line: 32
+Error (10112): Ignored design unit "divider" at divider.sv(1) due to previous errors File: C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/divider.sv Line: 1
+Info (12021): Found 0 design units, including 0 entities, in source file divider.sv
 Info (12021): Found 1 design units, including 1 entities, in source file divider_tb.sv
     Info (12023): Found entity 1: divider_tb File: C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/divider_tb.sv Line: 1
-Info (12127): Elaborating entity "divider" for the top level hierarchy
-Error (10031): Net "temp_numerator[3]" at divider.sv(14) is already driven by input port "numerator[3]", and cannot be driven by another signal File: C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/divider.sv Line: 14
-Error (10032): "numerator[3]" was declared at divider.sv(2) File: C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/divider.sv Line: 2
-Error (10031): Net "temp_numerator[2]" at divider.sv(14) is already driven by input port "numerator[2]", and cannot be driven by another signal File: C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/divider.sv Line: 14
-Error (10032): "numerator[2]" was declared at divider.sv(2) File: C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/divider.sv Line: 2
-Error (10031): Net "temp_numerator[1]" at divider.sv(14) is already driven by input port "numerator[1]", and cannot be driven by another signal File: C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/divider.sv Line: 14
-Error (10032): "numerator[1]" was declared at divider.sv(2) File: C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/divider.sv Line: 2
-Error (10028): Can't resolve multiple constant drivers for net "temp_quotient[0]" at divider.sv(22) File: C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/divider.sv Line: 22
-Error (10029): Constant driver at divider.sv(11) File: C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/divider.sv Line: 11
-Error (12153): Can't elaborate top-level user hierarchy
-Error: Quartus Prime Analysis & Elaboration was unsuccessful. 9 errors, 1 warning
+Error: Quartus Prime Analysis & Elaboration was unsuccessful. 3 errors, 1 warning
     Error: Peak virtual memory: 4781 megabytes
-    Error: Processing ended: Fri Sep  8 20:44:35 2023
-    Error: Elapsed time: 00:00:18
-    Error: Total CPU time (on all processors): 00:00:13
+    Error: Processing ended: Sat Sep  9 11:54:20 2023
+    Error: Elapsed time: 00:00:05
+    Error: Total CPU time (on all processors): 00:00:07
 
 

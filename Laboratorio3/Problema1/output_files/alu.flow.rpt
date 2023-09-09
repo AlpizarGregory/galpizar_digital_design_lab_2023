@@ -1,5 +1,5 @@
 Flow report for alu
-Fri Sep  8 20:44:35 2023
+Sat Sep  9 11:54:20 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------+
 ; Flow Summary                                                                 ;
 +-----------------------------+------------------------------------------------+
-; Flow Status                 ; Flow Failed - Fri Sep  8 20:44:35 2023         ;
+; Flow Status                 ; Flow Failed - Sat Sep  9 11:54:20 2023         ;
 ; Quartus Prime Version       ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name               ; alu                                            ;
 ; Top-level Entity Name       ; divider                                        ;
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/08/2023 20:44:18 ;
+; Start date & time ; 09/09/2023 11:54:15 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; alu                 ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 238300910873173.169422745815164        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 238300910873173.169428205512924        ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; divider_tb                        ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; n_bit_adder_tb                    ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; n_bit_subtractor_tb               ;
@@ -121,8 +121,8 @@ https://fpgasoftware.intel.com/eula.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:18     ; 1.0                     ; 4781 MB             ; 00:00:13                           ;
-; Total                  ; 00:00:18     ; --                      ; --                  ; 00:00:13                           ;
+; Analysis & Elaboration ; 00:00:05     ; 1.0                     ; 4781 MB             ; 00:00:07                           ;
+; Total                  ; 00:00:05     ; --                      ; --                  ; 00:00:07                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

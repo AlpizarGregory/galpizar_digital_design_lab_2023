@@ -8,10 +8,20 @@ module divider (
   wire [3:0] numerator_temp;
   wire [3:0] denominator_temp;
   wire [3:0] quotient_temp;
-  wire lower;
+  reg lower;
   wire greater;
   wire equal;
-  wire uselessneg;
+  wire uselessvar;
+
+
+  assign numerator_temp = numerator;
+  assign denominator_temp = denominator;
+
+  initial begin
+    lower = 1'b0;
+    greater = 1'b0;
+    equal = 1'b0;
+  end
 
   generate
     genvar i;
@@ -24,22 +34,26 @@ module divider (
         .altb(lower)
       );
 
-      if (lower) begin
-        break;
-      end
+      if (numerator_temp < denominator_temp) begin
 
-      n_bit_subtractor sub_inst(
-        .a(numerator_temp),
-        .b(denominator_temp),
-        .aorb(1'b1),
-        .res(numerator_temp),
-        .negout(uselessneg)
-      );
-
+        n_bit_subtractor sub_inst(
+          .a(numerator_temp),
+          .b(denominator_temp),
+          .aorb(1'b1),
+          .doit(lower),
+          .res(numerator_temp),
+          .negout(uselessvar)
+        );
+        
+        n_bit_adder add_inst(
+          .a(quotient_temp),
+          .b(lower),
+          .cin(1'b0),
+          .sum(quotient_temp),
+          .cout(uselessvar)
+        );
     end
   endgenerate
-
-  assign quotient_temp = i;
 
   assign quotient = quotient_temp;
 
