@@ -32,5 +32,40 @@ module comparator_tb;
         end
 
     end
+    /*
+
+  // Definir señales de entrada y salida
+  reg [3:0] a;
+  reg [3:0] b;
+  wire aeqb;
+  wire altb;
+  wire agtb;
+
+    // Instanciar el módulo del comparador
+  comparator uut (
+    .a(a),
+    .b(b),
+    .aeqb(aeqb),
+    .altb(altb),
+    .agtb(agtb)
+  );
+
+
+
+  // Simulación
+  initial begin
+    $display("Simulation started");
+    $monitor("a = %b, b = %b, aeqb = %b, altb = %b, agtb = %b", a, b, aeqb, altb, agtb);
+
+    // Realizar pruebas con diferentes combinaciones de entrada
+    a = 4'b0000; b = 4'b0000; #10;
+    a = 4'b0010; b = 4'b0001; #10;
+    a = 4'b1100; b = 4'b1111; #10;
+    a = 4'b1000; b = 4'b1000; #10;
+    a = 4'b0101; b = 4'b1010; #10;
+
+    $display("Simulation finished");
+
+  end*/
 
 endmodule

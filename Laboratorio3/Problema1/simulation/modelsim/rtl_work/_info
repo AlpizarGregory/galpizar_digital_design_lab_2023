@@ -11,7 +11,7 @@ cModel Technology
 Z0 dC:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/simulation/modelsim
 vbit_comparator
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1694208183
+Z2 !s110 1694293880
 !i10b 1
 !s100 CiP==CeZVM8[gkBQH69Fe1
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -28,7 +28,7 @@ Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1694208183.000000
+Z6 !s108 1694293880.000000
 !s107 C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/bit_comparator.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1|C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/bit_comparator.sv|
 !i113 1
@@ -39,17 +39,17 @@ vcomparator
 R1
 R2
 !i10b 1
-!s100 P1EPzWD[2;n7CF<4GNb2W0
+!s100 iFo[=]`_nTeH_2MWBaON81
 R3
-I6>Z2bhUIdd05TdS`k;4<M1
+I__73F[^_JJk72^NSM8mCP3
 R4
 S1
 R0
-w1694202566
+w1694293776
 8C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/comparator.sv
 FC:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/comparator.sv
 !i122 1
-L0 1 32
+L0 1 57
 R5
 r1
 !s85 0
@@ -65,17 +65,17 @@ vcomparator_tb
 R1
 R2
 !i10b 1
-!s100 XchCko1e_klZXz^PPaHnn0
+!s100 N>O8U3BF=?=1zT@[fIW4D3
 R3
-I@A@5:=h@Tb8G18`fLQZeI1
+IGeDlMGd>n35006`99YbIL3
 R4
 S1
 R0
-w1694208148
+w1694293861
 8C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/comparator_tb.sv
 FC:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/comparator_tb.sv
 !i122 2
-L0 1 36
+L0 1 71
 R5
 r1
 !s85 0

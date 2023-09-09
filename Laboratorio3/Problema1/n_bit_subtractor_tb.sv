@@ -10,7 +10,6 @@ module n_bit_subtractor_tb;
 	n_bit_subtractor sub_inst(
 		.a(a),
 		.b(b),
-		.aorb(1'b1),
 		.doit(1'b1),
 		.res(res),
 		.negout(negout)

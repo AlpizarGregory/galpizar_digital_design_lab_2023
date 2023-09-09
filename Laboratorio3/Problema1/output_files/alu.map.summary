@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Failed - Sat Sep  9 11:54:20 2023
+Analysis & Elaboration Status : Successful - Sat Sep  9 14:31:16 2023
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : alu
-Top-level Entity Name : divider
+Top-level Entity Name : comparator
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A until Partition Merge
 Total registers : N/A until Partition Merge

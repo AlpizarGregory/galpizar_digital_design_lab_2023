@@ -1,5 +1,5 @@
 Analysis & Elaboration report for alu
-Sat Sep  9 11:54:20 2023
+Sat Sep  9 14:31:16 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -10,7 +10,10 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
   4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
+  5. Port Connectivity Checks: "bit_comparator:bit_comparation[2].bit_comp_inst"
+  6. Port Connectivity Checks: "bit_comparator:bit_comparation[1].bit_comp_inst"
+  7. Port Connectivity Checks: "bit_comparator:bit_comparation[0].bit_comp_inst"
+  8. Analysis & Elaboration Messages
 
 
 
@@ -37,10 +40,10 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                 ;
 +-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Failed - Sat Sep  9 11:54:20 2023              ;
+; Analysis & Elaboration Status ; Successful - Sat Sep  9 14:31:16 2023          ;
 ; Quartus Prime Version         ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                 ; alu                                            ;
-; Top-level Entity Name         ; divider                                        ;
+; Top-level Entity Name         ; comparator                                     ;
 ; Family                        ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)   ; N/A until Partition Merge                      ;
 ; Total registers               ; N/A until Partition Merge                      ;
@@ -74,7 +77,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; divider            ; alu                ;
+; Top-level entity name                                                           ; comparator         ; alu                ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -155,13 +158,44 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bit_comparator:bit_comparation[2].bit_comp_inst"                                    ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; agtb ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; altb ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bit_comparator:bit_comparation[1].bit_comp_inst"                                    ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; agtb ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; altb ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bit_comparator:bit_comparation[0].bit_comp_inst"                                    ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; aeqb ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; agtb ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; altb ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +---------------------------------+
 ; Analysis & Elaboration Messages ;
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Sat Sep  9 11:54:15 2023
+    Info: Processing started: Sat Sep  9 14:31:11 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu -c alu --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -185,16 +219,20 @@ Info (12021): Found 1 design units, including 1 entities, in source file compara
     Info (12023): Found entity 1: comparator_tb File: C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/comparator_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file bit_comparator_tb.sv
     Info (12023): Found entity 1: bit_comparator_tb File: C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/bit_comparator_tb.sv Line: 1
-Error (10170): Verilog HDL syntax error at divider.sv(24) near text: "(";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/divider.sv Line: 24
-Error (10170): Verilog HDL syntax error at divider.sv(32) near text: "(";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/divider.sv Line: 32
-Error (10112): Ignored design unit "divider" at divider.sv(1) due to previous errors File: C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/divider.sv Line: 1
-Info (12021): Found 0 design units, including 0 entities, in source file divider.sv
+Info (12021): Found 1 design units, including 1 entities, in source file divider.sv
+    Info (12023): Found entity 1: divider File: C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/divider.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file divider_tb.sv
     Info (12023): Found entity 1: divider_tb File: C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/divider_tb.sv Line: 1
-Error: Quartus Prime Analysis & Elaboration was unsuccessful. 3 errors, 1 warning
-    Error: Peak virtual memory: 4781 megabytes
-    Error: Processing ended: Sat Sep  9 11:54:20 2023
-    Error: Elapsed time: 00:00:05
-    Error: Total CPU time (on all processors): 00:00:07
+Info (12021): Found 1 design units, including 1 entities, in source file mod.sv
+    Info (12023): Found entity 1: mod File: C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/mod.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mod_tb.sv
+    Info (12023): Found entity 1: mod_tb File: C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/mod_tb.sv Line: 1
+Info (12127): Elaborating entity "comparator" for the top level hierarchy
+Info (12128): Elaborating entity "bit_comparator" for hierarchy "bit_comparator:bit_comparation[0].bit_comp_inst" File: C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/comparator.sv Line: 24
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4781 megabytes
+    Info: Processing ended: Sat Sep  9 14:31:16 2023
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:08
 
 
