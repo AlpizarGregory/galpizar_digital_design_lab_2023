@@ -1,0 +1,14 @@
+module LogicalUnit #(parameter N = 8)(
+  input logic [N-1:0] A,
+  input logic [N-1:0] B,
+  input logic operation, // Código de operación (por ejemplo, 0 para AND, 1 para XOR, etc.)
+  output logic [N-1:0] result,
+  output logic N, // Bandera Negativo
+  output logic Z, // Bandera Cero
+  output logic C, // Bandera Acarreo
+  output logic V // Bandera Desbordamiento
+);
+
+  // Lógica de la operación lógica aquí
+  // ...
+endmodule

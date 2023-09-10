@@ -93,7 +93,7 @@ module AndGate #(parameter WIDTH = 1)(
 endmodule
 
 
-module XorGate #(parameter WIDTH = 1)(
+module XorGate2 #(parameter WIDTH = 1)(
   input logic [WIDTH-1:0] a,
   input logic [WIDTH-1:0] b,
   output logic y
@@ -125,7 +125,7 @@ module suma #(parameter N = 8)(
         .b(b[i]),
         .y(and_outputs[i])
       );
-      XorGate #(1) xor_gates (
+      XorGate2 #(1) xor_gates (
         .a(a[i]),
         .b(b[i]),
         .y(xor_outputs[i])

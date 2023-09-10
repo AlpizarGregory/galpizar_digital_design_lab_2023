@@ -1,0 +1,28 @@
+module ALU_tb();
+
+	logic [3:0] A;
+   logic [3:0] B;
+   logic [3:0] operation; // Código de operación (por ejemplo, 000 para suma, 001 para resta, etc.)
+   logic [3:0] result;
+   logic N; // Bandera Negativo
+   logic Z; // Bandera Cero
+   logic C; // Bandera Acarreo
+   logic V; // Bandera Desbordamiento
+	
+	ALU #(4) InstanceALU(A, B , operation, result, N,Z,C,V);
+
+	
+	//always #20 clk = ~clk;
+	initial begin
+	
+	A = 4'b1001;
+	B = 4'b0010;
+	operation = 4'b0010;
+
+
+
+	#30;
+
+	end
+
+endmodule

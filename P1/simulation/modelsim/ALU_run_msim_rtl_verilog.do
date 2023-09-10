@@ -45,11 +45,18 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
+vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/Lab3/P1 {C:/Users/Bryan Gomez/Documents/Lab3/P1/ALU.sv}
+vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/Lab3/P1 {C:/Users/Bryan Gomez/Documents/Lab3/P1/Conexion.sv}
+vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/Lab3/P1 {C:/Users/Bryan Gomez/Documents/Lab3/P1/NbitMultiplier.sv}
+vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/Lab3/P1 {C:/Users/Bryan Gomez/Documents/Lab3/P1/shift_left.sv}
 vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/Lab3/P1 {C:/Users/Bryan Gomez/Documents/Lab3/P1/shift_right.sv}
+vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/Lab3/P1 {C:/Users/Bryan Gomez/Documents/Lab3/P1/ArithmeticUnit.sv}
+vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/Lab3/P1 {C:/Users/Bryan Gomez/Documents/Lab3/P1/XorGate.sv}
+vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/Lab3/P1 {C:/Users/Bryan Gomez/Documents/Lab3/P1/LogicalUnit.sv}
 
-vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/Lab3/P1 {C:/Users/Bryan Gomez/Documents/Lab3/P1/shift_right_tb.sv}
+vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/Lab3/P1 {C:/Users/Bryan Gomez/Documents/Lab3/P1/ALU_tb.sv}
 
-vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  shift_right_tb
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  ALU_tb
 
 add wave *
 view structure

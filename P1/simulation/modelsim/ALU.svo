@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition"
 
-// DATE "09/02/2023 22:02:19"
+// DATE "09/10/2023 05:16:44"
 
 // 
 // Device: Altera 5CSEMA5F31C6 Package FBGA896
@@ -29,24 +29,57 @@
 
 `timescale 1 ps/ 1 ps
 
-module Conexion (
-	a,
-	b2,
-	individual2);
-input 	logic [3:0] a ;
-input 	logic b2 ;
-output 	logic [3:0] individual2 ;
+module ALU (
+	A,
+	B,
+	operation,
+	result,
+	N,
+	Z,
+	C,
+	V);
+input 	[7:0] A;
+input 	[7:0] B;
+input 	[3:0] operation;
+output 	[7:0] result;
+output 	N;
+output 	Z;
+output 	C;
+output 	V;
 
 // Design Ports Information
-// a[0]	=>  Location: PIN_AG8,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// a[1]	=>  Location: PIN_E3,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// a[2]	=>  Location: PIN_E9,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// a[3]	=>  Location: PIN_AF5,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// b2	=>  Location: PIN_AA25,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// individual2[0]	=>  Location: PIN_AH2,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// individual2[1]	=>  Location: PIN_AE29,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// individual2[2]	=>  Location: PIN_J7,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// individual2[3]	=>  Location: PIN_AK3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// result[0]	=>  Location: PIN_Y23,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// result[1]	=>  Location: PIN_AH30,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// result[2]	=>  Location: PIN_AG28,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// result[3]	=>  Location: PIN_AC30,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// result[4]	=>  Location: PIN_AE28,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// result[5]	=>  Location: PIN_AF30,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// result[6]	=>  Location: PIN_W24,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// result[7]	=>  Location: PIN_V23,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// N	=>  Location: PIN_AB15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Z	=>  Location: PIN_AG26,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// C	=>  Location: PIN_AF20,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// V	=>  Location: PIN_A8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// A[0]	=>  Location: PIN_AA28,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// B[0]	=>  Location: PIN_AB28,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// operation[0]	=>  Location: PIN_W25,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// operation[3]	=>  Location: PIN_Y27,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// operation[1]	=>  Location: PIN_AF29,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// operation[2]	=>  Location: PIN_AD26,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// B[1]	=>  Location: PIN_AC28,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// A[3]	=>  Location: PIN_AC29,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// A[2]	=>  Location: PIN_AA30,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// A[1]	=>  Location: PIN_AB30,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// B[2]	=>  Location: PIN_AA26,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// B[3]	=>  Location: PIN_AC27,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// B[4]	=>  Location: PIN_AG30,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// A[4]	=>  Location: PIN_AD29,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// A[7]	=>  Location: PIN_Y26,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// A[6]	=>  Location: PIN_AB27,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// A[5]	=>  Location: PIN_AE29,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// B[5]	=>  Location: PIN_V25,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// B[6]	=>  Location: PIN_AD30,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// B[7]	=>  Location: PIN_Y24,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 wire gnd;
@@ -60,134 +93,2689 @@ assign unknown = 1'bx;
 tri1 devclrn;
 tri1 devpor;
 tri1 devoe;
-wire \a[0]~input_o ;
-wire \a[1]~input_o ;
-wire \a[2]~input_o ;
-wire \a[3]~input_o ;
-wire \b2~input_o ;
 wire \~QUARTUS_CREATED_GND~I_combout ;
+wire \operation[2]~input_o ;
+wire \operation[1]~input_o ;
+wire \B[0]~input_o ;
+wire \B[3]~input_o ;
+wire \A[2]~input_o ;
+wire \B[1]~input_o ;
+wire \A[1]~input_o ;
+wire \A[3]~input_o ;
+wire \A[0]~input_o ;
+wire \logic_unit|shift_leftInstance|Mux0~0_combout ;
+wire \operation[0]~input_o ;
+wire \B[2]~input_o ;
+wire \result~30_combout ;
+wire \operation[3]~input_o ;
+wire \result~26_combout ;
+wire \logic_unit|shift_leftInstance|Mux7~0_combout ;
+wire \result~1_combout ;
+wire \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[1].xor_gates|y~combout ;
+wire \result~2_combout ;
+wire \logic_unit|shift_leftInstance|Mux0~1_combout ;
+wire \result~22_combout ;
+wire \result~3_combout ;
+wire \result~0_combout ;
+wire \result~4_combout ;
+wire \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|generate_gates[2].and_gates|y~combout ;
+wire \arith_unit|NbitMultiplierInstance|partial_products[2][3]~0_combout ;
+wire \logic_unit|shift_leftInstance|Mux7~1_combout ;
+wire \result~5_combout ;
+wire \result~6_combout ;
+wire \result~7_combout ;
+wire \A[5]~input_o ;
+wire \A[6]~input_o ;
+wire \A[4]~input_o ;
+wire \A[7]~input_o ;
+wire \logic_unit|shift_leftInstance|Mux0~2_combout ;
+wire \result~9_combout ;
+wire \result~10_combout ;
+wire \result~11_combout ;
+wire \B[4]~input_o ;
+wire \result~8_combout ;
+wire \arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[3].and_gates|y~combout ;
+wire \arith_unit|NbitMultiplierInstance|partial_products[3][4]~2_combout ;
+wire \arith_unit|NbitMultiplierInstance|partial_products[2][4]~1_combout ;
+wire \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~0_combout ;
+wire \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[4].xor_gates|y~combout ;
+wire \arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|generate_gates[4].xor_gates|y~combout ;
+wire \result~12_combout ;
+wire \arith_unit|NbitMultiplierInstance|partial_products[4][5]~7_combout ;
+wire \arith_unit|NbitMultiplierInstance|partial_products[5][5]~8_combout ;
+wire \arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|generate_gates[4].and_gates|y~combout ;
+wire \B[5]~input_o ;
+wire \logic_unit|shift_leftInstance|Mux7~2_combout ;
+wire \result~13_combout ;
+wire \result~14_combout ;
+wire \arith_unit|NbitMultiplierInstance|partial_products[3][5]~6_combout ;
+wire \arith_unit|NbitMultiplierInstance|partial_products[0][4]~3_combout ;
+wire \arith_unit|NbitMultiplierInstance|partial_products[2][5]~5_combout ;
+wire \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[5].xor_gates|y~combout ;
+wire \arith_unit|NbitMultiplierInstance|partial_products[1][4]~4_combout ;
+wire \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|generate_gates[5].xor_gates|y~combout ;
+wire \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~0_combout ;
+wire \result~15_combout ;
+wire \logic_unit|shift_leftInstance|Mux0~3_combout ;
+wire \result~16_combout ;
+wire \B[6]~input_o ;
+wire \result~17_combout ;
+wire \arith_unit|NbitMultiplierInstance|partial_products[6][6]~15_combout ;
+wire \arith_unit|NbitMultiplierInstance|partial_products[4][6]~13_combout ;
+wire \arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|carry_out_i~0_combout ;
+wire \arith_unit|NbitMultiplierInstance|partial_products[1][5]~10_combout ;
+wire \arith_unit|NbitMultiplierInstance|partial_products[0][5]~9_combout ;
+wire \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[6].xor_gates|y~combout ;
+wire \arith_unit|NbitMultiplierInstance|partial_products[2][6]~11_combout ;
+wire \arith_unit|NbitMultiplierInstance|partial_products[3][6]~12_combout ;
+wire \arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[6].xor_gates|y~combout ;
+wire \arith_unit|NbitMultiplierInstance|partial_products[5][6]~14_combout ;
+wire \arith_unit|NbitMultiplierInstance|generate_partial_sums[5].sum_instance|generate_gates[5].and_gates|y~combout ;
+wire \result~18_combout ;
+wire \logic_unit|shift_leftInstance|Mux7~3_combout ;
+wire \result~19_combout ;
+wire \B[7]~input_o ;
+wire \result~20_combout ;
+wire \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~1_combout ;
+wire \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~1_combout ;
+wire \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~0_combout ;
+wire \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~2_combout ;
+wire \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~3_combout ;
+wire \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~1_combout ;
+wire \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~4_combout ;
+wire \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~5_combout ;
+wire \arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|carry_out_i~0_combout ;
+wire \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~combout ;
+wire \result~21_combout ;
+wire [16:0] \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum ;
+wire [16:0] \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum ;
+wire [16:0] \arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|sum ;
+wire [16:0] \arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|sum ;
 
 
-// Location: IOOBUF_X10_Y0_N59
-cyclonev_io_obuf \individual2[0]~output (
+// Location: IOOBUF_X89_Y13_N5
+cyclonev_io_obuf \result[0]~output (
+	.i(\result~26_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(result[0]),
+	.obar());
+// synopsys translate_off
+defparam \result[0]~output .bus_hold = "false";
+defparam \result[0]~output .open_drain_output = "false";
+defparam \result[0]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y16_N39
+cyclonev_io_obuf \result[1]~output (
+	.i(\result~2_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(result[1]),
+	.obar());
+// synopsys translate_off
+defparam \result[1]~output .bus_hold = "false";
+defparam \result[1]~output .open_drain_output = "false";
+defparam \result[1]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y13_N39
+cyclonev_io_obuf \result[2]~output (
+	.i(\result~4_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(result[2]),
+	.obar());
+// synopsys translate_off
+defparam \result[2]~output .bus_hold = "false";
+defparam \result[2]~output .open_drain_output = "false";
+defparam \result[2]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y25_N56
+cyclonev_io_obuf \result[3]~output (
+	.i(\result~7_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(result[3]),
+	.obar());
+// synopsys translate_off
+defparam \result[3]~output .bus_hold = "false";
+defparam \result[3]~output .open_drain_output = "false";
+defparam \result[3]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y11_N96
+cyclonev_io_obuf \result[4]~output (
+	.i(\result~12_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(result[4]),
+	.obar());
+// synopsys translate_off
+defparam \result[4]~output .bus_hold = "false";
+defparam \result[4]~output .open_drain_output = "false";
+defparam \result[4]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y15_N56
+cyclonev_io_obuf \result[5]~output (
+	.i(\result~15_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(result[5]),
+	.obar());
+// synopsys translate_off
+defparam \result[5]~output .bus_hold = "false";
+defparam \result[5]~output .open_drain_output = "false";
+defparam \result[5]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y15_N22
+cyclonev_io_obuf \result[6]~output (
+	.i(\result~18_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(result[6]),
+	.obar());
+// synopsys translate_off
+defparam \result[6]~output .bus_hold = "false";
+defparam \result[6]~output .open_drain_output = "false";
+defparam \result[6]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y15_N5
+cyclonev_io_obuf \result[7]~output (
+	.i(\result~21_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(result[7]),
+	.obar());
+// synopsys translate_off
+defparam \result[7]~output .bus_hold = "false";
+defparam \result[7]~output .open_drain_output = "false";
+defparam \result[7]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X28_Y0_N2
+cyclonev_io_obuf \N~output (
 	.i(gnd),
 	.oe(vcc),
 	.dynamicterminationcontrol(gnd),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.parallelterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
-	.o(individual2[0]),
+	.o(N),
 	.obar());
 // synopsys translate_off
-defparam \individual2[0]~output .bus_hold = "false";
-defparam \individual2[0]~output .open_drain_output = "false";
-defparam \individual2[0]~output .shift_series_termination_control = "false";
+defparam \N~output .bus_hold = "false";
+defparam \N~output .open_drain_output = "false";
+defparam \N~output .shift_series_termination_control = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X89_Y23_N39
-cyclonev_io_obuf \individual2[1]~output (
+// Location: IOOBUF_X84_Y0_N36
+cyclonev_io_obuf \Z~output (
 	.i(gnd),
 	.oe(vcc),
 	.dynamicterminationcontrol(gnd),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.parallelterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
-	.o(individual2[1]),
+	.o(Z),
 	.obar());
 // synopsys translate_off
-defparam \individual2[1]~output .bus_hold = "false";
-defparam \individual2[1]~output .open_drain_output = "false";
-defparam \individual2[1]~output .shift_series_termination_control = "false";
+defparam \Z~output .bus_hold = "false";
+defparam \Z~output .open_drain_output = "false";
+defparam \Z~output .shift_series_termination_control = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X16_Y81_N2
-cyclonev_io_obuf \individual2[2]~output (
+// Location: IOOBUF_X70_Y0_N2
+cyclonev_io_obuf \C~output (
 	.i(gnd),
 	.oe(vcc),
 	.dynamicterminationcontrol(gnd),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.parallelterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
-	.o(individual2[2]),
+	.o(C),
 	.obar());
 // synopsys translate_off
-defparam \individual2[2]~output .bus_hold = "false";
-defparam \individual2[2]~output .open_drain_output = "false";
-defparam \individual2[2]~output .shift_series_termination_control = "false";
+defparam \C~output .bus_hold = "false";
+defparam \C~output .open_drain_output = "false";
+defparam \C~output .shift_series_termination_control = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X20_Y0_N53
-cyclonev_io_obuf \individual2[3]~output (
+// Location: IOOBUF_X34_Y81_N93
+cyclonev_io_obuf \V~output (
 	.i(gnd),
 	.oe(vcc),
 	.dynamicterminationcontrol(gnd),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.parallelterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
-	.o(individual2[3]),
+	.o(V),
 	.obar());
 // synopsys translate_off
-defparam \individual2[3]~output .bus_hold = "false";
-defparam \individual2[3]~output .open_drain_output = "false";
-defparam \individual2[3]~output .shift_series_termination_control = "false";
+defparam \V~output .bus_hold = "false";
+defparam \V~output .open_drain_output = "false";
+defparam \V~output .shift_series_termination_control = "false";
 // synopsys translate_on
 
-// Location: IOIBUF_X8_Y0_N52
-cyclonev_io_ibuf \a[0]~input (
-	.i(a[0]),
+// Location: IOIBUF_X89_Y16_N4
+cyclonev_io_ibuf \operation[2]~input (
+	.i(operation[2]),
 	.ibar(gnd),
 	.dynamicterminationcontrol(gnd),
-	.o(\a[0]~input_o ));
+	.o(\operation[2]~input_o ));
 // synopsys translate_off
-defparam \a[0]~input .bus_hold = "false";
-defparam \a[0]~input .simulate_z_as = "z";
+defparam \operation[2]~input .bus_hold = "false";
+defparam \operation[2]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: IOIBUF_X8_Y81_N35
-cyclonev_io_ibuf \a[1]~input (
-	.i(a[1]),
+// Location: IOIBUF_X89_Y15_N38
+cyclonev_io_ibuf \operation[1]~input (
+	.i(operation[1]),
 	.ibar(gnd),
 	.dynamicterminationcontrol(gnd),
-	.o(\a[1]~input_o ));
+	.o(\operation[1]~input_o ));
 // synopsys translate_off
-defparam \a[1]~input .bus_hold = "false";
-defparam \a[1]~input .simulate_z_as = "z";
+defparam \operation[1]~input .bus_hold = "false";
+defparam \operation[1]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: IOIBUF_X30_Y81_N1
-cyclonev_io_ibuf \a[2]~input (
-	.i(a[2]),
+// Location: IOIBUF_X89_Y21_N38
+cyclonev_io_ibuf \B[0]~input (
+	.i(B[0]),
 	.ibar(gnd),
 	.dynamicterminationcontrol(gnd),
-	.o(\a[2]~input_o ));
+	.o(\B[0]~input_o ));
 // synopsys translate_off
-defparam \a[2]~input .bus_hold = "false";
-defparam \a[2]~input .simulate_z_as = "z";
+defparam \B[0]~input .bus_hold = "false";
+defparam \B[0]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: IOIBUF_X8_Y0_N18
-cyclonev_io_ibuf \a[3]~input (
-	.i(a[3]),
+// Location: IOIBUF_X89_Y16_N21
+cyclonev_io_ibuf \B[3]~input (
+	.i(B[3]),
 	.ibar(gnd),
 	.dynamicterminationcontrol(gnd),
-	.o(\a[3]~input_o ));
+	.o(\B[3]~input_o ));
 // synopsys translate_off
-defparam \a[3]~input .bus_hold = "false";
-defparam \a[3]~input .simulate_z_as = "z";
+defparam \B[3]~input .bus_hold = "false";
+defparam \B[3]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: IOIBUF_X89_Y9_N38
-cyclonev_io_ibuf \b2~input (
-	.i(b2),
+// Location: IOIBUF_X89_Y21_N21
+cyclonev_io_ibuf \A[2]~input (
+	.i(A[2]),
 	.ibar(gnd),
 	.dynamicterminationcontrol(gnd),
-	.o(\b2~input_o ));
+	.o(\A[2]~input_o ));
 // synopsys translate_off
-defparam \b2~input .bus_hold = "false";
-defparam \b2~input .simulate_z_as = "z";
+defparam \A[2]~input .bus_hold = "false";
+defparam \A[2]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LABCELL_X45_Y44_N0
+// Location: IOIBUF_X89_Y20_N78
+cyclonev_io_ibuf \B[1]~input (
+	.i(B[1]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\B[1]~input_o ));
+// synopsys translate_off
+defparam \B[1]~input .bus_hold = "false";
+defparam \B[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X89_Y21_N4
+cyclonev_io_ibuf \A[1]~input (
+	.i(A[1]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\A[1]~input_o ));
+// synopsys translate_off
+defparam \A[1]~input .bus_hold = "false";
+defparam \A[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X89_Y20_N95
+cyclonev_io_ibuf \A[3]~input (
+	.i(A[3]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\A[3]~input_o ));
+// synopsys translate_off
+defparam \A[3]~input .bus_hold = "false";
+defparam \A[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X89_Y21_N55
+cyclonev_io_ibuf \A[0]~input (
+	.i(A[0]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\A[0]~input_o ));
+// synopsys translate_off
+defparam \A[0]~input .bus_hold = "false";
+defparam \A[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: MLABCELL_X87_Y21_N12
+cyclonev_lcell_comb \logic_unit|shift_leftInstance|Mux0~0 (
+// Equation(s):
+// \logic_unit|shift_leftInstance|Mux0~0_combout  = ( \A[3]~input_o  & ( \A[0]~input_o  & ( (!\B[1]~input_o ) # ((!\B[0]~input_o  & (\A[2]~input_o )) # (\B[0]~input_o  & ((\A[1]~input_o )))) ) ) ) # ( !\A[3]~input_o  & ( \A[0]~input_o  & ( (!\B[1]~input_o  & 
+// (((!\B[0]~input_o )))) # (\B[1]~input_o  & ((!\B[0]~input_o  & (\A[2]~input_o )) # (\B[0]~input_o  & ((\A[1]~input_o ))))) ) ) ) # ( \A[3]~input_o  & ( !\A[0]~input_o  & ( (!\B[1]~input_o  & (((\B[0]~input_o )))) # (\B[1]~input_o  & ((!\B[0]~input_o  & 
+// (\A[2]~input_o )) # (\B[0]~input_o  & ((\A[1]~input_o ))))) ) ) ) # ( !\A[3]~input_o  & ( !\A[0]~input_o  & ( (\B[1]~input_o  & ((!\B[0]~input_o  & (\A[2]~input_o )) # (\B[0]~input_o  & ((\A[1]~input_o ))))) ) ) )
+
+	.dataa(!\A[2]~input_o ),
+	.datab(!\B[1]~input_o ),
+	.datac(!\A[1]~input_o ),
+	.datad(!\B[0]~input_o ),
+	.datae(!\A[3]~input_o ),
+	.dataf(!\A[0]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\logic_unit|shift_leftInstance|Mux0~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \logic_unit|shift_leftInstance|Mux0~0 .extended_lut = "off";
+defparam \logic_unit|shift_leftInstance|Mux0~0 .lut_mask = 64'h110311CFDD03DDCF;
+defparam \logic_unit|shift_leftInstance|Mux0~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X89_Y20_N44
+cyclonev_io_ibuf \operation[0]~input (
+	.i(operation[0]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\operation[0]~input_o ));
+// synopsys translate_off
+defparam \operation[0]~input .bus_hold = "false";
+defparam \operation[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X89_Y23_N4
+cyclonev_io_ibuf \B[2]~input (
+	.i(B[2]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\B[2]~input_o ));
+// synopsys translate_off
+defparam \B[2]~input .bus_hold = "false";
+defparam \B[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: MLABCELL_X87_Y21_N36
+cyclonev_lcell_comb \result~30 (
+// Equation(s):
+// \result~30_combout  = ( !\operation[0]~input_o  & ( !\B[0]~input_o  $ ((((!\A[0]~input_o )))) ) ) # ( \operation[0]~input_o  & ( (!\B[0]~input_o  & (!\B[3]~input_o  & (\logic_unit|shift_leftInstance|Mux0~0_combout  & (!\B[1]~input_o  & !\B[2]~input_o )))) 
+// ) )
+
+	.dataa(!\B[0]~input_o ),
+	.datab(!\B[3]~input_o ),
+	.datac(!\logic_unit|shift_leftInstance|Mux0~0_combout ),
+	.datad(!\B[1]~input_o ),
+	.datae(!\operation[0]~input_o ),
+	.dataf(!\B[2]~input_o ),
+	.datag(!\A[0]~input_o ),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\result~30_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \result~30 .extended_lut = "on";
+defparam \result~30 .lut_mask = 64'h5A5A08005A5A0000;
+defparam \result~30 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X89_Y25_N21
+cyclonev_io_ibuf \operation[3]~input (
+	.i(operation[3]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\operation[3]~input_o ));
+// synopsys translate_off
+defparam \operation[3]~input .bus_hold = "false";
+defparam \operation[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X88_Y21_N30
+cyclonev_lcell_comb \result~26 (
+// Equation(s):
+// \result~26_combout  = ( !\operation[3]~input_o  & ( (!\operation[2]~input_o  & (\operation[1]~input_o  & (\A[0]~input_o  & (!\operation[0]~input_o  & \B[0]~input_o )))) ) ) # ( \operation[3]~input_o  & ( (!\operation[2]~input_o  & (\operation[1]~input_o  
+// & (\result~30_combout ))) # (\operation[2]~input_o  & (!\operation[1]~input_o  & (((!\operation[0]~input_o ))))) ) )
+
+	.dataa(!\operation[2]~input_o ),
+	.datab(!\operation[1]~input_o ),
+	.datac(!\result~30_combout ),
+	.datad(!\operation[0]~input_o ),
+	.datae(!\operation[3]~input_o ),
+	.dataf(!\B[0]~input_o ),
+	.datag(!\A[0]~input_o ),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\result~26_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \result~26 .extended_lut = "on";
+defparam \result~26 .lut_mask = 64'h0000460202004602;
+defparam \result~26 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X87_Y21_N18
+cyclonev_lcell_comb \logic_unit|shift_leftInstance|Mux7~0 (
+// Equation(s):
+// \logic_unit|shift_leftInstance|Mux7~0_combout  = ( \A[3]~input_o  & ( \A[0]~input_o  & ( (!\B[1]~input_o  & (((\B[0]~input_o ) # (\A[1]~input_o )))) # (\B[1]~input_o  & (((!\B[0]~input_o )) # (\A[2]~input_o ))) ) ) ) # ( !\A[3]~input_o  & ( \A[0]~input_o  
+// & ( (!\B[1]~input_o  & (((\B[0]~input_o ) # (\A[1]~input_o )))) # (\B[1]~input_o  & (\A[2]~input_o  & ((\B[0]~input_o )))) ) ) ) # ( \A[3]~input_o  & ( !\A[0]~input_o  & ( (!\B[1]~input_o  & (((\A[1]~input_o  & !\B[0]~input_o )))) # (\B[1]~input_o  & 
+// (((!\B[0]~input_o )) # (\A[2]~input_o ))) ) ) ) # ( !\A[3]~input_o  & ( !\A[0]~input_o  & ( (!\B[1]~input_o  & (((\A[1]~input_o  & !\B[0]~input_o )))) # (\B[1]~input_o  & (\A[2]~input_o  & ((\B[0]~input_o )))) ) ) )
+
+	.dataa(!\A[2]~input_o ),
+	.datab(!\B[1]~input_o ),
+	.datac(!\A[1]~input_o ),
+	.datad(!\B[0]~input_o ),
+	.datae(!\A[3]~input_o ),
+	.dataf(!\A[0]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\logic_unit|shift_leftInstance|Mux7~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \logic_unit|shift_leftInstance|Mux7~0 .extended_lut = "off";
+defparam \logic_unit|shift_leftInstance|Mux7~0 .lut_mask = 64'h0C113F110CDD3FDD;
+defparam \logic_unit|shift_leftInstance|Mux7~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X88_Y21_N48
+cyclonev_lcell_comb \result~1 (
+// Equation(s):
+// \result~1_combout  = ( \A[1]~input_o  & ( \B[2]~input_o  & ( (!\B[1]~input_o  & !\operation[0]~input_o ) ) ) ) # ( !\A[1]~input_o  & ( \B[2]~input_o  & ( (\B[1]~input_o  & !\operation[0]~input_o ) ) ) ) # ( \A[1]~input_o  & ( !\B[2]~input_o  & ( 
+// (!\B[1]~input_o  & ((!\operation[0]~input_o ) # ((!\B[3]~input_o  & \logic_unit|shift_leftInstance|Mux7~0_combout )))) ) ) ) # ( !\A[1]~input_o  & ( !\B[2]~input_o  & ( (!\B[1]~input_o  & (!\B[3]~input_o  & (\logic_unit|shift_leftInstance|Mux7~0_combout  
+// & \operation[0]~input_o ))) # (\B[1]~input_o  & (((!\operation[0]~input_o )))) ) ) )
+
+	.dataa(!\B[3]~input_o ),
+	.datab(!\logic_unit|shift_leftInstance|Mux7~0_combout ),
+	.datac(!\B[1]~input_o ),
+	.datad(!\operation[0]~input_o ),
+	.datae(!\A[1]~input_o ),
+	.dataf(!\B[2]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\result~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \result~1 .extended_lut = "off";
+defparam \result~1 .lut_mask = 64'h0F20F0200F00F000;
+defparam \result~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X88_Y21_N45
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[1].xor_gates|y (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[1].xor_gates|y~combout  = ( \B[0]~input_o  & ( !\A[1]~input_o  $ (((!\B[1]~input_o ) # (!\A[0]~input_o ))) ) ) # ( !\B[0]~input_o  & ( (\B[1]~input_o  & \A[0]~input_o 
+// ) ) )
+
+	.dataa(!\B[1]~input_o ),
+	.datab(gnd),
+	.datac(!\A[1]~input_o ),
+	.datad(!\A[0]~input_o ),
+	.datae(gnd),
+	.dataf(!\B[0]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[1].xor_gates|y~combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[1].xor_gates|y .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[1].xor_gates|y .lut_mask = 64'h005500550F5A0F5A;
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[1].xor_gates|y .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X88_Y21_N54
+cyclonev_lcell_comb \result~2 (
+// Equation(s):
+// \result~2_combout  = ( \operation[3]~input_o  & ( \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[1].xor_gates|y~combout  & ( (!\operation[2]~input_o  & (\operation[1]~input_o  & (\result~1_combout ))) # 
+// (\operation[2]~input_o  & (!\operation[1]~input_o  & ((!\operation[0]~input_o )))) ) ) ) # ( !\operation[3]~input_o  & ( \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[1].xor_gates|y~combout  & ( 
+// (!\operation[2]~input_o  & (\operation[1]~input_o  & !\operation[0]~input_o )) ) ) ) # ( \operation[3]~input_o  & ( !\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[1].xor_gates|y~combout  & ( 
+// (!\operation[2]~input_o  & (\operation[1]~input_o  & (\result~1_combout ))) # (\operation[2]~input_o  & (!\operation[1]~input_o  & ((!\operation[0]~input_o )))) ) ) )
+
+	.dataa(!\operation[2]~input_o ),
+	.datab(!\operation[1]~input_o ),
+	.datac(!\result~1_combout ),
+	.datad(!\operation[0]~input_o ),
+	.datae(!\operation[3]~input_o ),
+	.dataf(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[1].xor_gates|y~combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\result~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \result~2 .extended_lut = "off";
+defparam \result~2 .lut_mask = 64'h0000460222004602;
+defparam \result~2 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X87_Y21_N30
+cyclonev_lcell_comb \logic_unit|shift_leftInstance|Mux0~1 (
+// Equation(s):
+// \logic_unit|shift_leftInstance|Mux0~1_combout  = ( \A[3]~input_o  & ( \A[0]~input_o  & ( ((!\B[0]~input_o  & (\A[2]~input_o )) # (\B[0]~input_o  & ((\A[1]~input_o )))) # (\B[1]~input_o ) ) ) ) # ( !\A[3]~input_o  & ( \A[0]~input_o  & ( (!\B[1]~input_o  & 
+// ((!\B[0]~input_o  & (\A[2]~input_o )) # (\B[0]~input_o  & ((\A[1]~input_o ))))) # (\B[1]~input_o  & (((!\B[0]~input_o )))) ) ) ) # ( \A[3]~input_o  & ( !\A[0]~input_o  & ( (!\B[1]~input_o  & ((!\B[0]~input_o  & (\A[2]~input_o )) # (\B[0]~input_o  & 
+// ((\A[1]~input_o ))))) # (\B[1]~input_o  & (((\B[0]~input_o )))) ) ) ) # ( !\A[3]~input_o  & ( !\A[0]~input_o  & ( (!\B[1]~input_o  & ((!\B[0]~input_o  & (\A[2]~input_o )) # (\B[0]~input_o  & ((\A[1]~input_o ))))) ) ) )
+
+	.dataa(!\A[2]~input_o ),
+	.datab(!\B[1]~input_o ),
+	.datac(!\A[1]~input_o ),
+	.datad(!\B[0]~input_o ),
+	.datae(!\A[3]~input_o ),
+	.dataf(!\A[0]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\logic_unit|shift_leftInstance|Mux0~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \logic_unit|shift_leftInstance|Mux0~1 .extended_lut = "off";
+defparam \logic_unit|shift_leftInstance|Mux0~1 .lut_mask = 64'h440C443F770C773F;
+defparam \logic_unit|shift_leftInstance|Mux0~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X87_Y21_N0
+cyclonev_lcell_comb \result~22 (
+// Equation(s):
+// \result~22_combout  = ( !\operation[0]~input_o  & ( ((!\A[2]~input_o  $ (((!\B[2]~input_o ))))) ) ) # ( \operation[0]~input_o  & ( (\logic_unit|shift_leftInstance|Mux0~1_combout  & (!\B[3]~input_o  & (!\B[2]~input_o  & ((!\B[0]~input_o ) # (!\B[1]~input_o 
+// ))))) ) )
+
+	.dataa(!\B[0]~input_o ),
+	.datab(!\logic_unit|shift_leftInstance|Mux0~1_combout ),
+	.datac(!\B[3]~input_o ),
+	.datad(!\B[1]~input_o ),
+	.datae(!\operation[0]~input_o ),
+	.dataf(!\B[2]~input_o ),
+	.datag(!\A[2]~input_o ),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\result~22_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \result~22 .extended_lut = "on";
+defparam \result~22 .lut_mask = 64'h0F0F3020F0F00000;
+defparam \result~22 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X88_Y21_N9
+cyclonev_lcell_comb \result~3 (
+// Equation(s):
+// \result~3_combout  = ( \operation[0]~input_o  & ( (!\operation[2]~input_o  & (\operation[1]~input_o  & (\result~22_combout  & \operation[3]~input_o ))) ) ) # ( !\operation[0]~input_o  & ( (\operation[3]~input_o  & ((!\operation[2]~input_o  & 
+// (\operation[1]~input_o  & \result~22_combout )) # (\operation[2]~input_o  & (!\operation[1]~input_o )))) ) )
+
+	.dataa(!\operation[2]~input_o ),
+	.datab(!\operation[1]~input_o ),
+	.datac(!\result~22_combout ),
+	.datad(!\operation[3]~input_o ),
+	.datae(gnd),
+	.dataf(!\operation[0]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\result~3_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \result~3 .extended_lut = "off";
+defparam \result~3 .lut_mask = 64'h0046004600020002;
+defparam \result~3 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X88_Y21_N6
+cyclonev_lcell_comb \result~0 (
+// Equation(s):
+// \result~0_combout  = ( !\operation[0]~input_o  & ( (!\operation[2]~input_o  & (\operation[1]~input_o  & !\operation[3]~input_o )) ) )
+
+	.dataa(!\operation[2]~input_o ),
+	.datab(!\operation[1]~input_o ),
+	.datac(gnd),
+	.datad(!\operation[3]~input_o ),
+	.datae(gnd),
+	.dataf(!\operation[0]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\result~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \result~0 .extended_lut = "off";
+defparam \result~0 .lut_mask = 64'h2200220000000000;
+defparam \result~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X87_Y21_N57
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum[2] (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [2] = ( \B[2]~input_o  & ( (!\B[1]~input_o  & (((\A[0]~input_o )))) # (\B[1]~input_o  & ((!\A[0]~input_o  & ((\A[1]~input_o ))) # (\A[0]~input_o  & ((!\A[1]~input_o ) # 
+// (\B[0]~input_o ))))) ) ) # ( !\B[2]~input_o  & ( (\B[1]~input_o  & (\A[1]~input_o  & ((!\B[0]~input_o ) # (!\A[0]~input_o )))) ) )
+
+	.dataa(!\B[0]~input_o ),
+	.datab(!\B[1]~input_o ),
+	.datac(!\A[0]~input_o ),
+	.datad(!\A[1]~input_o ),
+	.datae(gnd),
+	.dataf(!\B[2]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [2]),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum[2] .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum[2] .lut_mask = 64'h003200320F3D0F3D;
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum[2] .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X88_Y21_N0
+cyclonev_lcell_comb \result~4 (
+// Equation(s):
+// \result~4_combout  = ( \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [2] & ( \B[0]~input_o  & ( ((!\A[2]~input_o  & \result~0_combout )) # (\result~3_combout ) ) ) ) # ( 
+// !\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [2] & ( \B[0]~input_o  & ( ((\A[2]~input_o  & \result~0_combout )) # (\result~3_combout ) ) ) ) # ( \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum 
+// [2] & ( !\B[0]~input_o  & ( (\result~0_combout ) # (\result~3_combout ) ) ) ) # ( !\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [2] & ( !\B[0]~input_o  & ( \result~3_combout  ) ) )
+
+	.dataa(gnd),
+	.datab(!\result~3_combout ),
+	.datac(!\A[2]~input_o ),
+	.datad(!\result~0_combout ),
+	.datae(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [2]),
+	.dataf(!\B[0]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\result~4_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \result~4 .extended_lut = "off";
+defparam \result~4 .lut_mask = 64'h333333FF333F33F3;
+defparam \result~4 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X87_Y21_N6
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|generate_gates[2].and_gates|y (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|generate_gates[2].and_gates|y~combout  = ( \A[1]~input_o  & ( \B[2]~input_o  & ( (\B[0]~input_o  & (\A[2]~input_o  & ((\A[0]~input_o ) # (\B[1]~input_o )))) ) ) ) # ( !\A[1]~input_o  
+// & ( \B[2]~input_o  & ( (\B[0]~input_o  & (\A[2]~input_o  & \A[0]~input_o )) ) ) ) # ( \A[1]~input_o  & ( !\B[2]~input_o  & ( (\B[0]~input_o  & (\B[1]~input_o  & (\A[2]~input_o  & !\A[0]~input_o ))) ) ) )
+
+	.dataa(!\B[0]~input_o ),
+	.datab(!\B[1]~input_o ),
+	.datac(!\A[2]~input_o ),
+	.datad(!\A[0]~input_o ),
+	.datae(!\A[1]~input_o ),
+	.dataf(!\B[2]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|generate_gates[2].and_gates|y~combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|generate_gates[2].and_gates|y .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|generate_gates[2].and_gates|y .lut_mask = 64'h0000010000050105;
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|generate_gates[2].and_gates|y .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X87_Y21_N42
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum[3] (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [3] = ( \A[1]~input_o  & ( \B[2]~input_o  & ( (!\A[0]~input_o ) # (!\B[3]~input_o  $ (\B[1]~input_o )) ) ) ) # ( !\A[1]~input_o  & ( \B[2]~input_o  & ( (\A[0]~input_o  & 
+// \B[3]~input_o ) ) ) ) # ( \A[1]~input_o  & ( !\B[2]~input_o  & ( (\A[0]~input_o  & (!\B[3]~input_o  $ (((!\B[0]~input_o ) # (!\B[1]~input_o ))))) ) ) ) # ( !\A[1]~input_o  & ( !\B[2]~input_o  & ( (\A[0]~input_o  & \B[3]~input_o ) ) ) )
+
+	.dataa(!\A[0]~input_o ),
+	.datab(!\B[3]~input_o ),
+	.datac(!\B[0]~input_o ),
+	.datad(!\B[1]~input_o ),
+	.datae(!\A[1]~input_o ),
+	.dataf(!\B[2]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [3]),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum[3] .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum[3] .lut_mask = 64'h111111141111EEBB;
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum[3] .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X87_Y21_N54
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|partial_products[2][3]~0 (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|partial_products[2][3]~0_combout  = ( \A[2]~input_o  & ( \B[1]~input_o  ) )
+
+	.dataa(gnd),
+	.datab(!\B[1]~input_o ),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\A[2]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|partial_products[2][3]~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|partial_products[2][3]~0 .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|partial_products[2][3]~0 .lut_mask = 64'h0000000033333333;
+defparam \arith_unit|NbitMultiplierInstance|partial_products[2][3]~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X83_Y21_N30
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum[3] (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum [3] = ( \arith_unit|NbitMultiplierInstance|partial_products[2][3]~0_combout  & ( 
+// !\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|generate_gates[2].and_gates|y~combout  $ (\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [3]) ) ) # ( 
+// !\arith_unit|NbitMultiplierInstance|partial_products[2][3]~0_combout  & ( !\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|generate_gates[2].and_gates|y~combout  $ 
+// (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [3]) ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|generate_gates[2].and_gates|y~combout ),
+	.datad(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [3]),
+	.datae(gnd),
+	.dataf(!\arith_unit|NbitMultiplierInstance|partial_products[2][3]~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum [3]),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum[3] .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum[3] .lut_mask = 64'h0FF00FF0F00FF00F;
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum[3] .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X88_Y21_N36
+cyclonev_lcell_comb \logic_unit|shift_leftInstance|Mux7~1 (
+// Equation(s):
+// \logic_unit|shift_leftInstance|Mux7~1_combout  = ( \A[0]~input_o  & ( \A[2]~input_o  & ( ((!\B[1]~input_o  & (\A[3]~input_o )) # (\B[1]~input_o  & ((\A[1]~input_o )))) # (\B[0]~input_o ) ) ) ) # ( !\A[0]~input_o  & ( \A[2]~input_o  & ( (!\B[1]~input_o  & 
+// (((\B[0]~input_o )) # (\A[3]~input_o ))) # (\B[1]~input_o  & (((\A[1]~input_o  & !\B[0]~input_o )))) ) ) ) # ( \A[0]~input_o  & ( !\A[2]~input_o  & ( (!\B[1]~input_o  & (\A[3]~input_o  & ((!\B[0]~input_o )))) # (\B[1]~input_o  & (((\B[0]~input_o ) # 
+// (\A[1]~input_o )))) ) ) ) # ( !\A[0]~input_o  & ( !\A[2]~input_o  & ( (!\B[0]~input_o  & ((!\B[1]~input_o  & (\A[3]~input_o )) # (\B[1]~input_o  & ((\A[1]~input_o ))))) ) ) )
+
+	.dataa(!\A[3]~input_o ),
+	.datab(!\A[1]~input_o ),
+	.datac(!\B[1]~input_o ),
+	.datad(!\B[0]~input_o ),
+	.datae(!\A[0]~input_o ),
+	.dataf(!\A[2]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\logic_unit|shift_leftInstance|Mux7~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \logic_unit|shift_leftInstance|Mux7~1 .extended_lut = "off";
+defparam \logic_unit|shift_leftInstance|Mux7~1 .lut_mask = 64'h5300530F53F053FF;
+defparam \logic_unit|shift_leftInstance|Mux7~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X88_Y21_N15
+cyclonev_lcell_comb \result~5 (
+// Equation(s):
+// \result~5_combout  = ( \A[3]~input_o  & ( (!\B[3]~input_o  & ((!\operation[0]~input_o ) # ((\logic_unit|shift_leftInstance|Mux7~1_combout  & !\B[2]~input_o )))) ) ) # ( !\A[3]~input_o  & ( (!\operation[0]~input_o  & (((\B[3]~input_o )))) # 
+// (\operation[0]~input_o  & (\logic_unit|shift_leftInstance|Mux7~1_combout  & (!\B[2]~input_o  & !\B[3]~input_o ))) ) )
+
+	.dataa(!\logic_unit|shift_leftInstance|Mux7~1_combout ),
+	.datab(!\B[2]~input_o ),
+	.datac(!\operation[0]~input_o ),
+	.datad(!\B[3]~input_o ),
+	.datae(gnd),
+	.dataf(!\A[3]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\result~5_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \result~5 .extended_lut = "off";
+defparam \result~5 .lut_mask = 64'h04F004F0F400F400;
+defparam \result~5 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X88_Y21_N18
+cyclonev_lcell_comb \result~6 (
+// Equation(s):
+// \result~6_combout  = ( \result~5_combout  & ( (\operation[3]~input_o  & ((!\operation[2]~input_o  & (\operation[1]~input_o )) # (\operation[2]~input_o  & (!\operation[1]~input_o  & !\operation[0]~input_o )))) ) ) # ( !\result~5_combout  & ( 
+// (\operation[2]~input_o  & (\operation[3]~input_o  & (!\operation[1]~input_o  & !\operation[0]~input_o ))) ) )
+
+	.dataa(!\operation[2]~input_o ),
+	.datab(!\operation[3]~input_o ),
+	.datac(!\operation[1]~input_o ),
+	.datad(!\operation[0]~input_o ),
+	.datae(gnd),
+	.dataf(!\result~5_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\result~6_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \result~6 .extended_lut = "off";
+defparam \result~6 .lut_mask = 64'h1000100012021202;
+defparam \result~6 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X83_Y21_N33
+cyclonev_lcell_comb \result~7 (
+// Equation(s):
+// \result~7_combout  = ( \A[3]~input_o  & ( ((\result~0_combout  & (!\B[0]~input_o  $ (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum [3])))) # (\result~6_combout ) ) ) # ( !\A[3]~input_o  & ( 
+// ((\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum [3] & \result~0_combout )) # (\result~6_combout ) ) )
+
+	.dataa(!\B[0]~input_o ),
+	.datab(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum [3]),
+	.datac(!\result~6_combout ),
+	.datad(!\result~0_combout ),
+	.datae(gnd),
+	.dataf(!\A[3]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\result~7_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \result~7 .extended_lut = "off";
+defparam \result~7 .lut_mask = 64'h0F3F0F3F0F6F0F6F;
+defparam \result~7 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X89_Y23_N38
+cyclonev_io_ibuf \A[5]~input (
+	.i(A[5]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\A[5]~input_o ));
+// synopsys translate_off
+defparam \A[5]~input .bus_hold = "false";
+defparam \A[5]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X89_Y23_N21
+cyclonev_io_ibuf \A[6]~input (
+	.i(A[6]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\A[6]~input_o ));
+// synopsys translate_off
+defparam \A[6]~input .bus_hold = "false";
+defparam \A[6]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X89_Y23_N55
+cyclonev_io_ibuf \A[4]~input (
+	.i(A[4]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\A[4]~input_o ));
+// synopsys translate_off
+defparam \A[4]~input .bus_hold = "false";
+defparam \A[4]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X89_Y25_N4
+cyclonev_io_ibuf \A[7]~input (
+	.i(A[7]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\A[7]~input_o ));
+// synopsys translate_off
+defparam \A[7]~input .bus_hold = "false";
+defparam \A[7]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X85_Y22_N6
+cyclonev_lcell_comb \logic_unit|shift_leftInstance|Mux0~2 (
+// Equation(s):
+// \logic_unit|shift_leftInstance|Mux0~2_combout  = ( \B[1]~input_o  & ( \A[7]~input_o  & ( (!\B[0]~input_o  & ((\A[6]~input_o ))) # (\B[0]~input_o  & (\A[5]~input_o )) ) ) ) # ( !\B[1]~input_o  & ( \A[7]~input_o  & ( (\A[4]~input_o ) # (\B[0]~input_o ) ) ) 
+// ) # ( \B[1]~input_o  & ( !\A[7]~input_o  & ( (!\B[0]~input_o  & ((\A[6]~input_o ))) # (\B[0]~input_o  & (\A[5]~input_o )) ) ) ) # ( !\B[1]~input_o  & ( !\A[7]~input_o  & ( (!\B[0]~input_o  & \A[4]~input_o ) ) ) )
+
+	.dataa(!\A[5]~input_o ),
+	.datab(!\B[0]~input_o ),
+	.datac(!\A[6]~input_o ),
+	.datad(!\A[4]~input_o ),
+	.datae(!\B[1]~input_o ),
+	.dataf(!\A[7]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\logic_unit|shift_leftInstance|Mux0~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \logic_unit|shift_leftInstance|Mux0~2 .extended_lut = "off";
+defparam \logic_unit|shift_leftInstance|Mux0~2 .lut_mask = 64'h00CC1D1D33FF1D1D;
+defparam \logic_unit|shift_leftInstance|Mux0~2 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X85_Y22_N0
+cyclonev_lcell_comb \result~9 (
+// Equation(s):
+// \result~9_combout  = ( \operation[0]~input_o  & ( !\B[3]~input_o  ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(!\operation[0]~input_o ),
+	.dataf(!\B[3]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\result~9_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \result~9 .extended_lut = "off";
+defparam \result~9 .lut_mask = 64'h0000FFFF00000000;
+defparam \result~9 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X85_Y22_N12
+cyclonev_lcell_comb \result~10 (
+// Equation(s):
+// \result~10_combout  = ( !\B[1]~input_o  & ( \B[2]~input_o  & ( (\logic_unit|shift_leftInstance|Mux0~0_combout  & (\result~9_combout  & !\B[0]~input_o )) ) ) ) # ( \B[1]~input_o  & ( !\B[2]~input_o  & ( (\logic_unit|shift_leftInstance|Mux0~0_combout  & 
+// \result~9_combout ) ) ) ) # ( !\B[1]~input_o  & ( !\B[2]~input_o  & ( (\result~9_combout  & ((!\B[0]~input_o  & ((\logic_unit|shift_leftInstance|Mux0~2_combout ))) # (\B[0]~input_o  & (\logic_unit|shift_leftInstance|Mux0~0_combout )))) ) ) )
+
+	.dataa(!\logic_unit|shift_leftInstance|Mux0~0_combout ),
+	.datab(!\logic_unit|shift_leftInstance|Mux0~2_combout ),
+	.datac(!\result~9_combout ),
+	.datad(!\B[0]~input_o ),
+	.datae(!\B[1]~input_o ),
+	.dataf(!\B[2]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\result~10_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \result~10 .extended_lut = "off";
+defparam \result~10 .lut_mask = 64'h0305050505000000;
+defparam \result~10 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X88_Y21_N21
+cyclonev_lcell_comb \result~11 (
+// Equation(s):
+// \result~11_combout  = (!\operation[2]~input_o  & (\operation[3]~input_o  & \operation[1]~input_o ))
+
+	.dataa(!\operation[2]~input_o ),
+	.datab(!\operation[3]~input_o ),
+	.datac(!\operation[1]~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\result~11_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \result~11 .extended_lut = "off";
+defparam \result~11 .lut_mask = 64'h0202020202020202;
+defparam \result~11 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X89_Y16_N55
+cyclonev_io_ibuf \B[4]~input (
+	.i(B[4]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\B[4]~input_o ));
+// synopsys translate_off
+defparam \B[4]~input .bus_hold = "false";
+defparam \B[4]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X85_Y21_N33
+cyclonev_lcell_comb \result~8 (
+// Equation(s):
+// \result~8_combout  = ( \A[4]~input_o  & ( (!\B[4]~input_o  & !\operation[0]~input_o ) ) ) # ( !\A[4]~input_o  & ( (\B[4]~input_o  & !\operation[0]~input_o ) ) )
+
+	.dataa(!\B[4]~input_o ),
+	.datab(gnd),
+	.datac(!\operation[0]~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\A[4]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\result~8_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \result~8 .extended_lut = "off";
+defparam \result~8 .lut_mask = 64'h50505050A0A0A0A0;
+defparam \result~8 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X83_Y21_N39
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[3].and_gates|y (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[3].and_gates|y~combout  = ( \B[0]~input_o  & ( (\A[3]~input_o  & 
+// (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|generate_gates[2].and_gates|y~combout  $ (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [3] $ 
+// (\arith_unit|NbitMultiplierInstance|partial_products[2][3]~0_combout )))) ) )
+
+	.dataa(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|generate_gates[2].and_gates|y~combout ),
+	.datab(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [3]),
+	.datac(!\A[3]~input_o ),
+	.datad(!\arith_unit|NbitMultiplierInstance|partial_products[2][3]~0_combout ),
+	.datae(!\B[0]~input_o ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[3].and_gates|y~combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[3].and_gates|y .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[3].and_gates|y .lut_mask = 64'h0000060900000609;
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[3].and_gates|y .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X83_Y21_N51
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|partial_products[3][4]~2 (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|partial_products[3][4]~2_combout  = (\A[3]~input_o  & \B[1]~input_o )
+
+	.dataa(gnd),
+	.datab(!\A[3]~input_o ),
+	.datac(!\B[1]~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|partial_products[3][4]~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|partial_products[3][4]~2 .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|partial_products[3][4]~2 .lut_mask = 64'h0303030303030303;
+defparam \arith_unit|NbitMultiplierInstance|partial_products[3][4]~2 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X87_Y21_N27
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|partial_products[2][4]~1 (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|partial_products[2][4]~1_combout  = ( \B[2]~input_o  & ( \A[2]~input_o  ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\A[2]~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\B[2]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|partial_products[2][4]~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|partial_products[2][4]~1 .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|partial_products[2][4]~1 .lut_mask = 64'h000000000F0F0F0F;
+defparam \arith_unit|NbitMultiplierInstance|partial_products[2][4]~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X87_Y21_N48
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~0 (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~0_combout  = ( \A[1]~input_o  & ( \B[2]~input_o  & ( (\A[0]~input_o  & ((\B[1]~input_o ) # (\B[3]~input_o ))) ) ) ) # ( \A[1]~input_o  & ( !\B[2]~input_o  & ( 
+// (\A[0]~input_o  & (\B[3]~input_o  & (\B[0]~input_o  & \B[1]~input_o ))) ) ) )
+
+	.dataa(!\A[0]~input_o ),
+	.datab(!\B[3]~input_o ),
+	.datac(!\B[0]~input_o ),
+	.datad(!\B[1]~input_o ),
+	.datae(!\A[1]~input_o ),
+	.dataf(!\B[2]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~0 .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~0 .lut_mask = 64'h0000000100001155;
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X87_Y21_N24
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[4].xor_gates|y (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[4].xor_gates|y~combout  = ( \A[0]~input_o  & ( !\B[4]~input_o  $ (((!\A[1]~input_o ) # (!\B[3]~input_o ))) ) ) # ( !\A[0]~input_o  & ( (\A[1]~input_o  & \B[3]~input_o 
+// ) ) )
+
+	.dataa(!\A[1]~input_o ),
+	.datab(!\B[3]~input_o ),
+	.datac(!\B[4]~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\A[0]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[4].xor_gates|y~combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[4].xor_gates|y .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[4].xor_gates|y .lut_mask = 64'h111111111E1E1E1E;
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[4].xor_gates|y .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X83_Y21_N42
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum[4] (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum [4] = ( \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [3] & ( \arith_unit|NbitMultiplierInstance|partial_products[2][3]~0_combout  & ( 
+// !\arith_unit|NbitMultiplierInstance|partial_products[2][4]~1_combout  $ (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~0_combout  $ 
+// (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[4].xor_gates|y~combout )) ) ) ) # ( !\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [3] & ( 
+// \arith_unit|NbitMultiplierInstance|partial_products[2][3]~0_combout  & ( !\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|generate_gates[2].and_gates|y~combout  $ 
+// (!\arith_unit|NbitMultiplierInstance|partial_products[2][4]~1_combout  $ (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~0_combout  $ 
+// (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[4].xor_gates|y~combout ))) ) ) ) # ( \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [3] & ( 
+// !\arith_unit|NbitMultiplierInstance|partial_products[2][3]~0_combout  & ( !\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|generate_gates[2].and_gates|y~combout  $ 
+// (!\arith_unit|NbitMultiplierInstance|partial_products[2][4]~1_combout  $ (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~0_combout  $ 
+// (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[4].xor_gates|y~combout ))) ) ) ) # ( !\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [3] & ( 
+// !\arith_unit|NbitMultiplierInstance|partial_products[2][3]~0_combout  & ( !\arith_unit|NbitMultiplierInstance|partial_products[2][4]~1_combout  $ (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~0_combout  $ 
+// (\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[4].xor_gates|y~combout )) ) ) )
+
+	.dataa(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|generate_gates[2].and_gates|y~combout ),
+	.datab(!\arith_unit|NbitMultiplierInstance|partial_products[2][4]~1_combout ),
+	.datac(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~0_combout ),
+	.datad(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[4].xor_gates|y~combout ),
+	.datae(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [3]),
+	.dataf(!\arith_unit|NbitMultiplierInstance|partial_products[2][3]~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum [4]),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum[4] .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum[4] .lut_mask = 64'h3CC369966996C33C;
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum[4] .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X83_Y21_N57
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|generate_gates[4].xor_gates|y (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|generate_gates[4].xor_gates|y~combout  = ( \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum [4] & ( 
+// !\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[3].and_gates|y~combout  $ (!\arith_unit|NbitMultiplierInstance|partial_products[3][4]~2_combout  $ (((!\B[0]~input_o ) # (!\A[4]~input_o )))) ) ) # ( 
+// !\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum [4] & ( !\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[3].and_gates|y~combout  $ 
+// (!\arith_unit|NbitMultiplierInstance|partial_products[3][4]~2_combout  $ (((\B[0]~input_o  & \A[4]~input_o )))) ) )
+
+	.dataa(!\B[0]~input_o ),
+	.datab(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[3].and_gates|y~combout ),
+	.datac(!\arith_unit|NbitMultiplierInstance|partial_products[3][4]~2_combout ),
+	.datad(!\A[4]~input_o ),
+	.datae(gnd),
+	.dataf(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum [4]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|generate_gates[4].xor_gates|y~combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|generate_gates[4].xor_gates|y .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|generate_gates[4].xor_gates|y .lut_mask = 64'h3C693C69C396C396;
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|generate_gates[4].xor_gates|y .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X83_Y21_N0
+cyclonev_lcell_comb \result~12 (
+// Equation(s):
+// \result~12_combout  = ( \result~0_combout  & ( ((\result~11_combout  & ((\result~8_combout ) # (\result~10_combout )))) # (\arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|generate_gates[4].xor_gates|y~combout ) ) ) # ( 
+// !\result~0_combout  & ( (\result~11_combout  & ((\result~8_combout ) # (\result~10_combout ))) ) )
+
+	.dataa(!\result~10_combout ),
+	.datab(!\result~11_combout ),
+	.datac(!\result~8_combout ),
+	.datad(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|generate_gates[4].xor_gates|y~combout ),
+	.datae(!\result~0_combout ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\result~12_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \result~12 .extended_lut = "off";
+defparam \result~12 .lut_mask = 64'h131313FF131313FF;
+defparam \result~12 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X85_Y22_N21
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|partial_products[4][5]~7 (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|partial_products[4][5]~7_combout  = ( \A[4]~input_o  & ( \B[1]~input_o  ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\B[1]~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\A[4]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|partial_products[4][5]~7_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|partial_products[4][5]~7 .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|partial_products[4][5]~7 .lut_mask = 64'h000000000F0F0F0F;
+defparam \arith_unit|NbitMultiplierInstance|partial_products[4][5]~7 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X85_Y22_N18
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|partial_products[5][5]~8 (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|partial_products[5][5]~8_combout  = (\B[0]~input_o  & \A[5]~input_o )
+
+	.dataa(gnd),
+	.datab(!\B[0]~input_o ),
+	.datac(!\A[5]~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|partial_products[5][5]~8_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|partial_products[5][5]~8 .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|partial_products[5][5]~8 .lut_mask = 64'h0303030303030303;
+defparam \arith_unit|NbitMultiplierInstance|partial_products[5][5]~8 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X83_Y21_N54
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|generate_gates[4].and_gates|y (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|generate_gates[4].and_gates|y~combout  = ( \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum [4] & ( (\B[0]~input_o  & (\A[4]~input_o  & 
+// (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[3].and_gates|y~combout  $ (\arith_unit|NbitMultiplierInstance|partial_products[3][4]~2_combout )))) ) ) # ( 
+// !\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum [4] & ( (\B[0]~input_o  & (\A[4]~input_o  & (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[3].and_gates|y~combout  $ 
+// (!\arith_unit|NbitMultiplierInstance|partial_products[3][4]~2_combout )))) ) )
+
+	.dataa(!\B[0]~input_o ),
+	.datab(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[3].and_gates|y~combout ),
+	.datac(!\A[4]~input_o ),
+	.datad(!\arith_unit|NbitMultiplierInstance|partial_products[3][4]~2_combout ),
+	.datae(gnd),
+	.dataf(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum [4]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|generate_gates[4].and_gates|y~combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|generate_gates[4].and_gates|y .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|generate_gates[4].and_gates|y .lut_mask = 64'h0104010404010401;
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|generate_gates[4].and_gates|y .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X89_Y20_N61
+cyclonev_io_ibuf \B[5]~input (
+	.i(B[5]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\B[5]~input_o ));
+// synopsys translate_off
+defparam \B[5]~input .bus_hold = "false";
+defparam \B[5]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X85_Y22_N54
+cyclonev_lcell_comb \logic_unit|shift_leftInstance|Mux7~2 (
+// Equation(s):
+// \logic_unit|shift_leftInstance|Mux7~2_combout  = ( \B[1]~input_o  & ( \A[7]~input_o  & ( (!\B[0]~input_o ) # (\A[6]~input_o ) ) ) ) # ( !\B[1]~input_o  & ( \A[7]~input_o  & ( (!\B[0]~input_o  & (\A[5]~input_o )) # (\B[0]~input_o  & ((\A[4]~input_o ))) ) ) 
+// ) # ( \B[1]~input_o  & ( !\A[7]~input_o  & ( (\B[0]~input_o  & \A[6]~input_o ) ) ) ) # ( !\B[1]~input_o  & ( !\A[7]~input_o  & ( (!\B[0]~input_o  & (\A[5]~input_o )) # (\B[0]~input_o  & ((\A[4]~input_o ))) ) ) )
+
+	.dataa(!\A[5]~input_o ),
+	.datab(!\B[0]~input_o ),
+	.datac(!\A[6]~input_o ),
+	.datad(!\A[4]~input_o ),
+	.datae(!\B[1]~input_o ),
+	.dataf(!\A[7]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\logic_unit|shift_leftInstance|Mux7~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \logic_unit|shift_leftInstance|Mux7~2 .extended_lut = "off";
+defparam \logic_unit|shift_leftInstance|Mux7~2 .lut_mask = 64'h447703034477CFCF;
+defparam \logic_unit|shift_leftInstance|Mux7~2 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X85_Y22_N33
+cyclonev_lcell_comb \result~13 (
+// Equation(s):
+// \result~13_combout  = ( \logic_unit|shift_leftInstance|Mux7~2_combout  & ( \B[2]~input_o  & ( (\logic_unit|shift_leftInstance|Mux7~0_combout  & (!\B[1]~input_o  & \result~9_combout )) ) ) ) # ( !\logic_unit|shift_leftInstance|Mux7~2_combout  & ( 
+// \B[2]~input_o  & ( (\logic_unit|shift_leftInstance|Mux7~0_combout  & (!\B[1]~input_o  & \result~9_combout )) ) ) ) # ( \logic_unit|shift_leftInstance|Mux7~2_combout  & ( !\B[2]~input_o  & ( (\result~9_combout  & ((!\B[1]~input_o ) # 
+// (\logic_unit|shift_leftInstance|Mux7~0_combout ))) ) ) ) # ( !\logic_unit|shift_leftInstance|Mux7~2_combout  & ( !\B[2]~input_o  & ( (\logic_unit|shift_leftInstance|Mux7~0_combout  & (\B[1]~input_o  & \result~9_combout )) ) ) )
+
+	.dataa(!\logic_unit|shift_leftInstance|Mux7~0_combout ),
+	.datab(!\B[1]~input_o ),
+	.datac(gnd),
+	.datad(!\result~9_combout ),
+	.datae(!\logic_unit|shift_leftInstance|Mux7~2_combout ),
+	.dataf(!\B[2]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\result~13_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \result~13 .extended_lut = "off";
+defparam \result~13 .lut_mask = 64'h001100DD00440044;
+defparam \result~13 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X85_Y22_N39
+cyclonev_lcell_comb \result~14 (
+// Equation(s):
+// \result~14_combout  = ( \result~13_combout  & ( \result~11_combout  ) ) # ( !\result~13_combout  & ( (\result~11_combout  & (!\operation[0]~input_o  & (!\B[5]~input_o  $ (!\A[5]~input_o )))) ) )
+
+	.dataa(!\result~11_combout ),
+	.datab(!\operation[0]~input_o ),
+	.datac(!\B[5]~input_o ),
+	.datad(!\A[5]~input_o ),
+	.datae(gnd),
+	.dataf(!\result~13_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\result~14_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \result~14 .extended_lut = "off";
+defparam \result~14 .lut_mask = 64'h0440044055555555;
+defparam \result~14 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X83_Y21_N48
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|partial_products[3][5]~6 (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|partial_products[3][5]~6_combout  = ( \B[2]~input_o  & ( \A[3]~input_o  ) )
+
+	.dataa(gnd),
+	.datab(!\A[3]~input_o ),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\B[2]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|partial_products[3][5]~6_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|partial_products[3][5]~6 .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|partial_products[3][5]~6 .lut_mask = 64'h0000000033333333;
+defparam \arith_unit|NbitMultiplierInstance|partial_products[3][5]~6 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X85_Y21_N30
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|partial_products[0][4]~3 (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|partial_products[0][4]~3_combout  = (\B[4]~input_o  & \A[0]~input_o )
+
+	.dataa(!\B[4]~input_o ),
+	.datab(gnd),
+	.datac(!\A[0]~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|partial_products[0][4]~3_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|partial_products[0][4]~3 .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|partial_products[0][4]~3 .lut_mask = 64'h0505050505050505;
+defparam \arith_unit|NbitMultiplierInstance|partial_products[0][4]~3 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X88_Y21_N27
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|partial_products[2][5]~5 (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|partial_products[2][5]~5_combout  = (\A[2]~input_o  & \B[3]~input_o )
+
+	.dataa(!\A[2]~input_o ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\B[3]~input_o ),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|partial_products[2][5]~5_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|partial_products[2][5]~5 .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|partial_products[2][5]~5 .lut_mask = 64'h0055005500550055;
+defparam \arith_unit|NbitMultiplierInstance|partial_products[2][5]~5 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X85_Y21_N45
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[5].xor_gates|y (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[5].xor_gates|y~combout  = ( \A[1]~input_o  & ( !\B[4]~input_o  $ (((!\B[5]~input_o ) # (!\A[0]~input_o ))) ) ) # ( !\A[1]~input_o  & ( (\B[5]~input_o  & \A[0]~input_o 
+// ) ) )
+
+	.dataa(!\B[5]~input_o ),
+	.datab(!\B[4]~input_o ),
+	.datac(gnd),
+	.datad(!\A[0]~input_o ),
+	.datae(gnd),
+	.dataf(!\A[1]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[5].xor_gates|y~combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[5].xor_gates|y .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[5].xor_gates|y .lut_mask = 64'h0055005533663366;
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[5].xor_gates|y .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X85_Y21_N39
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|partial_products[1][4]~4 (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|partial_products[1][4]~4_combout  = ( \B[3]~input_o  & ( \A[1]~input_o  ) )
+
+	.dataa(!\A[1]~input_o ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(!\B[3]~input_o ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|partial_products[1][4]~4_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|partial_products[1][4]~4 .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|partial_products[1][4]~4 .lut_mask = 64'h0000555500005555;
+defparam \arith_unit|NbitMultiplierInstance|partial_products[1][4]~4 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X85_Y21_N48
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|generate_gates[5].xor_gates|y (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|generate_gates[5].xor_gates|y~combout  = ( \arith_unit|NbitMultiplierInstance|partial_products[1][4]~4_combout  & ( 
+// !\arith_unit|NbitMultiplierInstance|partial_products[2][5]~5_combout  $ (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[5].xor_gates|y~combout  $ 
+// (((\arith_unit|NbitMultiplierInstance|partial_products[0][4]~3_combout ) # (\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~0_combout )))) ) ) # ( !\arith_unit|NbitMultiplierInstance|partial_products[1][4]~4_combout  & 
+// ( !\arith_unit|NbitMultiplierInstance|partial_products[2][5]~5_combout  $ (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[5].xor_gates|y~combout  $ 
+// (((\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~0_combout  & \arith_unit|NbitMultiplierInstance|partial_products[0][4]~3_combout )))) ) )
+
+	.dataa(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~0_combout ),
+	.datab(!\arith_unit|NbitMultiplierInstance|partial_products[0][4]~3_combout ),
+	.datac(!\arith_unit|NbitMultiplierInstance|partial_products[2][5]~5_combout ),
+	.datad(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[5].xor_gates|y~combout ),
+	.datae(gnd),
+	.dataf(!\arith_unit|NbitMultiplierInstance|partial_products[1][4]~4_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|generate_gates[5].xor_gates|y~combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|generate_gates[5].xor_gates|y .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|generate_gates[5].xor_gates|y .lut_mask = 64'h1EE11EE178877887;
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|generate_gates[5].xor_gates|y .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X83_Y21_N6
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~0 (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~0_combout  = ( \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [3] & ( \arith_unit|NbitMultiplierInstance|partial_products[2][3]~0_combout  & 
+// ( (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~0_combout  $ (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[4].xor_gates|y~combout )) # 
+// (\arith_unit|NbitMultiplierInstance|partial_products[2][4]~1_combout ) ) ) ) # ( !\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [3] & ( \arith_unit|NbitMultiplierInstance|partial_products[2][3]~0_combout  & ( 
+// (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|generate_gates[2].and_gates|y~combout  & (\arith_unit|NbitMultiplierInstance|partial_products[2][4]~1_combout  & 
+// (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~0_combout  $ (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[4].xor_gates|y~combout )))) # 
+// (\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|generate_gates[2].and_gates|y~combout  & ((!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~0_combout  $ 
+// (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[4].xor_gates|y~combout )) # (\arith_unit|NbitMultiplierInstance|partial_products[2][4]~1_combout ))) ) ) ) # ( 
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [3] & ( !\arith_unit|NbitMultiplierInstance|partial_products[2][3]~0_combout  & ( 
+// (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|generate_gates[2].and_gates|y~combout  & (\arith_unit|NbitMultiplierInstance|partial_products[2][4]~1_combout  & 
+// (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~0_combout  $ (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[4].xor_gates|y~combout )))) # 
+// (\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|generate_gates[2].and_gates|y~combout  & ((!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~0_combout  $ 
+// (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[4].xor_gates|y~combout )) # (\arith_unit|NbitMultiplierInstance|partial_products[2][4]~1_combout ))) ) ) ) # ( 
+// !\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [3] & ( !\arith_unit|NbitMultiplierInstance|partial_products[2][3]~0_combout  & ( (\arith_unit|NbitMultiplierInstance|partial_products[2][4]~1_combout  & 
+// (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~0_combout  $ (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[4].xor_gates|y~combout ))) ) ) )
+
+	.dataa(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|generate_gates[2].and_gates|y~combout ),
+	.datab(!\arith_unit|NbitMultiplierInstance|partial_products[2][4]~1_combout ),
+	.datac(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~0_combout ),
+	.datad(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[4].xor_gates|y~combout ),
+	.datae(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [3]),
+	.dataf(!\arith_unit|NbitMultiplierInstance|partial_products[2][3]~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~0 .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~0 .lut_mask = 64'h0330177117713FF3;
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X83_Y21_N12
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|sum[5] (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|sum [5] = ( \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|generate_gates[5].xor_gates|y~combout  & ( 
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~0_combout  & ( !\arith_unit|NbitMultiplierInstance|partial_products[3][5]~6_combout  $ (((!\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum 
+// [4] & ((!\arith_unit|NbitMultiplierInstance|partial_products[3][4]~2_combout ) # (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[3].and_gates|y~combout ))) # 
+// (\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum [4] & (!\arith_unit|NbitMultiplierInstance|partial_products[3][4]~2_combout  & 
+// !\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[3].and_gates|y~combout )))) ) ) ) # ( !\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|generate_gates[5].xor_gates|y~combout  & ( 
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~0_combout  & ( !\arith_unit|NbitMultiplierInstance|partial_products[3][5]~6_combout  $ (((!\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum 
+// [4] & (\arith_unit|NbitMultiplierInstance|partial_products[3][4]~2_combout  & \arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[3].and_gates|y~combout )) # 
+// (\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum [4] & ((\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[3].and_gates|y~combout ) # 
+// (\arith_unit|NbitMultiplierInstance|partial_products[3][4]~2_combout ))))) ) ) ) # ( \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|generate_gates[5].xor_gates|y~combout  & ( 
+// !\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~0_combout  & ( !\arith_unit|NbitMultiplierInstance|partial_products[3][5]~6_combout  $ (((!\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum 
+// [4] & (\arith_unit|NbitMultiplierInstance|partial_products[3][4]~2_combout  & \arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[3].and_gates|y~combout )) # 
+// (\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum [4] & ((\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[3].and_gates|y~combout ) # 
+// (\arith_unit|NbitMultiplierInstance|partial_products[3][4]~2_combout ))))) ) ) ) # ( !\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|generate_gates[5].xor_gates|y~combout  & ( 
+// !\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~0_combout  & ( !\arith_unit|NbitMultiplierInstance|partial_products[3][5]~6_combout  $ (((!\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum 
+// [4] & ((!\arith_unit|NbitMultiplierInstance|partial_products[3][4]~2_combout ) # (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[3].and_gates|y~combout ))) # 
+// (\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum [4] & (!\arith_unit|NbitMultiplierInstance|partial_products[3][4]~2_combout  & 
+// !\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[3].and_gates|y~combout )))) ) ) )
+
+	.dataa(!\arith_unit|NbitMultiplierInstance|partial_products[3][5]~6_combout ),
+	.datab(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum [4]),
+	.datac(!\arith_unit|NbitMultiplierInstance|partial_products[3][4]~2_combout ),
+	.datad(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[3].and_gates|y~combout ),
+	.datae(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|generate_gates[5].xor_gates|y~combout ),
+	.dataf(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|sum [5]),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|sum[5] .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|sum[5] .lut_mask = 64'h566AA995A995566A;
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|sum[5] .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X84_Y21_N0
+cyclonev_lcell_comb \result~15 (
+// Equation(s):
+// \result~15_combout  = ( \arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|sum [5] & ( \result~0_combout  & ( (!\arith_unit|NbitMultiplierInstance|partial_products[4][5]~7_combout  $ 
+// (!\arith_unit|NbitMultiplierInstance|partial_products[5][5]~8_combout  $ (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|generate_gates[4].and_gates|y~combout ))) # (\result~14_combout ) ) ) ) # ( 
+// !\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|sum [5] & ( \result~0_combout  & ( (!\arith_unit|NbitMultiplierInstance|partial_products[4][5]~7_combout  $ (!\arith_unit|NbitMultiplierInstance|partial_products[5][5]~8_combout  $ 
+// (\arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|generate_gates[4].and_gates|y~combout ))) # (\result~14_combout ) ) ) ) # ( \arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|sum [5] & ( !\result~0_combout  
+// & ( \result~14_combout  ) ) ) # ( !\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|sum [5] & ( !\result~0_combout  & ( \result~14_combout  ) ) )
+
+	.dataa(!\arith_unit|NbitMultiplierInstance|partial_products[4][5]~7_combout ),
+	.datab(!\arith_unit|NbitMultiplierInstance|partial_products[5][5]~8_combout ),
+	.datac(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|generate_gates[4].and_gates|y~combout ),
+	.datad(!\result~14_combout ),
+	.datae(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|sum [5]),
+	.dataf(!\result~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\result~15_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \result~15 .extended_lut = "off";
+defparam \result~15 .lut_mask = 64'h00FF00FF69FF96FF;
+defparam \result~15 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X85_Y22_N42
+cyclonev_lcell_comb \logic_unit|shift_leftInstance|Mux0~3 (
+// Equation(s):
+// \logic_unit|shift_leftInstance|Mux0~3_combout  = ( \B[1]~input_o  & ( \A[7]~input_o  & ( (\A[4]~input_o ) # (\B[0]~input_o ) ) ) ) # ( !\B[1]~input_o  & ( \A[7]~input_o  & ( (!\B[0]~input_o  & ((\A[6]~input_o ))) # (\B[0]~input_o  & (\A[5]~input_o )) ) ) 
+// ) # ( \B[1]~input_o  & ( !\A[7]~input_o  & ( (!\B[0]~input_o  & \A[4]~input_o ) ) ) ) # ( !\B[1]~input_o  & ( !\A[7]~input_o  & ( (!\B[0]~input_o  & ((\A[6]~input_o ))) # (\B[0]~input_o  & (\A[5]~input_o )) ) ) )
+
+	.dataa(!\A[5]~input_o ),
+	.datab(!\B[0]~input_o ),
+	.datac(!\A[6]~input_o ),
+	.datad(!\A[4]~input_o ),
+	.datae(!\B[1]~input_o ),
+	.dataf(!\A[7]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\logic_unit|shift_leftInstance|Mux0~3_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \logic_unit|shift_leftInstance|Mux0~3 .extended_lut = "off";
+defparam \logic_unit|shift_leftInstance|Mux0~3 .lut_mask = 64'h1D1D00CC1D1D33FF;
+defparam \logic_unit|shift_leftInstance|Mux0~3 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X85_Y22_N48
+cyclonev_lcell_comb \result~16 (
+// Equation(s):
+// \result~16_combout  = ( \result~9_combout  & ( \B[0]~input_o  & ( (!\B[2]~input_o  & ((!\B[1]~input_o  & (\logic_unit|shift_leftInstance|Mux0~3_combout )) # (\B[1]~input_o  & ((\logic_unit|shift_leftInstance|Mux0~1_combout ))))) # (\B[2]~input_o  & 
+// (((\logic_unit|shift_leftInstance|Mux0~1_combout  & !\B[1]~input_o )))) ) ) ) # ( \result~9_combout  & ( !\B[0]~input_o  & ( (!\B[2]~input_o  & (\logic_unit|shift_leftInstance|Mux0~3_combout )) # (\B[2]~input_o  & 
+// ((\logic_unit|shift_leftInstance|Mux0~1_combout ))) ) ) )
+
+	.dataa(!\B[2]~input_o ),
+	.datab(!\logic_unit|shift_leftInstance|Mux0~3_combout ),
+	.datac(!\logic_unit|shift_leftInstance|Mux0~1_combout ),
+	.datad(!\B[1]~input_o ),
+	.datae(!\result~9_combout ),
+	.dataf(!\B[0]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\result~16_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \result~16 .extended_lut = "off";
+defparam \result~16 .lut_mask = 64'h000027270000270A;
+defparam \result~16 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X89_Y25_N38
+cyclonev_io_ibuf \B[6]~input (
+	.i(B[6]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\B[6]~input_o ));
+// synopsys translate_off
+defparam \B[6]~input .bus_hold = "false";
+defparam \B[6]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X85_Y22_N36
+cyclonev_lcell_comb \result~17 (
+// Equation(s):
+// \result~17_combout  = ( \B[6]~input_o  & ( (\result~11_combout  & (((!\operation[0]~input_o  & !\A[6]~input_o )) # (\result~16_combout ))) ) ) # ( !\B[6]~input_o  & ( (\result~11_combout  & (((!\operation[0]~input_o  & \A[6]~input_o )) # 
+// (\result~16_combout ))) ) )
+
+	.dataa(!\result~11_combout ),
+	.datab(!\operation[0]~input_o ),
+	.datac(!\result~16_combout ),
+	.datad(!\A[6]~input_o ),
+	.datae(gnd),
+	.dataf(!\B[6]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\result~17_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \result~17 .extended_lut = "off";
+defparam \result~17 .lut_mask = 64'h0545054545054505;
+defparam \result~17 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X84_Y21_N30
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|partial_products[6][6]~15 (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|partial_products[6][6]~15_combout  = ( \A[6]~input_o  & ( \B[0]~input_o  ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\B[0]~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\A[6]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|partial_products[6][6]~15_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|partial_products[6][6]~15 .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|partial_products[6][6]~15 .lut_mask = 64'h000000000F0F0F0F;
+defparam \arith_unit|NbitMultiplierInstance|partial_products[6][6]~15 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X84_Y21_N51
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|partial_products[4][6]~13 (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|partial_products[4][6]~13_combout  = ( \A[4]~input_o  & ( \B[2]~input_o  ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\B[2]~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\A[4]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|partial_products[4][6]~13_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|partial_products[4][6]~13 .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|partial_products[4][6]~13 .lut_mask = 64'h000000000F0F0F0F;
+defparam \arith_unit|NbitMultiplierInstance|partial_products[4][6]~13 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X83_Y21_N18
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|carry_out_i~0 (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|carry_out_i~0_combout  = ( \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|generate_gates[5].xor_gates|y~combout  & ( 
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~0_combout  & ( (\arith_unit|NbitMultiplierInstance|partial_products[3][5]~6_combout  & ((!\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum [4] 
+// & (\arith_unit|NbitMultiplierInstance|partial_products[3][4]~2_combout  & \arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[3].and_gates|y~combout )) # 
+// (\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum [4] & ((\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[3].and_gates|y~combout ) # 
+// (\arith_unit|NbitMultiplierInstance|partial_products[3][4]~2_combout ))))) ) ) ) # ( !\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|generate_gates[5].xor_gates|y~combout  & ( 
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~0_combout  & ( ((!\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum [4] & (\arith_unit|NbitMultiplierInstance|partial_products[3][4]~2_combout  
+// & \arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[3].and_gates|y~combout )) # (\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum [4] & 
+// ((\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[3].and_gates|y~combout ) # (\arith_unit|NbitMultiplierInstance|partial_products[3][4]~2_combout )))) # 
+// (\arith_unit|NbitMultiplierInstance|partial_products[3][5]~6_combout ) ) ) ) # ( \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|generate_gates[5].xor_gates|y~combout  & ( 
+// !\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~0_combout  & ( ((!\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum [4] & (\arith_unit|NbitMultiplierInstance|partial_products[3][4]~2_combout 
+//  & \arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[3].and_gates|y~combout )) # (\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum [4] & 
+// ((\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[3].and_gates|y~combout ) # (\arith_unit|NbitMultiplierInstance|partial_products[3][4]~2_combout )))) # 
+// (\arith_unit|NbitMultiplierInstance|partial_products[3][5]~6_combout ) ) ) ) # ( !\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|generate_gates[5].xor_gates|y~combout  & ( 
+// !\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~0_combout  & ( (\arith_unit|NbitMultiplierInstance|partial_products[3][5]~6_combout  & ((!\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum 
+// [4] & (\arith_unit|NbitMultiplierInstance|partial_products[3][4]~2_combout  & \arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[3].and_gates|y~combout )) # 
+// (\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum [4] & ((\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[3].and_gates|y~combout ) # 
+// (\arith_unit|NbitMultiplierInstance|partial_products[3][4]~2_combout ))))) ) ) )
+
+	.dataa(!\arith_unit|NbitMultiplierInstance|partial_products[3][5]~6_combout ),
+	.datab(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|sum [4]),
+	.datac(!\arith_unit|NbitMultiplierInstance|partial_products[3][4]~2_combout ),
+	.datad(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[3].and_gates|y~combout ),
+	.datae(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|generate_gates[5].xor_gates|y~combout ),
+	.dataf(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|carry_out_i~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|carry_out_i~0 .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|carry_out_i~0 .lut_mask = 64'h0115577F577F0115;
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|carry_out_i~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X85_Y21_N0
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|partial_products[1][5]~10 (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|partial_products[1][5]~10_combout  = (\B[4]~input_o  & \A[1]~input_o )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\B[4]~input_o ),
+	.datad(!\A[1]~input_o ),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|partial_products[1][5]~10_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|partial_products[1][5]~10 .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|partial_products[1][5]~10 .lut_mask = 64'h000F000F000F000F;
+defparam \arith_unit|NbitMultiplierInstance|partial_products[1][5]~10 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X85_Y21_N57
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|partial_products[0][5]~9 (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|partial_products[0][5]~9_combout  = ( \B[5]~input_o  & ( \A[0]~input_o  ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\A[0]~input_o ),
+	.datae(gnd),
+	.dataf(!\B[5]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|partial_products[0][5]~9_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|partial_products[0][5]~9 .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|partial_products[0][5]~9 .lut_mask = 64'h0000000000FF00FF;
+defparam \arith_unit|NbitMultiplierInstance|partial_products[0][5]~9 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X85_Y21_N6
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[6].xor_gates|y (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[6].xor_gates|y~combout  = ( \B[6]~input_o  & ( !\A[0]~input_o  $ (((!\A[1]~input_o ) # (!\B[5]~input_o ))) ) ) # ( !\B[6]~input_o  & ( (\A[1]~input_o  & \B[5]~input_o 
+// ) ) )
+
+	.dataa(gnd),
+	.datab(!\A[1]~input_o ),
+	.datac(!\B[5]~input_o ),
+	.datad(!\A[0]~input_o ),
+	.datae(gnd),
+	.dataf(!\B[6]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[6].xor_gates|y~combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[6].xor_gates|y .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[6].xor_gates|y .lut_mask = 64'h0303030303FC03FC;
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[6].xor_gates|y .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X85_Y21_N12
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum[6] (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [6] = ( \arith_unit|NbitMultiplierInstance|partial_products[0][5]~9_combout  & ( 
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[6].xor_gates|y~combout  & ( (!\arith_unit|NbitMultiplierInstance|partial_products[1][5]~10_combout  & 
+// ((!\arith_unit|NbitMultiplierInstance|partial_products[0][4]~3_combout  & ((!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~0_combout ) # (!\arith_unit|NbitMultiplierInstance|partial_products[1][4]~4_combout ))) # 
+// (\arith_unit|NbitMultiplierInstance|partial_products[0][4]~3_combout  & (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~0_combout  & !\arith_unit|NbitMultiplierInstance|partial_products[1][4]~4_combout )))) ) ) ) # ( 
+// !\arith_unit|NbitMultiplierInstance|partial_products[0][5]~9_combout  & ( \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[6].xor_gates|y~combout  & ( 
+// (!\arith_unit|NbitMultiplierInstance|partial_products[1][5]~10_combout ) # ((!\arith_unit|NbitMultiplierInstance|partial_products[0][4]~3_combout  & ((!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~0_combout ) # 
+// (!\arith_unit|NbitMultiplierInstance|partial_products[1][4]~4_combout ))) # (\arith_unit|NbitMultiplierInstance|partial_products[0][4]~3_combout  & (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~0_combout  & 
+// !\arith_unit|NbitMultiplierInstance|partial_products[1][4]~4_combout ))) ) ) ) # ( \arith_unit|NbitMultiplierInstance|partial_products[0][5]~9_combout  & ( 
+// !\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[6].xor_gates|y~combout  & ( ((!\arith_unit|NbitMultiplierInstance|partial_products[0][4]~3_combout  & 
+// (\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~0_combout  & \arith_unit|NbitMultiplierInstance|partial_products[1][4]~4_combout )) # (\arith_unit|NbitMultiplierInstance|partial_products[0][4]~3_combout  & 
+// ((\arith_unit|NbitMultiplierInstance|partial_products[1][4]~4_combout ) # (\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~0_combout )))) # (\arith_unit|NbitMultiplierInstance|partial_products[1][5]~10_combout ) ) ) ) 
+// # ( !\arith_unit|NbitMultiplierInstance|partial_products[0][5]~9_combout  & ( !\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[6].xor_gates|y~combout  & ( 
+// (\arith_unit|NbitMultiplierInstance|partial_products[1][5]~10_combout  & ((!\arith_unit|NbitMultiplierInstance|partial_products[0][4]~3_combout  & (\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~0_combout  & 
+// \arith_unit|NbitMultiplierInstance|partial_products[1][4]~4_combout )) # (\arith_unit|NbitMultiplierInstance|partial_products[0][4]~3_combout  & ((\arith_unit|NbitMultiplierInstance|partial_products[1][4]~4_combout ) # 
+// (\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~0_combout ))))) ) ) )
+
+	.dataa(!\arith_unit|NbitMultiplierInstance|partial_products[1][5]~10_combout ),
+	.datab(!\arith_unit|NbitMultiplierInstance|partial_products[0][4]~3_combout ),
+	.datac(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~0_combout ),
+	.datad(!\arith_unit|NbitMultiplierInstance|partial_products[1][4]~4_combout ),
+	.datae(!\arith_unit|NbitMultiplierInstance|partial_products[0][5]~9_combout ),
+	.dataf(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[6].xor_gates|y~combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [6]),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum[6] .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum[6] .lut_mask = 64'h0115577FFEEAA880;
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum[6] .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X88_Y21_N24
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|partial_products[2][6]~11 (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|partial_products[2][6]~11_combout  = (\A[2]~input_o  & \B[4]~input_o )
+
+	.dataa(!\A[2]~input_o ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\B[4]~input_o ),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|partial_products[2][6]~11_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|partial_products[2][6]~11 .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|partial_products[2][6]~11 .lut_mask = 64'h0055005500550055;
+defparam \arith_unit|NbitMultiplierInstance|partial_products[2][6]~11 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X85_Y21_N51
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum[5] (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [5] = ( \arith_unit|NbitMultiplierInstance|partial_products[1][4]~4_combout  & ( 
+// !\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[5].xor_gates|y~combout  $ (((!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~0_combout  & 
+// !\arith_unit|NbitMultiplierInstance|partial_products[0][4]~3_combout ))) ) ) # ( !\arith_unit|NbitMultiplierInstance|partial_products[1][4]~4_combout  & ( 
+// !\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[5].xor_gates|y~combout  $ (((!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~0_combout ) # 
+// (!\arith_unit|NbitMultiplierInstance|partial_products[0][4]~3_combout ))) ) )
+
+	.dataa(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~0_combout ),
+	.datab(gnd),
+	.datac(!\arith_unit|NbitMultiplierInstance|partial_products[0][4]~3_combout ),
+	.datad(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|generate_gates[5].xor_gates|y~combout ),
+	.datae(gnd),
+	.dataf(!\arith_unit|NbitMultiplierInstance|partial_products[1][4]~4_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [5]),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum[5] .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum[5] .lut_mask = 64'h05FA05FA5FA05FA0;
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum[5] .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X83_Y21_N24
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|partial_products[3][6]~12 (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|partial_products[3][6]~12_combout  = ( \B[3]~input_o  & ( \A[3]~input_o  ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(!\B[3]~input_o ),
+	.dataf(!\A[3]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|partial_products[3][6]~12_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|partial_products[3][6]~12 .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|partial_products[3][6]~12 .lut_mask = 64'h000000000000FFFF;
+defparam \arith_unit|NbitMultiplierInstance|partial_products[3][6]~12 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X84_Y21_N12
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[6].xor_gates|y (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[6].xor_gates|y~combout  = ( \arith_unit|NbitMultiplierInstance|partial_products[3][6]~12_combout  & ( 
+// \arith_unit|NbitMultiplierInstance|partial_products[2][5]~5_combout  & ( !\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [6] $ (!\arith_unit|NbitMultiplierInstance|partial_products[2][6]~11_combout  $ 
+// (((!\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~0_combout  & !\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [5])))) ) ) ) # ( 
+// !\arith_unit|NbitMultiplierInstance|partial_products[3][6]~12_combout  & ( \arith_unit|NbitMultiplierInstance|partial_products[2][5]~5_combout  & ( !\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [6] $ 
+// (!\arith_unit|NbitMultiplierInstance|partial_products[2][6]~11_combout  $ (((\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [5]) # 
+// (\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~0_combout )))) ) ) ) # ( \arith_unit|NbitMultiplierInstance|partial_products[3][6]~12_combout  & ( !\arith_unit|NbitMultiplierInstance|partial_products[2][5]~5_combout  
+// & ( !\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [6] $ (!\arith_unit|NbitMultiplierInstance|partial_products[2][6]~11_combout  $ 
+// (((!\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~0_combout ) # (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [5])))) ) ) ) # ( 
+// !\arith_unit|NbitMultiplierInstance|partial_products[3][6]~12_combout  & ( !\arith_unit|NbitMultiplierInstance|partial_products[2][5]~5_combout  & ( !\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [6] $ 
+// (!\arith_unit|NbitMultiplierInstance|partial_products[2][6]~11_combout  $ (((\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~0_combout  & \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum 
+// [5])))) ) ) )
+
+	.dataa(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [6]),
+	.datab(!\arith_unit|NbitMultiplierInstance|partial_products[2][6]~11_combout ),
+	.datac(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~0_combout ),
+	.datad(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [5]),
+	.datae(!\arith_unit|NbitMultiplierInstance|partial_products[3][6]~12_combout ),
+	.dataf(!\arith_unit|NbitMultiplierInstance|partial_products[2][5]~5_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[6].xor_gates|y~combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[6].xor_gates|y .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[6].xor_gates|y .lut_mask = 64'h6669999669999666;
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[6].xor_gates|y .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X84_Y21_N24
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|sum[6] (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|sum [6] = ( \arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|sum [5] & ( \arith_unit|NbitMultiplierInstance|partial_products[4][5]~7_combout  & ( 
+// !\arith_unit|NbitMultiplierInstance|partial_products[4][6]~13_combout  $ (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|carry_out_i~0_combout  $ 
+// (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[6].xor_gates|y~combout )) ) ) ) # ( !\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|sum [5] & ( 
+// \arith_unit|NbitMultiplierInstance|partial_products[4][5]~7_combout  & ( !\arith_unit|NbitMultiplierInstance|partial_products[4][6]~13_combout  $ (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|carry_out_i~0_combout  $ 
+// (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|generate_gates[4].and_gates|y~combout  $ (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[6].xor_gates|y~combout ))) ) ) ) # ( 
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|sum [5] & ( !\arith_unit|NbitMultiplierInstance|partial_products[4][5]~7_combout  & ( !\arith_unit|NbitMultiplierInstance|partial_products[4][6]~13_combout  $ 
+// (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|carry_out_i~0_combout  $ (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|generate_gates[4].and_gates|y~combout  $ 
+// (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[6].xor_gates|y~combout ))) ) ) ) # ( !\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|sum [5] & ( 
+// !\arith_unit|NbitMultiplierInstance|partial_products[4][5]~7_combout  & ( !\arith_unit|NbitMultiplierInstance|partial_products[4][6]~13_combout  $ (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|carry_out_i~0_combout  $ 
+// (\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[6].xor_gates|y~combout )) ) ) )
+
+	.dataa(!\arith_unit|NbitMultiplierInstance|partial_products[4][6]~13_combout ),
+	.datab(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|carry_out_i~0_combout ),
+	.datac(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|generate_gates[4].and_gates|y~combout ),
+	.datad(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[6].xor_gates|y~combout ),
+	.datae(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|sum [5]),
+	.dataf(!\arith_unit|NbitMultiplierInstance|partial_products[4][5]~7_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|sum [6]),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|sum[6] .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|sum[6] .lut_mask = 64'h6699699669969966;
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|sum[6] .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X84_Y21_N39
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|partial_products[5][6]~14 (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|partial_products[5][6]~14_combout  = ( \A[5]~input_o  & ( \B[1]~input_o  ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\B[1]~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\A[5]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|partial_products[5][6]~14_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|partial_products[5][6]~14 .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|partial_products[5][6]~14 .lut_mask = 64'h000000000F0F0F0F;
+defparam \arith_unit|NbitMultiplierInstance|partial_products[5][6]~14 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X84_Y21_N36
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|generate_partial_sums[5].sum_instance|generate_gates[5].and_gates|y (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[5].sum_instance|generate_gates[5].and_gates|y~combout  = ( \arith_unit|NbitMultiplierInstance|partial_products[4][5]~7_combout  & ( 
+// (\arith_unit|NbitMultiplierInstance|partial_products[5][5]~8_combout  & (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|generate_gates[4].and_gates|y~combout  $ 
+// (\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|sum [5]))) ) ) # ( !\arith_unit|NbitMultiplierInstance|partial_products[4][5]~7_combout  & ( (\arith_unit|NbitMultiplierInstance|partial_products[5][5]~8_combout  & 
+// (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|generate_gates[4].and_gates|y~combout  $ (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|sum [5]))) ) )
+
+	.dataa(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|generate_gates[4].and_gates|y~combout ),
+	.datab(!\arith_unit|NbitMultiplierInstance|partial_products[5][5]~8_combout ),
+	.datac(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|sum [5]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\arith_unit|NbitMultiplierInstance|partial_products[4][5]~7_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|generate_partial_sums[5].sum_instance|generate_gates[5].and_gates|y~combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[5].sum_instance|generate_gates[5].and_gates|y .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[5].sum_instance|generate_gates[5].and_gates|y .lut_mask = 64'h1212121221212121;
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[5].sum_instance|generate_gates[5].and_gates|y .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X84_Y21_N6
+cyclonev_lcell_comb \result~18 (
+// Equation(s):
+// \result~18_combout  = ( \arith_unit|NbitMultiplierInstance|generate_partial_sums[5].sum_instance|generate_gates[5].and_gates|y~combout  & ( \result~0_combout  & ( (!\arith_unit|NbitMultiplierInstance|partial_products[6][6]~15_combout  $ 
+// (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|sum [6] $ (!\arith_unit|NbitMultiplierInstance|partial_products[5][6]~14_combout ))) # (\result~17_combout ) ) ) ) # ( 
+// !\arith_unit|NbitMultiplierInstance|generate_partial_sums[5].sum_instance|generate_gates[5].and_gates|y~combout  & ( \result~0_combout  & ( (!\arith_unit|NbitMultiplierInstance|partial_products[6][6]~15_combout  $ 
+// (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|sum [6] $ (\arith_unit|NbitMultiplierInstance|partial_products[5][6]~14_combout ))) # (\result~17_combout ) ) ) ) # ( 
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[5].sum_instance|generate_gates[5].and_gates|y~combout  & ( !\result~0_combout  & ( \result~17_combout  ) ) ) # ( 
+// !\arith_unit|NbitMultiplierInstance|generate_partial_sums[5].sum_instance|generate_gates[5].and_gates|y~combout  & ( !\result~0_combout  & ( \result~17_combout  ) ) )
+
+	.dataa(!\result~17_combout ),
+	.datab(!\arith_unit|NbitMultiplierInstance|partial_products[6][6]~15_combout ),
+	.datac(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|sum [6]),
+	.datad(!\arith_unit|NbitMultiplierInstance|partial_products[5][6]~14_combout ),
+	.datae(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[5].sum_instance|generate_gates[5].and_gates|y~combout ),
+	.dataf(!\result~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\result~18_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \result~18 .extended_lut = "off";
+defparam \result~18 .lut_mask = 64'h555555557DD7D77D;
+defparam \result~18 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X85_Y22_N24
+cyclonev_lcell_comb \logic_unit|shift_leftInstance|Mux7~3 (
+// Equation(s):
+// \logic_unit|shift_leftInstance|Mux7~3_combout  = ( \B[1]~input_o  & ( \A[7]~input_o  & ( (!\B[0]~input_o  & (\A[5]~input_o )) # (\B[0]~input_o  & ((\A[4]~input_o ))) ) ) ) # ( !\B[1]~input_o  & ( \A[7]~input_o  & ( (!\B[0]~input_o ) # (\A[6]~input_o ) ) ) 
+// ) # ( \B[1]~input_o  & ( !\A[7]~input_o  & ( (!\B[0]~input_o  & (\A[5]~input_o )) # (\B[0]~input_o  & ((\A[4]~input_o ))) ) ) ) # ( !\B[1]~input_o  & ( !\A[7]~input_o  & ( (\B[0]~input_o  & \A[6]~input_o ) ) ) )
+
+	.dataa(!\A[5]~input_o ),
+	.datab(!\B[0]~input_o ),
+	.datac(!\A[6]~input_o ),
+	.datad(!\A[4]~input_o ),
+	.datae(!\B[1]~input_o ),
+	.dataf(!\A[7]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\logic_unit|shift_leftInstance|Mux7~3_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \logic_unit|shift_leftInstance|Mux7~3 .extended_lut = "off";
+defparam \logic_unit|shift_leftInstance|Mux7~3 .lut_mask = 64'h03034477CFCF4477;
+defparam \logic_unit|shift_leftInstance|Mux7~3 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X88_Y21_N12
+cyclonev_lcell_comb \result~19 (
+// Equation(s):
+// \result~19_combout  = ( \result~9_combout  & ( (!\B[2]~input_o  & ((\logic_unit|shift_leftInstance|Mux7~3_combout ))) # (\B[2]~input_o  & (\logic_unit|shift_leftInstance|Mux7~1_combout )) ) )
+
+	.dataa(!\logic_unit|shift_leftInstance|Mux7~1_combout ),
+	.datab(!\B[2]~input_o ),
+	.datac(!\logic_unit|shift_leftInstance|Mux7~3_combout ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\result~9_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\result~19_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \result~19 .extended_lut = "off";
+defparam \result~19 .lut_mask = 64'h000000001D1D1D1D;
+defparam \result~19 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X89_Y13_N21
+cyclonev_io_ibuf \B[7]~input (
+	.i(B[7]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\B[7]~input_o ));
+// synopsys translate_off
+defparam \B[7]~input .bus_hold = "false";
+defparam \B[7]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X85_Y21_N9
+cyclonev_lcell_comb \result~20 (
+// Equation(s):
+// \result~20_combout  = ( \B[7]~input_o  & ( (!\result~19_combout  & ((\A[7]~input_o ) # (\operation[0]~input_o ))) ) ) # ( !\B[7]~input_o  & ( (!\result~19_combout  & ((!\A[7]~input_o ) # (\operation[0]~input_o ))) ) )
+
+	.dataa(!\result~19_combout ),
+	.datab(gnd),
+	.datac(!\operation[0]~input_o ),
+	.datad(!\A[7]~input_o ),
+	.datae(gnd),
+	.dataf(!\B[7]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\result~20_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \result~20 .extended_lut = "off";
+defparam \result~20 .lut_mask = 64'hAA0AAA0A0AAA0AAA;
+defparam \result~20 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X84_Y21_N33
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~1 (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~1_combout  = ( \arith_unit|NbitMultiplierInstance|partial_products[2][5]~5_combout  & ( (\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [5]) 
+// # (\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~0_combout ) ) ) # ( !\arith_unit|NbitMultiplierInstance|partial_products[2][5]~5_combout  & ( 
+// (\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~0_combout  & \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [5]) ) )
+
+	.dataa(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~0_combout ),
+	.datab(gnd),
+	.datac(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [5]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\arith_unit|NbitMultiplierInstance|partial_products[2][5]~5_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~1 .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~1 .lut_mask = 64'h050505055F5F5F5F;
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X85_Y21_N18
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~1 (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~1_combout  = ( \A[1]~input_o  & ( \B[6]~input_o  & ( (!\A[0]~input_o  & ((!\B[0]~input_o ) # ((!\A[7]~input_o )))) # (\A[0]~input_o  & (!\B[7]~input_o  
+// $ (((\B[0]~input_o  & \A[7]~input_o ))))) ) ) ) # ( !\A[1]~input_o  & ( \B[6]~input_o  & ( (!\A[0]~input_o  & (\B[0]~input_o  & ((\A[7]~input_o )))) # (\A[0]~input_o  & (!\B[7]~input_o  $ (((!\B[0]~input_o ) # (!\A[7]~input_o ))))) ) ) ) # ( \A[1]~input_o 
+//  & ( !\B[6]~input_o  & ( (!\A[0]~input_o  & (\B[0]~input_o  & ((\A[7]~input_o )))) # (\A[0]~input_o  & (!\B[7]~input_o  $ (((!\B[0]~input_o ) # (!\A[7]~input_o ))))) ) ) ) # ( !\A[1]~input_o  & ( !\B[6]~input_o  & ( (!\A[0]~input_o  & (\B[0]~input_o  & 
+// ((\A[7]~input_o )))) # (\A[0]~input_o  & (!\B[7]~input_o  $ (((!\B[0]~input_o ) # (!\A[7]~input_o ))))) ) ) )
+
+	.dataa(!\A[0]~input_o ),
+	.datab(!\B[0]~input_o ),
+	.datac(!\B[7]~input_o ),
+	.datad(!\A[7]~input_o ),
+	.datae(!\A[1]~input_o ),
+	.dataf(!\B[6]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~1 .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~1 .lut_mask = 64'h053605360536FAC9;
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X88_Y21_N42
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~0 (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~0_combout  = ( \A[5]~input_o  & ( !\B[2]~input_o  $ (((!\B[1]~input_o ) # (!\A[6]~input_o ))) ) ) # ( !\A[5]~input_o  & ( (\B[1]~input_o  & 
+// \A[6]~input_o ) ) )
+
+	.dataa(!\B[1]~input_o ),
+	.datab(!\B[2]~input_o ),
+	.datac(!\A[6]~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\A[5]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~0 .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~0 .lut_mask = 64'h0505050536363636;
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X85_Y21_N42
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~2 (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~2_combout  = ( \A[2]~input_o  & ( !\B[5]~input_o  $ (((!\B[4]~input_o ) # (!\A[3]~input_o ))) ) ) # ( !\A[2]~input_o  & ( (\B[4]~input_o  & 
+// \A[3]~input_o ) ) )
+
+	.dataa(!\B[5]~input_o ),
+	.datab(!\B[4]~input_o ),
+	.datac(!\A[3]~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\A[2]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~2 .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~2 .lut_mask = 64'h0303030356565656;
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~2 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X85_Y21_N54
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~3 (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~3_combout  = ( \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~2_combout  & ( 
+// !\arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~1_combout  $ (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~0_combout  $ (((!\A[4]~input_o ) 
+// # (!\B[3]~input_o )))) ) ) # ( !\arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~2_combout  & ( 
+// !\arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~1_combout  $ (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~0_combout  $ (((\A[4]~input_o  & 
+// \B[3]~input_o )))) ) )
+
+	.dataa(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~1_combout ),
+	.datab(!\A[4]~input_o ),
+	.datac(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~0_combout ),
+	.datad(!\B[3]~input_o ),
+	.datae(gnd),
+	.dataf(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~2_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~3_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~3 .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~3 .lut_mask = 64'h5A695A69A596A596;
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~3 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X85_Y21_N3
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~1 (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~1_combout  = ( \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~0_combout  & ( 
+// (!\arith_unit|NbitMultiplierInstance|partial_products[1][5]~10_combout  & (\arith_unit|NbitMultiplierInstance|partial_products[0][5]~9_combout  & ((\arith_unit|NbitMultiplierInstance|partial_products[0][4]~3_combout ) # 
+// (\arith_unit|NbitMultiplierInstance|partial_products[1][4]~4_combout )))) # (\arith_unit|NbitMultiplierInstance|partial_products[1][5]~10_combout  & (((\arith_unit|NbitMultiplierInstance|partial_products[0][5]~9_combout ) # 
+// (\arith_unit|NbitMultiplierInstance|partial_products[0][4]~3_combout )) # (\arith_unit|NbitMultiplierInstance|partial_products[1][4]~4_combout ))) ) ) # ( !\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~0_combout  & ( 
+// (!\arith_unit|NbitMultiplierInstance|partial_products[1][5]~10_combout  & (\arith_unit|NbitMultiplierInstance|partial_products[1][4]~4_combout  & (\arith_unit|NbitMultiplierInstance|partial_products[0][4]~3_combout  & 
+// \arith_unit|NbitMultiplierInstance|partial_products[0][5]~9_combout ))) # (\arith_unit|NbitMultiplierInstance|partial_products[1][5]~10_combout  & (((\arith_unit|NbitMultiplierInstance|partial_products[1][4]~4_combout  & 
+// \arith_unit|NbitMultiplierInstance|partial_products[0][4]~3_combout )) # (\arith_unit|NbitMultiplierInstance|partial_products[0][5]~9_combout ))) ) )
+
+	.dataa(!\arith_unit|NbitMultiplierInstance|partial_products[1][5]~10_combout ),
+	.datab(!\arith_unit|NbitMultiplierInstance|partial_products[1][4]~4_combout ),
+	.datac(!\arith_unit|NbitMultiplierInstance|partial_products[0][4]~3_combout ),
+	.datad(!\arith_unit|NbitMultiplierInstance|partial_products[0][5]~9_combout ),
+	.datae(gnd),
+	.dataf(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~1 .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~1 .lut_mask = 64'h01570157157F157F;
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X85_Y21_N24
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~4 (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~4_combout  = ( \A[0]~input_o  & ( \B[6]~input_o  & ( 
+// !\arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~3_combout  $ (((!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~1_combout  & ((!\B[5]~input_o ) # (!\A[1]~input_o 
+// ))))) ) ) ) # ( !\A[0]~input_o  & ( \B[6]~input_o  & ( !\arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~3_combout  $ (((!\B[5]~input_o ) # ((!\A[1]~input_o ) # 
+// (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~1_combout )))) ) ) ) # ( \A[0]~input_o  & ( !\B[6]~input_o  & ( 
+// !\arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~3_combout  $ (((!\B[5]~input_o ) # ((!\A[1]~input_o ) # 
+// (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~1_combout )))) ) ) ) # ( !\A[0]~input_o  & ( !\B[6]~input_o  & ( 
+// !\arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~3_combout  $ (((!\B[5]~input_o ) # ((!\A[1]~input_o ) # 
+// (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~1_combout )))) ) ) )
+
+	.dataa(!\B[5]~input_o ),
+	.datab(!\A[1]~input_o ),
+	.datac(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~3_combout ),
+	.datad(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|carry_out_i~1_combout ),
+	.datae(!\A[0]~input_o ),
+	.dataf(!\B[6]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~4_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~4 .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~4 .lut_mask = 64'h0F1E0F1E0F1E1EF0;
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~4 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X84_Y21_N18
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~5 (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~5_combout  = ( \arith_unit|NbitMultiplierInstance|partial_products[3][6]~12_combout  & ( 
+// \arith_unit|NbitMultiplierInstance|partial_products[2][6]~11_combout  & ( !\arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~4_combout  $ 
+// (((!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [6] & (\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|carry_out_i~0_combout  & 
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~1_combout )) # (\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [6] & 
+// ((\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~1_combout ) # (\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|carry_out_i~0_combout ))))) ) ) ) # ( 
+// !\arith_unit|NbitMultiplierInstance|partial_products[3][6]~12_combout  & ( \arith_unit|NbitMultiplierInstance|partial_products[2][6]~11_combout  & ( 
+// !\arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~4_combout  $ (((!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [6] & 
+// (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|carry_out_i~0_combout  & !\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~1_combout )) # 
+// (\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [6] & (\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|carry_out_i~0_combout  & 
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~1_combout )))) ) ) ) # ( \arith_unit|NbitMultiplierInstance|partial_products[3][6]~12_combout  & ( !\arith_unit|NbitMultiplierInstance|partial_products[2][6]~11_combout  
+// & ( !\arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~4_combout  $ (((!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [6] & 
+// (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|carry_out_i~0_combout  & !\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~1_combout )) # 
+// (\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [6] & (\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|carry_out_i~0_combout  & 
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~1_combout )))) ) ) ) # ( !\arith_unit|NbitMultiplierInstance|partial_products[3][6]~12_combout  & ( !\arith_unit|NbitMultiplierInstance|partial_products[2][6]~11_combout  
+// & ( !\arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~4_combout  $ (((!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [6] & 
+// ((!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|carry_out_i~0_combout ) # (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~1_combout ))) # 
+// (\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [6] & (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|carry_out_i~0_combout  & 
+// !\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~1_combout )))) ) ) )
+
+	.dataa(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[1].sum_instance|sum [6]),
+	.datab(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|carry_out_i~0_combout ),
+	.datac(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[2].sum_instance|carry_out_i~1_combout ),
+	.datad(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~4_combout ),
+	.datae(!\arith_unit|NbitMultiplierInstance|partial_products[3][6]~12_combout ),
+	.dataf(!\arith_unit|NbitMultiplierInstance|partial_products[2][6]~11_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~5_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~5 .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~5 .lut_mask = 64'h17E87E817E81E817;
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~5 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X84_Y21_N42
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|carry_out_i~0 (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|carry_out_i~0_combout  = ( \arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|sum [5] & ( \arith_unit|NbitMultiplierInstance|partial_products[4][5]~7_combout  & 
+// ( (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|carry_out_i~0_combout  $ (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[6].xor_gates|y~combout )) # 
+// (\arith_unit|NbitMultiplierInstance|partial_products[4][6]~13_combout ) ) ) ) # ( !\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|sum [5] & ( \arith_unit|NbitMultiplierInstance|partial_products[4][5]~7_combout  & ( 
+// (!\arith_unit|NbitMultiplierInstance|partial_products[4][6]~13_combout  & (\arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|generate_gates[4].and_gates|y~combout  & 
+// (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|carry_out_i~0_combout  $ (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[6].xor_gates|y~combout )))) # 
+// (\arith_unit|NbitMultiplierInstance|partial_products[4][6]~13_combout  & ((!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|carry_out_i~0_combout  $ 
+// (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[6].xor_gates|y~combout )) # (\arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|generate_gates[4].and_gates|y~combout ))) ) ) ) # ( 
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|sum [5] & ( !\arith_unit|NbitMultiplierInstance|partial_products[4][5]~7_combout  & ( (!\arith_unit|NbitMultiplierInstance|partial_products[4][6]~13_combout  & 
+// (\arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|generate_gates[4].and_gates|y~combout  & (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|carry_out_i~0_combout  $ 
+// (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[6].xor_gates|y~combout )))) # (\arith_unit|NbitMultiplierInstance|partial_products[4][6]~13_combout  & 
+// ((!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|carry_out_i~0_combout  $ (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[6].xor_gates|y~combout )) # 
+// (\arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|generate_gates[4].and_gates|y~combout ))) ) ) ) # ( !\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|sum [5] & ( 
+// !\arith_unit|NbitMultiplierInstance|partial_products[4][5]~7_combout  & ( (\arith_unit|NbitMultiplierInstance|partial_products[4][6]~13_combout  & (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|carry_out_i~0_combout  $ 
+// (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[6].xor_gates|y~combout ))) ) ) )
+
+	.dataa(!\arith_unit|NbitMultiplierInstance|partial_products[4][6]~13_combout ),
+	.datab(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|carry_out_i~0_combout ),
+	.datac(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|generate_gates[4].and_gates|y~combout ),
+	.datad(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|generate_gates[6].xor_gates|y~combout ),
+	.datae(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[3].sum_instance|sum [5]),
+	.dataf(!\arith_unit|NbitMultiplierInstance|partial_products[4][5]~7_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|carry_out_i~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|carry_out_i~0 .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|carry_out_i~0 .lut_mask = 64'h1144174D174D77DD;
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|carry_out_i~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X84_Y21_N54
+cyclonev_lcell_comb \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y (
+// Equation(s):
+// \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~combout  = ( \arith_unit|NbitMultiplierInstance|generate_partial_sums[5].sum_instance|generate_gates[5].and_gates|y~combout  & ( 
+// \arith_unit|NbitMultiplierInstance|partial_products[5][6]~14_combout  & ( !\arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~5_combout  $ 
+// (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|carry_out_i~0_combout  $ (((!\arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|sum [6]) # 
+// (!\arith_unit|NbitMultiplierInstance|partial_products[6][6]~15_combout )))) ) ) ) # ( !\arith_unit|NbitMultiplierInstance|generate_partial_sums[5].sum_instance|generate_gates[5].and_gates|y~combout  & ( 
+// \arith_unit|NbitMultiplierInstance|partial_products[5][6]~14_combout  & ( !\arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~5_combout  $ 
+// (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|carry_out_i~0_combout  $ (((\arith_unit|NbitMultiplierInstance|partial_products[6][6]~15_combout ) # (\arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|sum 
+// [6])))) ) ) ) # ( \arith_unit|NbitMultiplierInstance|generate_partial_sums[5].sum_instance|generate_gates[5].and_gates|y~combout  & ( !\arith_unit|NbitMultiplierInstance|partial_products[5][6]~14_combout  & ( 
+// !\arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~5_combout  $ (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|carry_out_i~0_combout  $ 
+// (((\arith_unit|NbitMultiplierInstance|partial_products[6][6]~15_combout ) # (\arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|sum [6])))) ) ) ) # ( 
+// !\arith_unit|NbitMultiplierInstance|generate_partial_sums[5].sum_instance|generate_gates[5].and_gates|y~combout  & ( !\arith_unit|NbitMultiplierInstance|partial_products[5][6]~14_combout  & ( 
+// !\arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~5_combout  $ (!\arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|carry_out_i~0_combout  $ 
+// (((\arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|sum [6] & \arith_unit|NbitMultiplierInstance|partial_products[6][6]~15_combout )))) ) ) )
+
+	.dataa(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|sum [6]),
+	.datab(!\arith_unit|NbitMultiplierInstance|partial_products[6][6]~15_combout ),
+	.datac(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~5_combout ),
+	.datad(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[4].sum_instance|carry_out_i~0_combout ),
+	.datae(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[5].sum_instance|generate_gates[5].and_gates|y~combout ),
+	.dataf(!\arith_unit|NbitMultiplierInstance|partial_products[5][6]~14_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y .extended_lut = "off";
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y .lut_mask = 64'h1EE178877887E11E;
+defparam \arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X84_Y21_N48
+cyclonev_lcell_comb \result~21 (
+// Equation(s):
+// \result~21_combout  = ( \result~0_combout  & ( ((!\result~20_combout  & \result~11_combout )) # (\arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~combout ) ) ) # ( !\result~0_combout  & ( 
+// (!\result~20_combout  & \result~11_combout ) ) )
+
+	.dataa(!\result~20_combout ),
+	.datab(gnd),
+	.datac(!\arith_unit|NbitMultiplierInstance|generate_partial_sums[7].sum_instance|generate_gates[7].xor_gates|y~combout ),
+	.datad(!\result~11_combout ),
+	.datae(gnd),
+	.dataf(!\result~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\result~21_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \result~21 .extended_lut = "off";
+defparam \result~21 .lut_mask = 64'h00AA00AA0FAF0FAF;
+defparam \result~21 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X84_Y19_N0
 cyclonev_lcell_comb \~QUARTUS_CREATED_GND~I (
 // Equation(s):
 

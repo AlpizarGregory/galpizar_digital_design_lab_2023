@@ -1,0 +1,14 @@
+module ArithmeticUnit #(parameter N = 8)(
+  input logic [N-1:0] A,
+  input logic [N-1:0] B,
+  input logic [2:0] operation, // Código de operación (por ejemplo, 000 para suma, 001 para resta, etc.)
+  output logic [N-1:0] result,
+  output logic N, // Bandera Negativo
+  output logic Z, // Bandera Cero
+  output logic C, // Bandera Acarreo
+  output logic V // Bandera Desbordamiento
+);
+
+  // Lógica de la operación aritmética aquí
+  // ...
+endmodule
