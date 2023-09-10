@@ -1,11 +1,13 @@
 module divider_tb;
 
-  logic [3:0] numerator;
-  logic [3:0] denominator;
-  logic [3:0] quotient;
-  logic [3:0] remainder;
+  parameter N = 32;
 
-  divider divisor (
+  logic [N-1:0] numerator;
+  logic [N-1:0] denominator;
+  logic [N-1:0] quotient;
+  logic [N-1:0] remainder;
+
+  divider #(N) divisor (
     .numerator(numerator),
     .denominator(denominator),
     .quotient(quotient),
@@ -13,8 +15,8 @@ module divider_tb;
   );
 
   initial begin
-    numerator = 4'b1101;     // Numerador: 13
-    denominator = 4'b0110;   // Denominador: 6
+    numerator = 32'b0000001000011100;
+    denominator = 32'b0000000000000110;
 
     #10;
 
@@ -22,7 +24,6 @@ module divider_tb;
     $display("Numerador = %b", numerator);
     $display("Denominador = %b", denominator);
 
-	 
     #10;
 
     $display("Cociente = %b", quotient);

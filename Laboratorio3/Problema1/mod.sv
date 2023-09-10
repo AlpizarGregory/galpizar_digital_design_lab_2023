@@ -1,15 +1,15 @@
-module mod(
-    input [3:0] a,
-    input [3:0] b,
-    output [3:0] mod_out
+module mod #(parameter N = 4) (
+    input [N-1:0] a,
+    input [N-1:0] b,
+    output [N-1:0] mod_out
 );
 
-logic [3:0] temp_quotient;
-logic [3:0] temp_remainder;
+wire [N-1:0] temp_quotient;
+wire [N-1:0] temp_remainder;
 
-divider div(
-    .a(a),
-    .b(b),
+divider #(N) div(
+    .numerator(a),
+    .denominator(b),
     .quotient(temp_quotient),
     .remainder(temp_remainder)
 );

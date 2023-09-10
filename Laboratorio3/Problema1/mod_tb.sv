@@ -1,17 +1,20 @@
 module mod_tb;
-  logic [3:0] a;
-  logic [3:0] b;
-  logic [3:0] mod_out;
+	
+	parameter N = 8;
 
-  mod mod_inst (
+  logic [N-1:0] a;
+  logic [N-1:0] b;
+  logic [N-1:0] mod_out;
+
+  mod #(N) mod_inst (
     .a(a),
     .b(b),
     .mod_out(mod_out)
   );
 
   initial begin
-    a = 4'b1101; 
-    b = 4'b0110; 
+    a = 16'b0000100111011011; 
+    b = 16'b0000000000000010; 
 
     #10;
 
@@ -21,6 +24,7 @@ module mod_tb;
 
 	 
     #10;
-    $display("Módulo = %b", mod_out);
+
+    $display("Modulo = %b", mod_out);
   end
 endmodule

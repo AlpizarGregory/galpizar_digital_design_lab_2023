@@ -1,58 +1,70 @@
-module divider (
-  input logic [3:0] numerator,
-  input logic [3:0] denominator,
-  output logic [3:0] quotient,
-  output logic [3:0] remainder
+module divider #(parameter N = 4) (
+  input logic [N-1:0] numerator,
+  input logic [N-1:0] denominator,
+  output logic [N-1:0] quotient,
+  output logic [N-1:0] remainder
 );
 
-  wire [67:0] numerator_temp;
-  wire [3:0] denominator_temp;
-  wire [67:0] quotient_temp;
-  wire [15:0] greater;
-  wire [15:0] equal;
-  wire [15:0] lower;
-  wire [15:0] uselessvar;
+  wire [N*(2**N+1)-1:0] numerator_temp;
+  wire [N-1:0] denominator_temp;
+  wire [N*(2**N+1)-1:0] quotient_temp;
+  wire [N**2-1:0] greater;
+  wire [N**2-1:0] equal;
+  wire [N**2-1:0] lower;
+  wire [(N**2)*2-1:0] uselessvar;
 
+  wire [N-2:0] zeros;
+
+  /*
   assign numerator_temp[0] = numerator[0];
   assign numerator_temp[1] = numerator[1];
   assign numerator_temp[2] = numerator[2];
   assign numerator_temp[3] = numerator[3];
-  assign denominator_temp = denominator;
+  
   assign quotient_temp[0] = 1'b0;
   assign quotient_temp[1] = 1'b0;
   assign quotient_temp[2] = 1'b0;
-  assign quotient_temp[3] = 1'b0;
+  assign quotient_temp[3] = 1'b0; */
+
+  assign denominator_temp = denominator;
+  assign zeros = 0;
 
   generate
     genvar i;
-    for (i = 0; i < 16; i++) begin : loop
-      comparator comp_inst(
-        .a(numerator_temp[i*4+3:i*4]),
+
+    for (i = 0; i < N; i++) begin : assignation_loop
+      assign numerator_temp[i] = numerator[i];
+      assign quotient_temp[i] = 1'b0;
+    end
+
+    for (i = 0; i < N**2; i++) begin : division_loop
+      comparator #(N) comp_inst(
+        .a(numerator_temp[i*N+(N-1):i*N]),
         .b(denominator_temp),
         .aeqb(equal[i]),
         .agtb(greater[i]),
         .altb(lower[i])
       );
-      n_bit_subtractor sub_inst(
-        .a(numerator_temp[i*4+3:i*4]),
+      n_bit_subtractor #(N) sub_inst(
+        .a(numerator_temp[i*N+(N-1):i*N]),
         .b(denominator_temp),
-        .doit({greater[i], 3'b000}),
-        .res(numerator_temp[(i+1)*4+3:(i+1)*4]),
-        .negout(uselessvar)
+        .doit(!lower[i]),
+        .res(numerator_temp[(i+1)*N+(N-1):(i+1)*N]),
+        .negout(uselessvar[i])
       );
         
-      n_bit_adder add_inst(
-        .a(quotient_temp[i*4+3:i*4]),
-        .b({greater[i], 3'b000}),
+      n_bit_adder #(N) add_inst(
+        .a(quotient_temp[i*N+(N-1):i*N]),
+        .b({!lower[i], zeros}),
         .cin(1'b0),
-        .sum(quotient_temp[(i+1)*4+3:(i+1)*4]),
-        .cout(uselessvar[i])
+        .sum(quotient_temp[(i+1)*N+(N-1):(i+1)*N]),
+        .cout(uselessvar[i+N**2])
       );
 
     end
   endgenerate
 
-  assign quotient = quotient_temp[67:64];
-  assign remainder = numerator_temp[67:64];
+  assign quotient = quotient_temp[N*(2**N+1)-1:N*(2**N)];
+  assign remainder = numerator_temp[N*(2**N+1)-1:N*(2**N)];
 
 endmodule
