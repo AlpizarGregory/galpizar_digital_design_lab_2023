@@ -1,0 +1,26 @@
+module mod_tb;
+  logic [N-1:0] a;
+  logic [N-1:0] b;
+  logic [N-1:0] mod_out;
+
+  mod #(N) mod_inst (
+    .a(a),
+    .b(b),
+    .mod_out(mod_out)
+  );
+
+  initial begin
+    a = 4'b1101; 
+    b = 4'b0110; 
+
+    #10;
+
+    // Imprimimos los valores iniciales
+    $display("Numerador = %b", a);
+    $display("Denominador = %b", b);
+
+	 
+    #10;
+    $display("Módulo = %b", mod_out);
+  end
+endmodule
