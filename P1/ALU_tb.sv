@@ -8,8 +8,9 @@ module ALU_tb();
    logic Z; // Bandera Cero
    logic C; // Bandera Acarreo
    logic V; // Bandera Desbordamiento
+	logic [6:0] seg;
 	
-	ALU #(4) InstanceALU(A, B , operation, result, N,Z,C,V);
+	ALU #(4) InstanceALU(A, B , operation, result, N,Z,C,V, seg);
 
 	
 	//always #20 clk = ~clk;

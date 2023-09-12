@@ -11,57 +11,57 @@ cModel Technology
 Z0 dC:/Users/Bryan Gomez/Documents/Lab3/P1/simulation/modelsim
 vALU
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1694498138
+Z2 !s110 1694501630
 !i10b 1
-!s100 `aUjCOVo8>1_3`Kcm2CbQ2
+!s100 ^6J>mhJzcd5@o>eA61_i32
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IAW6NQo8j`z[WaZ9NQA71`1
+IcH^Nhk`BPLPjBZe1VfNEQ1
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1694340794
-8C:/Users/Bryan Gomez/Documents/Lab3/P1/ALU.sv
-FC:/Users/Bryan Gomez/Documents/Lab3/P1/ALU.sv
+Z5 w1694501567
+Z6 8C:/Users/Bryan Gomez/Documents/Lab3/P1/ALU.sv
+Z7 FC:/Users/Bryan Gomez/Documents/Lab3/P1/ALU.sv
 !i122 7
-L0 1 70
-Z5 OV;L;2020.1;71
+L0 1 78
+Z8 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1694498137.000000
-!s107 C:/Users/Bryan Gomez/Documents/Lab3/P1/ALU.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/Lab3/P1|C:/Users/Bryan Gomez/Documents/Lab3/P1/ALU.sv|
+Z9 !s108 1694501629.000000
+Z10 !s107 C:/Users/Bryan Gomez/Documents/Lab3/P1/ALU.sv|
+Z11 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/Lab3/P1|C:/Users/Bryan Gomez/Documents/Lab3/P1/ALU.sv|
 !i113 1
-Z7 o-sv -work work
-Z8 !s92 -sv -work work {+incdir+C:/Users/Bryan Gomez/Documents/Lab3/P1}
-Z9 tCvgOpt 0
+Z12 o-sv -work work
+Z13 !s92 -sv -work work {+incdir+C:/Users/Bryan Gomez/Documents/Lab3/P1}
+Z14 tCvgOpt 0
 n@a@l@u
 vALU_tb
 R1
-Z10 !s110 1694498141
+Z15 !s110 1694501633
 !i10b 1
-!s100 7XPhj3j;5h5a83k]AL^7I2
+!s100 `g5Ki0GK4M`:kgn;6iJDT2
 R3
-IdaGY7cL:]jLOMf<IA3oIf2
+Ik^G9>45Rgka[b<JnDVmOY0
 R4
 S1
 R0
-w1694497554
+w1694500670
 8C:/Users/Bryan Gomez/Documents/Lab3/P1/ALU_tb.sv
 FC:/Users/Bryan Gomez/Documents/Lab3/P1/ALU_tb.sv
 !i122 17
-L0 1 36
-R5
+L0 1 37
+R8
 r1
 !s85 0
 31
-Z11 !s108 1694498141.000000
+Z16 !s108 1694501633.000000
 !s107 C:/Users/Bryan Gomez/Documents/Lab3/P1/ALU_tb.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/Lab3/P1|C:/Users/Bryan Gomez/Documents/Lab3/P1/ALU_tb.sv|
 !i113 1
-R7
-R8
-R9
+R12
+R13
+R14
 n@a@l@u_tb
 vAnd
 R1
@@ -73,26 +73,26 @@ IdgD9Rfg5XEUERlG2AM?;L1
 R4
 S1
 R0
-Z12 w1694486765
-Z13 8C:/Users/Bryan Gomez/Documents/Lab3/P1/NbitMultiplier.sv
-Z14 FC:/Users/Bryan Gomez/Documents/Lab3/P1/NbitMultiplier.sv
+Z17 w1694486765
+Z18 8C:/Users/Bryan Gomez/Documents/Lab3/P1/NbitMultiplier.sv
+Z19 FC:/Users/Bryan Gomez/Documents/Lab3/P1/NbitMultiplier.sv
 !i122 9
-Z15 L0 1 7
-R5
+Z20 L0 1 7
+R8
 r1
 !s85 0
 31
-Z16 !s108 1694498138.000000
-Z17 !s107 C:/Users/Bryan Gomez/Documents/Lab3/P1/NbitMultiplier.sv|
-Z18 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/Lab3/P1|C:/Users/Bryan Gomez/Documents/Lab3/P1/NbitMultiplier.sv|
+Z21 !s108 1694501630.000000
+Z22 !s107 C:/Users/Bryan Gomez/Documents/Lab3/P1/NbitMultiplier.sv|
+Z23 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/Lab3/P1|C:/Users/Bryan Gomez/Documents/Lab3/P1/NbitMultiplier.sv|
 !i113 1
-R7
-R8
-R9
+R12
+R13
+R14
 n@and
 vAndGate
 R1
-R10
+R15
 !i10b 1
 !s100 FkBL1JKAHXRCZ2Jj^Oz=32
 R3
@@ -104,18 +104,18 @@ w1694497761
 8C:/Users/Bryan Gomez/Documents/Lab3/P1/AndGate.sv
 FC:/Users/Bryan Gomez/Documents/Lab3/P1/AndGate.sv
 !i122 15
-R15
-R5
+R20
+R8
 r1
 !s85 0
 31
-Z19 !s108 1694498140.000000
+Z24 !s108 1694501632.000000
 !s107 C:/Users/Bryan Gomez/Documents/Lab3/P1/AndGate.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/Lab3/P1|C:/Users/Bryan Gomez/Documents/Lab3/P1/AndGate.sv|
 !i113 1
-R7
-R8
-R9
+R12
+R13
+R14
 n@and@gate
 vAndGate2
 R1
@@ -127,26 +127,26 @@ I35i52b>oVEjM5hF_Ll>6T1
 R4
 S1
 R0
-Z20 w1694497893
-Z21 8C:/Users/Bryan Gomez/Documents/Lab3/P1/Conexion.sv
-Z22 FC:/Users/Bryan Gomez/Documents/Lab3/P1/Conexion.sv
+Z25 w1694497893
+Z26 8C:/Users/Bryan Gomez/Documents/Lab3/P1/Conexion.sv
+Z27 FC:/Users/Bryan Gomez/Documents/Lab3/P1/Conexion.sv
 !i122 8
 L0 87 7
-R5
+R8
 r1
 !s85 0
 31
-R16
-Z23 !s107 C:/Users/Bryan Gomez/Documents/Lab3/P1/Conexion.sv|
-Z24 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/Lab3/P1|C:/Users/Bryan Gomez/Documents/Lab3/P1/Conexion.sv|
+R21
+Z28 !s107 C:/Users/Bryan Gomez/Documents/Lab3/P1/Conexion.sv|
+Z29 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/Lab3/P1|C:/Users/Bryan Gomez/Documents/Lab3/P1/Conexion.sv|
 !i113 1
-R7
-R8
-R9
+R12
+R13
+R14
 n@and@gate2
 vArithmeticUnit
 R1
-Z25 !s110 1694498139
+Z30 !s110 1694501632
 !i10b 1
 !s100 Y`h8ZRBLjGKakgz;UASVQ0
 R3
@@ -159,21 +159,21 @@ w1694497094
 FC:/Users/Bryan Gomez/Documents/Lab3/P1/ArithmeticUnit.sv
 !i122 12
 L0 1 146
-R5
+R8
 r1
 !s85 0
 31
-Z26 !s108 1694498139.000000
+Z31 !s108 1694501631.000000
 !s107 C:/Users/Bryan Gomez/Documents/Lab3/P1/ArithmeticUnit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/Lab3/P1|C:/Users/Bryan Gomez/Documents/Lab3/P1/ArithmeticUnit.sv|
 !i113 1
-R7
-R8
-R9
+R12
+R13
+R14
 n@arithmetic@unit
 vbit_comparator
 R1
-Z27 !s110 1694498137
+Z32 !s110 1694501629
 !i10b 1
 !s100 om5D=PCYa_TC2GIL<TUfD3
 R3
@@ -181,25 +181,25 @@ IXY_@FXd7H<;z2`5=PZYBJ0
 R4
 S1
 R0
-Z28 w1694488555
+Z33 w1694488555
 8C:/Users/Bryan Gomez/Documents/Lab3/P1/bit_comparator.sv
 FC:/Users/Bryan Gomez/Documents/Lab3/P1/bit_comparator.sv
 !i122 6
 L0 1 20
-R5
+R8
 r1
 !s85 0
 31
-R6
+R9
 !s107 C:/Users/Bryan Gomez/Documents/Lab3/P1/bit_comparator.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/Lab3/P1|C:/Users/Bryan Gomez/Documents/Lab3/P1/bit_comparator.sv|
 !i113 1
-R7
-R8
-R9
+R12
+R13
+R14
 vcomparator
 R1
-R27
+R32
 !i10b 1
 !s100 Cn@:HEf>m[CeaX6Rg6JWm1
 R3
@@ -207,22 +207,22 @@ IQSDUTNDJSVgM[0?WYVBG<3
 R4
 S1
 R0
-R28
+R33
 8C:/Users/Bryan Gomez/Documents/Lab3/P1/comparator.sv
 FC:/Users/Bryan Gomez/Documents/Lab3/P1/comparator.sv
 !i122 5
 L0 1 41
-R5
+R8
 r1
 !s85 0
 31
-R6
+R9
 !s107 C:/Users/Bryan Gomez/Documents/Lab3/P1/comparator.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/Lab3/P1|C:/Users/Bryan Gomez/Documents/Lab3/P1/comparator.sv|
 !i113 1
-R7
-R8
-R9
+R12
+R13
+R14
 vConexion
 R1
 R2
@@ -233,26 +233,53 @@ I2fLoe=@kN7b=Ag;AO_hQl0
 R4
 S1
 R0
-R20
-R21
-R22
+R25
+R26
+R27
 !i122 8
 L0 159 46
-R5
+R8
 r1
 !s85 0
 31
-R16
-R23
-R24
+R21
+R28
+R29
 !i113 1
-R7
-R8
-R9
+R12
+R13
+R14
 n@conexion
+vDisplay7Segment
+R1
+R2
+!i10b 1
+!s100 bk6ieKMFmc_TF<22Skj:_0
+R3
+Iz9U8gOn>^<DA_Zn<X_]hD1
+R4
+S1
+R0
+R5
+R6
+R7
+!i122 7
+L0 80 30
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+R14
+n@display7@segment
 vdivider
 R1
-R27
+R32
 !i10b 1
 !s100 :V:DcZiCC<Yg4HM_zE_DH2
 R3
@@ -265,20 +292,20 @@ w1694496968
 FC:/Users/Bryan Gomez/Documents/Lab3/P1/divider.sv
 !i122 4
 L0 39 70
-R5
+R8
 r1
 !s85 0
 31
-R6
+Z34 !s108 1694501628.000000
 !s107 C:/Users/Bryan Gomez/Documents/Lab3/P1/divider.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/Lab3/P1|C:/Users/Bryan Gomez/Documents/Lab3/P1/divider.sv|
 !i113 1
-R7
-R8
-R9
+R12
+R13
+R14
 vfull_adder_1bit
 R1
-Z29 !s110 1694498136
+Z35 !s110 1694501628
 !i10b 1
 !s100 VJIDJT3RKg6m1mc;7m6eX2
 R3
@@ -286,25 +313,25 @@ IXTXQnofG85lV6jJX[CRah0
 R4
 S1
 R0
-R28
+R33
 8C:/Users/Bryan Gomez/Documents/Lab3/P1/full_adder_1bit.sv
 FC:/Users/Bryan Gomez/Documents/Lab3/P1/full_adder_1bit.sv
 !i122 3
 L0 1 10
-R5
+R8
 r1
 !s85 0
 31
-Z30 !s108 1694498136.000000
+R34
 !s107 C:/Users/Bryan Gomez/Documents/Lab3/P1/full_adder_1bit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/Lab3/P1|C:/Users/Bryan Gomez/Documents/Lab3/P1/full_adder_1bit.sv|
 !i113 1
-R7
-R8
-R9
+R12
+R13
+R14
 vLogicalUnit
 R1
-R10
+R15
 !i10b 1
 !s100 ;nzd:dG^C0DAjT8KPD2U83
 R3
@@ -317,21 +344,21 @@ w1694497818
 FC:/Users/Bryan Gomez/Documents/Lab3/P1/LogicalUnit.sv
 !i122 16
 L0 1 140
-R5
+R8
 r1
 !s85 0
 31
-R11
+R16
 !s107 C:/Users/Bryan Gomez/Documents/Lab3/P1/LogicalUnit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/Lab3/P1|C:/Users/Bryan Gomez/Documents/Lab3/P1/LogicalUnit.sv|
 !i113 1
-R7
-R8
-R9
+R12
+R13
+R14
 n@logical@unit
 vmod
 R1
-R29
+R35
 !i10b 1
 !s100 4=mj4GX:P3@O>Z6_;M8lQ2
 R3
@@ -339,25 +366,25 @@ IYD7P9?AH9?llMD3KCOAf^1
 R4
 S1
 R0
-R28
+R33
 8C:/Users/Bryan Gomez/Documents/Lab3/P1/mod.sv
 FC:/Users/Bryan Gomez/Documents/Lab3/P1/mod.sv
 !i122 2
 L0 1 19
-R5
+R8
 r1
 !s85 0
 31
-R30
+R34
 !s107 C:/Users/Bryan Gomez/Documents/Lab3/P1/mod.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/Lab3/P1|C:/Users/Bryan Gomez/Documents/Lab3/P1/mod.sv|
 !i113 1
-R7
-R8
-R9
+R12
+R13
+R14
 vn_bit_adder
 R1
-R29
+R35
 !i10b 1
 !s100 :oS`@AU:WHzAPCIF3j=R>0
 R3
@@ -365,25 +392,25 @@ I16JFf5o0h]oBD7gUZe=jC1
 R4
 S1
 R0
-R28
+R33
 8C:/Users/Bryan Gomez/Documents/Lab3/P1/n_bit_adder.sv
 FC:/Users/Bryan Gomez/Documents/Lab3/P1/n_bit_adder.sv
 !i122 1
 L0 1 27
-R5
+R8
 r1
 !s85 0
 31
-R30
+Z36 !s108 1694501627.000000
 !s107 C:/Users/Bryan Gomez/Documents/Lab3/P1/n_bit_adder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/Lab3/P1|C:/Users/Bryan Gomez/Documents/Lab3/P1/n_bit_adder.sv|
 !i113 1
-R7
-R8
-R9
+R12
+R13
+R14
 vn_bit_subtractor
 R1
-!s110 1694498135
+!s110 1694501627
 !i10b 1
 !s100 YYSnM_@CCV25;R^0ZSzc11
 R3
@@ -391,22 +418,22 @@ IV2a?2:GQXV=9Uz1;3HoYJ3
 R4
 S1
 R0
-R28
+R33
 8C:/Users/Bryan Gomez/Documents/Lab3/P1/n_bit_subtractor.sv
 FC:/Users/Bryan Gomez/Documents/Lab3/P1/n_bit_subtractor.sv
 !i122 0
 L0 1 45
-R5
+R8
 r1
 !s85 0
 31
-!s108 1694498135.000000
+R36
 !s107 C:/Users/Bryan Gomez/Documents/Lab3/P1/n_bit_subtractor.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/Lab3/P1|C:/Users/Bryan Gomez/Documents/Lab3/P1/n_bit_subtractor.sv|
 !i113 1
-R7
-R8
-R9
+R12
+R13
+R14
 vNbitMultiplier
 R1
 R2
@@ -417,26 +444,26 @@ I:?zY>o1hLdWHcChNzH;VD3
 R4
 S1
 R0
-R12
-R13
-R14
+R17
+R18
+R19
 !i122 9
 L0 73 47
-R5
+R8
 r1
 !s85 0
 31
-R16
-R17
-R18
+R21
+R22
+R23
 !i113 1
-R7
-R8
-R9
+R12
+R13
+R14
 n@nbit@multiplier
 vOrGate
 R1
-Z31 !s110 1694498140
+R30
 !i10b 1
 !s100 B6bPa[HVV2LCe:@[b_?8K3
 R3
@@ -448,18 +475,18 @@ w1694497426
 8C:/Users/Bryan Gomez/Documents/Lab3/P1/OrGate.sv
 FC:/Users/Bryan Gomez/Documents/Lab3/P1/OrGate.sv
 !i122 14
-R15
-R5
+R20
+R8
 r1
 !s85 0
 31
-R19
+R24
 !s107 C:/Users/Bryan Gomez/Documents/Lab3/P1/OrGate.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/Lab3/P1|C:/Users/Bryan Gomez/Documents/Lab3/P1/OrGate.sv|
 !i113 1
-R7
-R8
-R9
+R12
+R13
+R14
 n@or@gate
 vPartialAdder
 R1
@@ -471,26 +498,26 @@ IGn:@:3eG?8_SY_YmY@zMe2
 R4
 S1
 R0
-R12
-R13
-R14
+R17
+R18
+R19
 !i122 9
 L0 19 53
-R5
+R8
 r1
 !s85 0
 31
-R16
-R17
-R18
+R21
+R22
+R23
 !i113 1
-R7
-R8
-R9
+R12
+R13
+R14
 n@partial@adder
 vshift_left
 R1
-R25
+Z37 !s110 1694501631
 !i10b 1
 !s100 ><R8>Wbk[fZK;AWWnhI]V2
 R3
@@ -503,17 +530,17 @@ w1694480565
 FC:/Users/Bryan Gomez/Documents/Lab3/P1/shift_left.sv
 !i122 10
 L0 1 31
-R5
+R8
 r1
 !s85 0
 31
-R26
+R31
 !s107 C:/Users/Bryan Gomez/Documents/Lab3/P1/shift_left.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/Lab3/P1|C:/Users/Bryan Gomez/Documents/Lab3/P1/shift_left.sv|
 !i113 1
-R7
-R8
-R9
+R12
+R13
+R14
 vshift_left_with_truncate
 R1
 R2
@@ -524,25 +551,25 @@ IF4eJ=0NDjgPK1I5281TJ42
 R4
 S1
 R0
-R20
-R21
-R22
+R25
+R26
+R27
 !i122 8
 L0 207 18
-R5
+R8
 r1
 !s85 0
 31
-R16
-R23
-R24
+R21
+R28
+R29
 !i113 1
-R7
-R8
-R9
+R12
+R13
+R14
 vshift_right
 R1
-R25
+R37
 !i10b 1
 !s100 >ffQT50hC<j0k]X436ab93
 R3
@@ -555,17 +582,17 @@ w1694479698
 FC:/Users/Bryan Gomez/Documents/Lab3/P1/shift_right.sv
 !i122 11
 L0 1 35
-R5
+R8
 r1
 !s85 0
 31
-R26
+R31
 !s107 C:/Users/Bryan Gomez/Documents/Lab3/P1/shift_right.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/Lab3/P1|C:/Users/Bryan Gomez/Documents/Lab3/P1/shift_right.sv|
 !i113 1
-R7
-R8
-R9
+R12
+R13
+R14
 vsuma
 R1
 R2
@@ -576,22 +603,22 @@ IV4R>52;::DA_SBjmiN=h61
 R4
 S1
 R0
-R20
-R21
-R22
+R25
+R26
+R27
 !i122 8
 L0 105 53
-R5
+R8
 r1
 !s85 0
 31
-R16
-R23
-R24
+R21
+R28
+R29
 !i113 1
-R7
-R8
-R9
+R12
+R13
+R14
 vXor
 R1
 R2
@@ -602,26 +629,26 @@ Ik:z7@b>Aj;oYX3M2gzlU60
 R4
 S1
 R0
-R12
-R13
-R14
+R17
+R18
+R19
 !i122 9
 L0 10 7
-R5
+R8
 r1
 !s85 0
 31
-R16
-R17
-R18
+R21
+R22
+R23
 !i113 1
-R7
-R8
-R9
+R12
+R13
+R14
 n@xor
 vXorGate
 R1
-R31
+R30
 !i10b 1
 !s100 mlZ<`1WJZ?0U^?flaoAf72
 R3
@@ -633,18 +660,18 @@ w1694340409
 8C:/Users/Bryan Gomez/Documents/Lab3/P1/XorGate.sv
 FC:/Users/Bryan Gomez/Documents/Lab3/P1/XorGate.sv
 !i122 13
-R15
-R5
+R20
+R8
 r1
 !s85 0
 31
-R19
+R24
 !s107 C:/Users/Bryan Gomez/Documents/Lab3/P1/XorGate.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/Lab3/P1|C:/Users/Bryan Gomez/Documents/Lab3/P1/XorGate.sv|
 !i113 1
-R7
-R8
-R9
+R12
+R13
+R14
 n@xor@gate
 vXorGate2
 R1
@@ -656,20 +683,20 @@ IaV[_aYNcNK47OUG4T?o^j2
 R4
 S1
 R0
-R20
-R21
-R22
+R25
+R26
+R27
 !i122 8
 L0 96 7
-R5
+R8
 r1
 !s85 0
 31
-R16
-R23
-R24
+R21
+R28
+R29
 !i113 1
-R7
-R8
-R9
+R12
+R13
+R14
 n@xor@gate2

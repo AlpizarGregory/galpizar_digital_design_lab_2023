@@ -19,18 +19,25 @@ operation[0] => operation[0].IN2
 operation[1] => operation[1].IN2
 operation[2] => operation[2].IN2
 operation[3] => Decoder0.IN0
-result[0] << result.DB_MAX_OUTPUT_PORT_TYPE
-result[1] << result.DB_MAX_OUTPUT_PORT_TYPE
-result[2] << result.DB_MAX_OUTPUT_PORT_TYPE
-result[3] << result.DB_MAX_OUTPUT_PORT_TYPE
-result[4] << result.DB_MAX_OUTPUT_PORT_TYPE
-result[5] << result.DB_MAX_OUTPUT_PORT_TYPE
-result[6] << result.DB_MAX_OUTPUT_PORT_TYPE
-result[7] << result.DB_MAX_OUTPUT_PORT_TYPE
-N << N.DB_MAX_OUTPUT_PORT_TYPE
-Z << Z.DB_MAX_OUTPUT_PORT_TYPE
-C << C.DB_MAX_OUTPUT_PORT_TYPE
-V << V.DB_MAX_OUTPUT_PORT_TYPE
+result[0] <= result[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result[3].DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= result[4].DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= result[5].DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= result[6].DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= result[7].DB_MAX_OUTPUT_PORT_TYPE
+N <= N.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Z.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+V <= V.DB_MAX_OUTPUT_PORT_TYPE
+segOut[0] <= <GND>
+segOut[1] <= <GND>
+segOut[2] <= <GND>
+segOut[3] <= <GND>
+segOut[4] <= <GND>
+segOut[5] <= <GND>
+segOut[6] <= <GND>
 
 
 |ALU|ArithmeticUnit:arith_unit
@@ -49485,5 +49492,19 @@ data_out[4] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
 data_out[5] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
 data_out[6] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
 data_out[7] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Display7Segment:display_instance
+binary_input[0] => Decoder0.IN3
+binary_input[1] => Decoder0.IN2
+binary_input[2] => Decoder0.IN1
+binary_input[3] => Decoder0.IN0
+seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 

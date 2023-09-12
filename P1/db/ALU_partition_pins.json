@@ -48,7 +48,43 @@
 					"strict" : false
 				},
 				{
+					"name" : "operation[2]",
+					"strict" : false
+				},
+				{
+					"name" : "operation[3]",
+					"strict" : false
+				},
+				{
 					"name" : "operation[0]",
+					"strict" : false
+				},
+				{
+					"name" : "A[0]",
+					"strict" : false
+				},
+				{
+					"name" : "B[0]",
+					"strict" : false
+				},
+				{
+					"name" : "operation[1]",
+					"strict" : false
+				},
+				{
+					"name" : "B[3]",
+					"strict" : false
+				},
+				{
+					"name" : "B[2]",
+					"strict" : false
+				},
+				{
+					"name" : "B[1]",
+					"strict" : false
+				},
+				{
+					"name" : "A[1]",
 					"strict" : false
 				},
 				{
@@ -88,43 +124,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "B[3]",
-					"strict" : false
-				},
-				{
 					"name" : "A[2]",
-					"strict" : false
-				},
-				{
-					"name" : "B[2]",
-					"strict" : false
-				},
-				{
-					"name" : "A[1]",
-					"strict" : false
-				},
-				{
-					"name" : "B[1]",
-					"strict" : false
-				},
-				{
-					"name" : "A[0]",
-					"strict" : false
-				},
-				{
-					"name" : "B[0]",
-					"strict" : false
-				},
-				{
-					"name" : "operation[1]",
-					"strict" : false
-				},
-				{
-					"name" : "operation[2]",
-					"strict" : false
-				},
-				{
-					"name" : "operation[3]",
 					"strict" : false
 				}
 			]

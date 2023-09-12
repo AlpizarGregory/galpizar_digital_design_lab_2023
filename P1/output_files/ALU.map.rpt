@@ -1,5 +1,5 @@
 Analysis & Elaboration report for ALU
-Mon Sep 11 23:52:03 2023
+Tue Sep 12 00:45:51 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -636,213 +636,214 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 628. Parameter Settings for User Entity Instance: LogicalUnit:logic_unit|shift_left:shift_leftInstance
 629. Parameter Settings for User Entity Instance: LogicalUnit:logic_unit|shift_right:shift_rightInstance
 630. Analysis & Elaboration Settings
-631. Port Connectivity Checks: "LogicalUnit:logic_unit|shift_right:shift_rightInstance"
-632. Port Connectivity Checks: "LogicalUnit:logic_unit|shift_left:shift_leftInstance"
-633. Port Connectivity Checks: "ArithmeticUnit:arith_unit|mod:modInstance|divider:div"
-634. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[63].add_inst"
-635. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[63].sub_inst"
-636. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[63].comp_inst"
-637. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[62].add_inst"
-638. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[62].sub_inst"
-639. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[62].comp_inst"
-640. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[61].add_inst"
-641. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[61].sub_inst"
-642. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[61].comp_inst"
-643. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[60].add_inst"
-644. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[60].sub_inst"
-645. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[60].comp_inst"
-646. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[59].add_inst"
-647. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[59].sub_inst"
-648. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[59].comp_inst"
-649. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[58].add_inst"
-650. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[58].sub_inst"
-651. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[58].comp_inst"
-652. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[57].add_inst"
-653. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[57].sub_inst"
-654. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[57].comp_inst"
-655. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[56].add_inst"
-656. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[56].sub_inst"
-657. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[56].comp_inst"
-658. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[55].add_inst"
-659. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[55].sub_inst"
-660. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[55].comp_inst"
-661. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[54].add_inst"
-662. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[54].sub_inst"
-663. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[54].comp_inst"
-664. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[53].add_inst"
-665. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[53].sub_inst"
-666. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[53].comp_inst"
-667. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[52].add_inst"
-668. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[52].sub_inst"
-669. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[52].comp_inst"
-670. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[51].add_inst"
-671. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[51].sub_inst"
-672. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[51].comp_inst"
-673. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[50].add_inst"
-674. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[50].sub_inst"
-675. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[50].comp_inst"
-676. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[49].add_inst"
-677. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[49].sub_inst"
-678. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[49].comp_inst"
-679. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[48].add_inst"
-680. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[48].sub_inst"
-681. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[48].comp_inst"
-682. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[47].add_inst"
-683. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[47].sub_inst"
-684. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[47].comp_inst"
-685. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[46].add_inst"
-686. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[46].sub_inst"
-687. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[46].comp_inst"
-688. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[45].add_inst"
-689. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[45].sub_inst"
-690. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[45].comp_inst"
-691. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[44].add_inst"
-692. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[44].sub_inst"
-693. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[44].comp_inst"
-694. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[43].add_inst"
-695. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[43].sub_inst"
-696. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[43].comp_inst"
-697. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[42].add_inst"
-698. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[42].sub_inst"
-699. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[42].comp_inst"
-700. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[41].add_inst"
-701. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[41].sub_inst"
-702. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[41].comp_inst"
-703. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[40].add_inst"
-704. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[40].sub_inst"
-705. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[40].comp_inst"
-706. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[39].add_inst"
-707. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[39].sub_inst"
-708. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[39].comp_inst"
-709. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[38].add_inst"
-710. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[38].sub_inst"
-711. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[38].comp_inst"
-712. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[37].add_inst"
-713. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[37].sub_inst"
-714. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[37].comp_inst"
-715. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[36].add_inst"
-716. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[36].sub_inst"
-717. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[36].comp_inst"
-718. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[35].add_inst"
-719. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[35].sub_inst"
-720. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[35].comp_inst"
-721. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[34].add_inst"
-722. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[34].sub_inst"
-723. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[34].comp_inst"
-724. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[33].add_inst"
-725. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[33].sub_inst"
-726. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[33].comp_inst"
-727. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[32].add_inst"
-728. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[32].sub_inst"
-729. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[32].comp_inst"
-730. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[31].add_inst"
-731. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[31].sub_inst"
-732. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[31].comp_inst"
-733. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[30].add_inst"
-734. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[30].sub_inst"
-735. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[30].comp_inst"
-736. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[29].add_inst"
-737. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[29].sub_inst"
-738. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[29].comp_inst"
-739. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[28].add_inst"
-740. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[28].sub_inst"
-741. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[28].comp_inst"
-742. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[27].add_inst"
-743. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[27].sub_inst"
-744. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[27].comp_inst"
-745. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[26].add_inst"
-746. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[26].sub_inst"
-747. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[26].comp_inst"
-748. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[25].add_inst"
-749. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[25].sub_inst"
-750. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[25].comp_inst"
-751. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[24].add_inst"
-752. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[24].sub_inst"
-753. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[24].comp_inst"
-754. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[23].add_inst"
-755. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[23].sub_inst"
-756. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[23].comp_inst"
-757. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[22].add_inst"
-758. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[22].sub_inst"
-759. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[22].comp_inst"
-760. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[21].add_inst"
-761. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[21].sub_inst"
-762. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[21].comp_inst"
-763. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[20].add_inst"
-764. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[20].sub_inst"
-765. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[20].comp_inst"
-766. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[19].add_inst"
-767. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[19].sub_inst"
-768. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[19].comp_inst"
-769. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[18].add_inst"
-770. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[18].sub_inst"
-771. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[18].comp_inst"
-772. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[17].add_inst"
-773. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[17].sub_inst"
-774. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[17].comp_inst"
-775. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[16].add_inst"
-776. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[16].sub_inst"
-777. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[16].comp_inst"
-778. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[15].add_inst"
-779. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[15].sub_inst"
-780. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[15].comp_inst"
-781. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[14].add_inst"
-782. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[14].sub_inst"
-783. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[14].comp_inst"
-784. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[13].add_inst"
-785. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[13].sub_inst"
-786. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[13].comp_inst"
-787. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[12].add_inst"
-788. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[12].sub_inst"
-789. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[12].comp_inst"
-790. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[11].add_inst"
-791. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[11].sub_inst"
-792. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[11].comp_inst"
-793. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[10].add_inst"
-794. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[10].sub_inst"
-795. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[10].comp_inst"
-796. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[9].add_inst"
-797. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[9].sub_inst"
-798. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[9].comp_inst"
-799. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[8].add_inst"
-800. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[8].sub_inst"
-801. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[8].comp_inst"
-802. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[7].add_inst"
-803. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[7].sub_inst"
-804. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[7].comp_inst"
-805. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[6].add_inst"
-806. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[6].sub_inst"
-807. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[6].comp_inst"
-808. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[5].add_inst"
-809. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[5].sub_inst"
-810. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[5].comp_inst"
-811. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[4].add_inst"
-812. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[4].sub_inst"
-813. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[4].comp_inst"
-814. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[3].add_inst"
-815. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[3].sub_inst"
-816. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[3].comp_inst"
-817. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[2].add_inst"
-818. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[2].sub_inst"
-819. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[2].comp_inst"
-820. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[1].add_inst"
-821. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[1].sub_inst"
-822. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[1].comp_inst"
-823. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[0].add_inst"
-824. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[0].sub_inst"
-825. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[0].comp_inst"
-826. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance"
-827. Port Connectivity Checks: "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[6].sum_instance"
-828. Port Connectivity Checks: "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[5].sum_instance"
-829. Port Connectivity Checks: "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[4].sum_instance"
-830. Port Connectivity Checks: "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[3].sum_instance"
-831. Port Connectivity Checks: "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[2].sum_instance"
-832. Port Connectivity Checks: "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[1].sum_instance"
-833. Port Connectivity Checks: "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[0].sum_instance"
-834. Port Connectivity Checks: "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance"
-835. Port Connectivity Checks: "ArithmeticUnit:arith_unit|n_bit_subtractor:n_bit_subtractorInstance"
-836. Port Connectivity Checks: "ArithmeticUnit:arith_unit|n_bit_adder:n_bit_adderInstance"
-837. Analysis & Elaboration Messages
+631. Port Connectivity Checks: "Display7Segment:display_instance"
+632. Port Connectivity Checks: "LogicalUnit:logic_unit|shift_right:shift_rightInstance"
+633. Port Connectivity Checks: "LogicalUnit:logic_unit|shift_left:shift_leftInstance"
+634. Port Connectivity Checks: "ArithmeticUnit:arith_unit|mod:modInstance|divider:div"
+635. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[63].add_inst"
+636. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[63].sub_inst"
+637. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[63].comp_inst"
+638. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[62].add_inst"
+639. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[62].sub_inst"
+640. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[62].comp_inst"
+641. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[61].add_inst"
+642. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[61].sub_inst"
+643. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[61].comp_inst"
+644. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[60].add_inst"
+645. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[60].sub_inst"
+646. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[60].comp_inst"
+647. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[59].add_inst"
+648. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[59].sub_inst"
+649. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[59].comp_inst"
+650. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[58].add_inst"
+651. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[58].sub_inst"
+652. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[58].comp_inst"
+653. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[57].add_inst"
+654. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[57].sub_inst"
+655. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[57].comp_inst"
+656. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[56].add_inst"
+657. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[56].sub_inst"
+658. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[56].comp_inst"
+659. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[55].add_inst"
+660. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[55].sub_inst"
+661. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[55].comp_inst"
+662. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[54].add_inst"
+663. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[54].sub_inst"
+664. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[54].comp_inst"
+665. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[53].add_inst"
+666. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[53].sub_inst"
+667. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[53].comp_inst"
+668. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[52].add_inst"
+669. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[52].sub_inst"
+670. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[52].comp_inst"
+671. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[51].add_inst"
+672. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[51].sub_inst"
+673. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[51].comp_inst"
+674. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[50].add_inst"
+675. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[50].sub_inst"
+676. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[50].comp_inst"
+677. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[49].add_inst"
+678. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[49].sub_inst"
+679. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[49].comp_inst"
+680. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[48].add_inst"
+681. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[48].sub_inst"
+682. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[48].comp_inst"
+683. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[47].add_inst"
+684. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[47].sub_inst"
+685. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[47].comp_inst"
+686. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[46].add_inst"
+687. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[46].sub_inst"
+688. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[46].comp_inst"
+689. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[45].add_inst"
+690. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[45].sub_inst"
+691. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[45].comp_inst"
+692. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[44].add_inst"
+693. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[44].sub_inst"
+694. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[44].comp_inst"
+695. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[43].add_inst"
+696. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[43].sub_inst"
+697. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[43].comp_inst"
+698. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[42].add_inst"
+699. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[42].sub_inst"
+700. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[42].comp_inst"
+701. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[41].add_inst"
+702. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[41].sub_inst"
+703. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[41].comp_inst"
+704. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[40].add_inst"
+705. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[40].sub_inst"
+706. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[40].comp_inst"
+707. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[39].add_inst"
+708. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[39].sub_inst"
+709. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[39].comp_inst"
+710. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[38].add_inst"
+711. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[38].sub_inst"
+712. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[38].comp_inst"
+713. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[37].add_inst"
+714. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[37].sub_inst"
+715. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[37].comp_inst"
+716. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[36].add_inst"
+717. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[36].sub_inst"
+718. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[36].comp_inst"
+719. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[35].add_inst"
+720. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[35].sub_inst"
+721. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[35].comp_inst"
+722. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[34].add_inst"
+723. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[34].sub_inst"
+724. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[34].comp_inst"
+725. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[33].add_inst"
+726. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[33].sub_inst"
+727. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[33].comp_inst"
+728. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[32].add_inst"
+729. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[32].sub_inst"
+730. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[32].comp_inst"
+731. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[31].add_inst"
+732. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[31].sub_inst"
+733. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[31].comp_inst"
+734. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[30].add_inst"
+735. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[30].sub_inst"
+736. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[30].comp_inst"
+737. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[29].add_inst"
+738. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[29].sub_inst"
+739. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[29].comp_inst"
+740. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[28].add_inst"
+741. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[28].sub_inst"
+742. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[28].comp_inst"
+743. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[27].add_inst"
+744. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[27].sub_inst"
+745. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[27].comp_inst"
+746. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[26].add_inst"
+747. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[26].sub_inst"
+748. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[26].comp_inst"
+749. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[25].add_inst"
+750. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[25].sub_inst"
+751. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[25].comp_inst"
+752. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[24].add_inst"
+753. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[24].sub_inst"
+754. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[24].comp_inst"
+755. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[23].add_inst"
+756. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[23].sub_inst"
+757. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[23].comp_inst"
+758. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[22].add_inst"
+759. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[22].sub_inst"
+760. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[22].comp_inst"
+761. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[21].add_inst"
+762. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[21].sub_inst"
+763. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[21].comp_inst"
+764. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[20].add_inst"
+765. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[20].sub_inst"
+766. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[20].comp_inst"
+767. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[19].add_inst"
+768. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[19].sub_inst"
+769. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[19].comp_inst"
+770. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[18].add_inst"
+771. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[18].sub_inst"
+772. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[18].comp_inst"
+773. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[17].add_inst"
+774. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[17].sub_inst"
+775. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[17].comp_inst"
+776. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[16].add_inst"
+777. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[16].sub_inst"
+778. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[16].comp_inst"
+779. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[15].add_inst"
+780. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[15].sub_inst"
+781. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[15].comp_inst"
+782. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[14].add_inst"
+783. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[14].sub_inst"
+784. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[14].comp_inst"
+785. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[13].add_inst"
+786. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[13].sub_inst"
+787. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[13].comp_inst"
+788. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[12].add_inst"
+789. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[12].sub_inst"
+790. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[12].comp_inst"
+791. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[11].add_inst"
+792. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[11].sub_inst"
+793. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[11].comp_inst"
+794. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[10].add_inst"
+795. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[10].sub_inst"
+796. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[10].comp_inst"
+797. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[9].add_inst"
+798. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[9].sub_inst"
+799. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[9].comp_inst"
+800. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[8].add_inst"
+801. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[8].sub_inst"
+802. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[8].comp_inst"
+803. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[7].add_inst"
+804. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[7].sub_inst"
+805. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[7].comp_inst"
+806. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[6].add_inst"
+807. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[6].sub_inst"
+808. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[6].comp_inst"
+809. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[5].add_inst"
+810. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[5].sub_inst"
+811. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[5].comp_inst"
+812. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[4].add_inst"
+813. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[4].sub_inst"
+814. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[4].comp_inst"
+815. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[3].add_inst"
+816. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[3].sub_inst"
+817. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[3].comp_inst"
+818. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[2].add_inst"
+819. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[2].sub_inst"
+820. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[2].comp_inst"
+821. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[1].add_inst"
+822. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[1].sub_inst"
+823. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[1].comp_inst"
+824. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_adder:division_loop[0].add_inst"
+825. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|n_bit_subtractor:division_loop[0].sub_inst"
+826. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[0].comp_inst"
+827. Port Connectivity Checks: "ArithmeticUnit:arith_unit|divider:dividerInstance"
+828. Port Connectivity Checks: "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[6].sum_instance"
+829. Port Connectivity Checks: "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[5].sum_instance"
+830. Port Connectivity Checks: "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[4].sum_instance"
+831. Port Connectivity Checks: "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[3].sum_instance"
+832. Port Connectivity Checks: "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[2].sum_instance"
+833. Port Connectivity Checks: "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[1].sum_instance"
+834. Port Connectivity Checks: "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[0].sum_instance"
+835. Port Connectivity Checks: "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance"
+836. Port Connectivity Checks: "ArithmeticUnit:arith_unit|n_bit_subtractor:n_bit_subtractorInstance"
+837. Port Connectivity Checks: "ArithmeticUnit:arith_unit|n_bit_adder:n_bit_adderInstance"
+838. Analysis & Elaboration Messages
 
 
 
@@ -869,7 +870,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                 ;
 +-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Mon Sep 11 23:52:03 2023          ;
+; Analysis & Elaboration Status ; Successful - Tue Sep 12 00:45:51 2023          ;
 ; Quartus Prime Version         ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                 ; ALU                                            ;
 ; Top-level Entity Name         ; ALU                                            ;
@@ -7247,6 +7248,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Display7Segment:display_instance"                                                                                                                                                        ;
++--------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                                                                                                                          ;
++--------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; binary_input ; Input  ; Warning  ; Input port expression (8 bits) is wider than the input port (4 bits) it drives.  The 4 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; seg          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                              ;
++--------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "LogicalUnit:logic_unit|shift_right:shift_rightInstance"                                                                                                                                ;
 +-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -9254,7 +9265,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Mon Sep 11 23:51:34 2023
+    Info: Processing started: Tue Sep 12 00:45:24 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -9286,8 +9297,9 @@ Info (12021): Found 1 design units, including 1 entities, in source file bit_com
     Info (12023): Found entity 1: bit_comparator_tb File: C:/Users/Bryan Gomez/Documents/Lab3/P1/bit_comparator_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file bit_comparator.sv
     Info (12023): Found entity 1: bit_comparator File: C:/Users/Bryan Gomez/Documents/Lab3/P1/bit_comparator.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
+Info (12021): Found 2 design units, including 2 entities, in source file alu.sv
     Info (12023): Found entity 1: ALU File: C:/Users/Bryan Gomez/Documents/Lab3/P1/ALU.sv Line: 1
+    Info (12023): Found entity 2: Display7Segment File: C:/Users/Bryan Gomez/Documents/Lab3/P1/ALU.sv Line: 80
 Info (12021): Found 5 design units, including 5 entities, in source file conexion.sv
     Info (12023): Found entity 1: AndGate2 File: C:/Users/Bryan Gomez/Documents/Lab3/P1/Conexion.sv Line: 87
     Info (12023): Found entity 2: XorGate2 File: C:/Users/Bryan Gomez/Documents/Lab3/P1/Conexion.sv Line: 96
@@ -9319,8 +9331,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file alu_tb.
     Info (12023): Found entity 1: ALU_tb File: C:/Users/Bryan Gomez/Documents/Lab3/P1/ALU_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file xorgate.sv
     Info (12023): Found entity 1: XorGate File: C:/Users/Bryan Gomez/Documents/Lab3/P1/XorGate.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file nbitdivider_tb.sv
-    Info (12023): Found entity 1: NbitDivider_tb File: C:/Users/Bryan Gomez/Documents/Lab3/P1/NbitDivider_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file orgate.sv
     Info (12023): Found entity 1: OrGate File: C:/Users/Bryan Gomez/Documents/Lab3/P1/OrGate.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file andgate.sv
@@ -9328,7 +9338,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file andgate
 Warning (10236): Verilog HDL Implicit Net warning at LogicalUnit.sv(59): created implicit net for "slV" File: C:/Users/Bryan Gomez/Documents/Lab3/P1/LogicalUnit.sv Line: 59
 Warning (10236): Verilog HDL Implicit Net warning at LogicalUnit.sv(71): created implicit net for "srV" File: C:/Users/Bryan Gomez/Documents/Lab3/P1/LogicalUnit.sv Line: 71
 Info (12127): Elaborating entity "ALU" for the top level hierarchy
-Info (12128): Elaborating entity "ArithmeticUnit" for hierarchy "ArithmeticUnit:arith_unit" File: C:/Users/Bryan Gomez/Documents/Lab3/P1/ALU.sv Line: 28
+Warning (10034): Output port "segOut" at ALU.sv(11) has no driver File: C:/Users/Bryan Gomez/Documents/Lab3/P1/ALU.sv Line: 11
+Info (12128): Elaborating entity "ArithmeticUnit" for hierarchy "ArithmeticUnit:arith_unit" File: C:/Users/Bryan Gomez/Documents/Lab3/P1/ALU.sv Line: 30
 Info (12128): Elaborating entity "n_bit_adder" for hierarchy "ArithmeticUnit:arith_unit|n_bit_adder:n_bit_adderInstance" File: C:/Users/Bryan Gomez/Documents/Lab3/P1/ArithmeticUnit.sv Line: 39
 Info (12128): Elaborating entity "full_adder_1bit" for hierarchy "ArithmeticUnit:arith_unit|n_bit_adder:n_bit_adderInstance|full_adder_1bit:adder_gen[0].adder_inst" File: C:/Users/Bryan Gomez/Documents/Lab3/P1/n_bit_adder.sv Line: 21
 Info (12128): Elaborating entity "n_bit_subtractor" for hierarchy "ArithmeticUnit:arith_unit|n_bit_subtractor:n_bit_subtractorInstance" File: C:/Users/Bryan Gomez/Documents/Lab3/P1/ArithmeticUnit.sv Line: 51
@@ -9348,17 +9359,18 @@ Warning (10030): Net "quotient_temp[2055..2048]" at divider.sv(48) has no driver
 Info (12128): Elaborating entity "comparator" for hierarchy "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[0].comp_inst" File: C:/Users/Bryan Gomez/Documents/Lab3/P1/divider.sv Line: 85
 Info (12128): Elaborating entity "bit_comparator" for hierarchy "ArithmeticUnit:arith_unit|divider:dividerInstance|comparator:division_loop[0].comp_inst|bit_comparator:xd[1].bit_comp_inst" File: C:/Users/Bryan Gomez/Documents/Lab3/P1/comparator.sv Line: 33
 Info (12128): Elaborating entity "mod" for hierarchy "ArithmeticUnit:arith_unit|mod:modInstance" File: C:/Users/Bryan Gomez/Documents/Lab3/P1/ArithmeticUnit.sv Line: 83
-Info (12128): Elaborating entity "LogicalUnit" for hierarchy "LogicalUnit:logic_unit" File: C:/Users/Bryan Gomez/Documents/Lab3/P1/ALU.sv Line: 40
+Info (12128): Elaborating entity "LogicalUnit" for hierarchy "LogicalUnit:logic_unit" File: C:/Users/Bryan Gomez/Documents/Lab3/P1/ALU.sv Line: 42
 Info (12128): Elaborating entity "AndGate" for hierarchy "LogicalUnit:logic_unit|AndGate:AndGateInstance[0]" File: C:/Users/Bryan Gomez/Documents/Lab3/P1/LogicalUnit.sv Line: 34
 Info (12128): Elaborating entity "OrGate" for hierarchy "LogicalUnit:logic_unit|OrGate:OrGateInstance[0]" File: C:/Users/Bryan Gomez/Documents/Lab3/P1/LogicalUnit.sv Line: 44
 Info (12128): Elaborating entity "XorGate" for hierarchy "LogicalUnit:logic_unit|XorGate:XorGateInstance[0]" File: C:/Users/Bryan Gomez/Documents/Lab3/P1/LogicalUnit.sv Line: 54
 Info (12128): Elaborating entity "shift_left" for hierarchy "LogicalUnit:logic_unit|shift_left:shift_leftInstance" File: C:/Users/Bryan Gomez/Documents/Lab3/P1/LogicalUnit.sv Line: 66
 Info (12128): Elaborating entity "shift_right" for hierarchy "LogicalUnit:logic_unit|shift_right:shift_rightInstance" File: C:/Users/Bryan Gomez/Documents/Lab3/P1/LogicalUnit.sv Line: 78
-Warning (12241): 12 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 14 warnings
-    Info: Peak virtual memory: 4828 megabytes
-    Info: Processing ended: Mon Sep 11 23:52:03 2023
-    Info: Elapsed time: 00:00:29
-    Info: Total CPU time (on all processors): 00:00:49
+Info (12128): Elaborating entity "Display7Segment" for hierarchy "Display7Segment:display_instance" File: C:/Users/Bryan Gomez/Documents/Lab3/P1/ALU.sv Line: 48
+Warning (12241): 13 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 15 warnings
+    Info: Peak virtual memory: 4831 megabytes
+    Info: Processing ended: Tue Sep 12 00:45:51 2023
+    Info: Elapsed time: 00:00:27
+    Info: Total CPU time (on all processors): 00:00:43
 
 
