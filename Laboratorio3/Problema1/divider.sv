@@ -60,7 +60,6 @@ module divider #(parameter N = 4) (
         .sum(quotient_temp[(i+1)*N+(N-1):(i+1)*N]),
         .cout(uselessvar[i+N**2])
       );
-
     end
   endgenerate
 
