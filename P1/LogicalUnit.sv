@@ -22,7 +22,26 @@ module LogicalUnit #(parameter Nbit = 8)(
 	
 	logic [Nbit-1:0] sr_result;
    logic sr_N, sr_Z, sr_C, sr_V;
-
+	AndGate AndGateInstance [Nbit-1:0](
+		 .a(A),
+		 .b(B),
+		 .y(and_result)
+		 /*
+		 .N(N),
+		 .Z(Z),
+		 .C(C),
+		 .V(V)*/
+	  );
+	OrGate OrGateInstance [Nbit-1:0](
+		 .a(A),
+		 .b(B),
+		 .y(or_result)
+		 /*
+		 .N(N),
+		 .Z(Z),
+		 .C(C),
+		 .V(V)*/
+	  );
 	XorGate XorGateInstance [Nbit-1:0](
 		 .a(A),
 		 .b(B),
@@ -61,12 +80,24 @@ module LogicalUnit #(parameter Nbit = 8)(
 // Lógica para seleccionar la operación basada en 'operation'
   always_comb begin
     case (operation)
-	 /*
-      3'b000: // AND
+	 
+      3'b000: begin// AND
+		  result = and_result;
+        N = 0;
+        Z = 0;
+        C = 0;
+        V = 0;
+        end
         
-      3'b001: // OR
+      3'b001: begin// OR
+		  result = or_result;
+        N = 0;
+        Z = 0;
+        C = 0;
+        V = 0;
+        end
         
-		*/  
+		  
       3'b010: begin// XOR
 		  result = xor_result;
         N = 0;

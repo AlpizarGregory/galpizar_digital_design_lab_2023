@@ -52,9 +52,6 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
-set_global_assignment -name SYSTEMVERILOG_FILE ALU.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Conexion.sv
-set_global_assignment -name SYSTEMVERILOG_FILE conexion_tb.sv
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
@@ -64,34 +61,58 @@ set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH ALU_tb -section
 set_global_assignment -name EDA_TEST_BENCH_NAME conexion_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id conexion_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME conexion_tb -section_id conexion_tb
-set_global_assignment -name SYSTEMVERILOG_FILE NbitMultiplier.sv
-set_global_assignment -name SYSTEMVERILOG_FILE NbitMultiplier_tb.sv
 set_global_assignment -name EDA_TEST_BENCH_NAME NbitMultiplier_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id NbitMultiplier_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME NbitMultiplier_tb -section_id NbitMultiplier_tb
-set_global_assignment -name SYSTEMVERILOG_FILE shift_left.sv
-set_global_assignment -name SYSTEMVERILOG_FILE shift_left_tb.sv
 set_global_assignment -name EDA_TEST_BENCH_NAME shift_left_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id shift_left_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME shift_left_tb -section_id shift_left_tb
-set_global_assignment -name SYSTEMVERILOG_FILE shift_right.sv
-set_global_assignment -name SYSTEMVERILOG_FILE shift_right_tb.sv
 set_global_assignment -name EDA_TEST_BENCH_NAME shift_right_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id shift_right_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME shift_right_tb -section_id shift_right_tb
-set_global_assignment -name SYSTEMVERILOG_FILE LogicalUnit.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ArithmeticUnit.sv
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name EDA_TEST_BENCH_NAME ALU_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id ALU_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME ALU_tb -section_id ALU_tb
+set_global_assignment -name SYSTEMVERILOG_FILE n_bit_subtractor_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE n_bit_subtractor.sv
+set_global_assignment -name SYSTEMVERILOG_FILE n_bit_adder_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE n_bit_adder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mod_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mod.sv
+set_global_assignment -name SYSTEMVERILOG_FILE full_adder_1bit_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE full_adder_1bit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE divider_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE divider.sv
+set_global_assignment -name SYSTEMVERILOG_FILE comparator_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE comparator.sv
+set_global_assignment -name SYSTEMVERILOG_FILE bit_comparator_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE bit_comparator.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ALU.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Conexion.sv
+set_global_assignment -name SYSTEMVERILOG_FILE conexion_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE NbitMultiplier.sv
+set_global_assignment -name SYSTEMVERILOG_FILE NbitMultiplier_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE shift_left.sv
+set_global_assignment -name SYSTEMVERILOG_FILE shift_left_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE shift_right.sv
+set_global_assignment -name SYSTEMVERILOG_FILE shift_right_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE LogicalUnit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ArithmeticUnit.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ALU_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE XorGate.sv
+set_global_assignment -name SOURCE_FILE db/ALU.cmp.rdb
+set_global_assignment -name EDA_TEST_BENCH_NAME NbitDivider_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id NbitDivider_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME NbitDivider_tb -section_id NbitDivider_tb
+set_global_assignment -name SYSTEMVERILOG_FILE OrGate.sv
+set_global_assignment -name SYSTEMVERILOG_FILE AndGate.sv
 set_global_assignment -name EDA_TEST_BENCH_FILE conexion_tb.sv -section_id conexion_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE NbitMultiplier_tb.sv -section_id NbitMultiplier_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE shift_left_tb.sv -section_id shift_left_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE shift_right_tb.sv -section_id shift_right_tb
-set_global_assignment -name EDA_TEST_BENCH_NAME ALU_tb -section_id eda_simulation
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id ALU_tb
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME ALU_tb -section_id ALU_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE ALU_tb.sv -section_id ALU_tb
-set_global_assignment -name SYSTEMVERILOG_FILE XorGate.sv
+set_global_assignment -name EDA_TEST_BENCH_FILE NbitDivider_tb.sv -section_id NbitDivider_tb
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

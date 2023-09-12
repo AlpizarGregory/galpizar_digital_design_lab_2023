@@ -14,11 +14,19 @@ module ALU_tb();
 	
 	//always #20 clk = ~clk;
 	initial begin
+	  //Prueba resta   resultado esperado = 1001
+	A = 4'b1110;
+	B = 4'b0101;
+	operation = 4'b1001;
+	/*
+	A = 4'b0011;
+	B = 4'b0011;
+	operation = 4'b0011;
 	
 	A = 4'b0010;
 	B = 4'b1011;
 	operation = 4'b0010;
-
+`	*/
 
 
 	#30;

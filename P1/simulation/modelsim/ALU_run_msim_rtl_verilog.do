@@ -45,6 +45,13 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
+vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/Lab3/P1 {C:/Users/Bryan Gomez/Documents/Lab3/P1/n_bit_subtractor.sv}
+vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/Lab3/P1 {C:/Users/Bryan Gomez/Documents/Lab3/P1/n_bit_adder.sv}
+vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/Lab3/P1 {C:/Users/Bryan Gomez/Documents/Lab3/P1/mod.sv}
+vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/Lab3/P1 {C:/Users/Bryan Gomez/Documents/Lab3/P1/full_adder_1bit.sv}
+vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/Lab3/P1 {C:/Users/Bryan Gomez/Documents/Lab3/P1/divider.sv}
+vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/Lab3/P1 {C:/Users/Bryan Gomez/Documents/Lab3/P1/comparator.sv}
+vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/Lab3/P1 {C:/Users/Bryan Gomez/Documents/Lab3/P1/bit_comparator.sv}
 vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/Lab3/P1 {C:/Users/Bryan Gomez/Documents/Lab3/P1/ALU.sv}
 vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/Lab3/P1 {C:/Users/Bryan Gomez/Documents/Lab3/P1/Conexion.sv}
 vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/Lab3/P1 {C:/Users/Bryan Gomez/Documents/Lab3/P1/NbitMultiplier.sv}
@@ -52,6 +59,8 @@ vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/Lab3/P1 {C:/Users/Br
 vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/Lab3/P1 {C:/Users/Bryan Gomez/Documents/Lab3/P1/shift_right.sv}
 vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/Lab3/P1 {C:/Users/Bryan Gomez/Documents/Lab3/P1/ArithmeticUnit.sv}
 vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/Lab3/P1 {C:/Users/Bryan Gomez/Documents/Lab3/P1/XorGate.sv}
+vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/Lab3/P1 {C:/Users/Bryan Gomez/Documents/Lab3/P1/OrGate.sv}
+vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/Lab3/P1 {C:/Users/Bryan Gomez/Documents/Lab3/P1/AndGate.sv}
 vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/Lab3/P1 {C:/Users/Bryan Gomez/Documents/Lab3/P1/LogicalUnit.sv}
 
 vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/Lab3/P1 {C:/Users/Bryan Gomez/Documents/Lab3/P1/ALU_tb.sv}

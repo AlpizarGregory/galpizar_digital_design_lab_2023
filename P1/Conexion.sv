@@ -57,7 +57,7 @@ module Conexion(a, b, y);
 endmodule
 
 
-module andGate (a, b, y);
+module andGate2 (a, b, y);
 	input logic a, b;
 	output logic y;
 	
@@ -84,7 +84,7 @@ module Conexion(a, b2, individual2);
 endmodule
 */
 
-module AndGate #(parameter WIDTH = 1)(
+module AndGate2 #(parameter WIDTH = 1)(
   input logic [WIDTH-1:0] a,
   input logic [WIDTH-1:0] b,
   output logic y
@@ -120,7 +120,7 @@ module suma #(parameter N = 8)(
   genvar i;
   generate
     for (i = 0; i < N; i = i + 1) begin : generate_gates
-      AndGate #(1) and_gates (
+      AndGate2 #(1) and_gates (
         .a(a[i]),
         .b(b[i]),
         .y(and_outputs[i])
