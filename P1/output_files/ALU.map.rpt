@@ -1,5 +1,5 @@
 Analysis & Elaboration report for ALU
-Sun Sep 10 05:17:30 2023
+Mon Sep 11 20:52:50 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -243,55 +243,21 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 235. Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[6].sum_instance|XorGate2:generate_gates[14].xor_gates
 236. Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[6].sum_instance|AndGate:generate_gates[15].and_gates
 237. Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[6].sum_instance|XorGate2:generate_gates[15].xor_gates
-238. Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance
-239. Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|AndGate:generate_gates[0].and_gates
-240. Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|XorGate2:generate_gates[0].xor_gates
-241. Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|AndGate:generate_gates[1].and_gates
-242. Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|XorGate2:generate_gates[1].xor_gates
-243. Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|AndGate:generate_gates[2].and_gates
-244. Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|XorGate2:generate_gates[2].xor_gates
-245. Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|AndGate:generate_gates[3].and_gates
-246. Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|XorGate2:generate_gates[3].xor_gates
-247. Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|AndGate:generate_gates[4].and_gates
-248. Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|XorGate2:generate_gates[4].xor_gates
-249. Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|AndGate:generate_gates[5].and_gates
-250. Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|XorGate2:generate_gates[5].xor_gates
-251. Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|AndGate:generate_gates[6].and_gates
-252. Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|XorGate2:generate_gates[6].xor_gates
-253. Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|AndGate:generate_gates[7].and_gates
-254. Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|XorGate2:generate_gates[7].xor_gates
-255. Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|AndGate:generate_gates[8].and_gates
-256. Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|XorGate2:generate_gates[8].xor_gates
-257. Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|AndGate:generate_gates[9].and_gates
-258. Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|XorGate2:generate_gates[9].xor_gates
-259. Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|AndGate:generate_gates[10].and_gates
-260. Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|XorGate2:generate_gates[10].xor_gates
-261. Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|AndGate:generate_gates[11].and_gates
-262. Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|XorGate2:generate_gates[11].xor_gates
-263. Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|AndGate:generate_gates[12].and_gates
-264. Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|XorGate2:generate_gates[12].xor_gates
-265. Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|AndGate:generate_gates[13].and_gates
-266. Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|XorGate2:generate_gates[13].xor_gates
-267. Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|AndGate:generate_gates[14].and_gates
-268. Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|XorGate2:generate_gates[14].xor_gates
-269. Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|AndGate:generate_gates[15].and_gates
-270. Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|XorGate2:generate_gates[15].xor_gates
-271. Parameter Settings for User Entity Instance: LogicalUnit:logic_unit
-272. Parameter Settings for User Entity Instance: LogicalUnit:logic_unit|shift_left:shift_leftInstance
-273. Parameter Settings for User Entity Instance: LogicalUnit:logic_unit|shift_right:shift_rightInstance
-274. Analysis & Elaboration Settings
-275. Port Connectivity Checks: "LogicalUnit:logic_unit|shift_right:shift_rightInstance"
-276. Port Connectivity Checks: "LogicalUnit:logic_unit|shift_left:shift_leftInstance"
-277. Port Connectivity Checks: "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance"
-278. Port Connectivity Checks: "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[6].sum_instance"
-279. Port Connectivity Checks: "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[5].sum_instance"
-280. Port Connectivity Checks: "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[4].sum_instance"
-281. Port Connectivity Checks: "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[3].sum_instance"
-282. Port Connectivity Checks: "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[2].sum_instance"
-283. Port Connectivity Checks: "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[1].sum_instance"
-284. Port Connectivity Checks: "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[0].sum_instance"
-285. Port Connectivity Checks: "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance"
-286. Analysis & Elaboration Messages
+238. Parameter Settings for User Entity Instance: LogicalUnit:logic_unit
+239. Parameter Settings for User Entity Instance: LogicalUnit:logic_unit|shift_left:shift_leftInstance
+240. Parameter Settings for User Entity Instance: LogicalUnit:logic_unit|shift_right:shift_rightInstance
+241. Analysis & Elaboration Settings
+242. Port Connectivity Checks: "LogicalUnit:logic_unit|shift_right:shift_rightInstance"
+243. Port Connectivity Checks: "LogicalUnit:logic_unit|shift_left:shift_leftInstance"
+244. Port Connectivity Checks: "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[6].sum_instance"
+245. Port Connectivity Checks: "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[5].sum_instance"
+246. Port Connectivity Checks: "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[4].sum_instance"
+247. Port Connectivity Checks: "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[3].sum_instance"
+248. Port Connectivity Checks: "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[2].sum_instance"
+249. Port Connectivity Checks: "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[1].sum_instance"
+250. Port Connectivity Checks: "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[0].sum_instance"
+251. Port Connectivity Checks: "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance"
+252. Analysis & Elaboration Messages
 
 
 
@@ -318,7 +284,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                 ;
 +-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Sun Sep 10 05:17:30 2023          ;
+; Analysis & Elaboration Status ; Successful - Mon Sep 11 20:52:50 2023          ;
 ; Quartus Prime Version         ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                 ; ALU                                            ;
 ; Top-level Entity Name         ; ALU                                            ;
@@ -2689,336 +2655,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance ;
-+----------------+-------+--------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                           ;
-+----------------+-------+--------------------------------------------------------------------------------------------------------------------------------+
-; N              ; 16    ; Signed Integer                                                                                                                 ;
-+----------------+-------+--------------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|AndGate:generate_gates[0].and_gates ;
-+----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                                                               ;
-+----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                                                                                     ;
-+----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|XorGate2:generate_gates[0].xor_gates ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                                                                ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                                                                                      ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|AndGate:generate_gates[1].and_gates ;
-+----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                                                               ;
-+----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                                                                                     ;
-+----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|XorGate2:generate_gates[1].xor_gates ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                                                                ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                                                                                      ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|AndGate:generate_gates[2].and_gates ;
-+----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                                                               ;
-+----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                                                                                     ;
-+----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|XorGate2:generate_gates[2].xor_gates ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                                                                ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                                                                                      ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|AndGate:generate_gates[3].and_gates ;
-+----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                                                               ;
-+----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                                                                                     ;
-+----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|XorGate2:generate_gates[3].xor_gates ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                                                                ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                                                                                      ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|AndGate:generate_gates[4].and_gates ;
-+----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                                                               ;
-+----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                                                                                     ;
-+----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|XorGate2:generate_gates[4].xor_gates ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                                                                ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                                                                                      ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|AndGate:generate_gates[5].and_gates ;
-+----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                                                               ;
-+----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                                                                                     ;
-+----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|XorGate2:generate_gates[5].xor_gates ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                                                                ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                                                                                      ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|AndGate:generate_gates[6].and_gates ;
-+----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                                                               ;
-+----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                                                                                     ;
-+----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|XorGate2:generate_gates[6].xor_gates ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                                                                ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                                                                                      ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|AndGate:generate_gates[7].and_gates ;
-+----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                                                               ;
-+----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                                                                                     ;
-+----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|XorGate2:generate_gates[7].xor_gates ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                                                                ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                                                                                      ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|AndGate:generate_gates[8].and_gates ;
-+----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                                                               ;
-+----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                                                                                     ;
-+----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|XorGate2:generate_gates[8].xor_gates ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                                                                ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                                                                                      ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|AndGate:generate_gates[9].and_gates ;
-+----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                                                               ;
-+----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                                                                                     ;
-+----------------+-------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|XorGate2:generate_gates[9].xor_gates ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                                                                ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                                                                                      ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|AndGate:generate_gates[10].and_gates ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                                                                ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                                                                                      ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|XorGate2:generate_gates[10].xor_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                                                                 ;
-+----------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                                                                                       ;
-+----------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|AndGate:generate_gates[11].and_gates ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                                                                ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                                                                                      ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|XorGate2:generate_gates[11].xor_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                                                                 ;
-+----------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                                                                                       ;
-+----------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|AndGate:generate_gates[12].and_gates ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                                                                ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                                                                                      ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|XorGate2:generate_gates[12].xor_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                                                                 ;
-+----------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                                                                                       ;
-+----------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|AndGate:generate_gates[13].and_gates ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                                                                ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                                                                                      ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|XorGate2:generate_gates[13].xor_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                                                                 ;
-+----------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                                                                                       ;
-+----------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|AndGate:generate_gates[14].and_gates ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                                                                ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                                                                                      ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|XorGate2:generate_gates[14].xor_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                                                                 ;
-+----------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                                                                                       ;
-+----------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|AndGate:generate_gates[15].and_gates ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                                                                ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                                                                                      ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance|XorGate2:generate_gates[15].xor_gates ;
-+----------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                                                                 ;
-+----------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Signed Integer                                                                                                                                                       ;
-+----------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +---------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: LogicalUnit:logic_unit ;
 +----------------+-------+--------------------------------------------+
@@ -3154,17 +2790,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[7].sum_instance"                   ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                                                                    ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
-; b[6..0] ; Input  ; Info     ; Stuck at GND                                                                                                               ;
-; b[15]   ; Input  ; Info     ; Stuck at GND                                                                                                               ;
-; sum     ; Output ; Warning  ; Output or bidir port (17 bits) is wider than the port expression (16 bits) it drives; bit(s) "sum[16..16]" have no fanouts ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
-
-
 +------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[6].sum_instance"                     ;
 +-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
@@ -3257,7 +2882,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Sun Sep 10 05:17:09 2023
+    Info: Processing started: Mon Sep 11 20:52:27 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -3294,11 +2919,13 @@ Info (12021): Found 1 design units, including 1 entities, in source file alu_tb.
     Info (12023): Found entity 1: ALU_tb File: C:/Users/Bryan Gomez/Documents/Lab3/P1/ALU_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file xorgate.sv
     Info (12023): Found entity 1: XorGate File: C:/Users/Bryan Gomez/Documents/Lab3/P1/XorGate.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at LogicalUnit.sv(40): created implicit net for "slV" File: C:/Users/Bryan Gomez/Documents/Lab3/P1/LogicalUnit.sv Line: 40
+Warning (10236): Verilog HDL Implicit Net warning at LogicalUnit.sv(52): created implicit net for "srV" File: C:/Users/Bryan Gomez/Documents/Lab3/P1/LogicalUnit.sv Line: 52
 Info (12127): Elaborating entity "ALU" for the top level hierarchy
 Info (12128): Elaborating entity "ArithmeticUnit" for hierarchy "ArithmeticUnit:arith_unit" File: C:/Users/Bryan Gomez/Documents/Lab3/P1/ALU.sv Line: 28
-Info (12128): Elaborating entity "NbitMultiplier" for hierarchy "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance" File: C:/Users/Bryan Gomez/Documents/Lab3/P1/ArithmeticUnit.sv Line: 23
-Warning (10230): Verilog HDL assignment warning at NbitMultiplier.sv(90): truncated value with size 32 to match size of target (16) File: C:/Users/Bryan Gomez/Documents/Lab3/P1/NbitMultiplier.sv Line: 90
-Info (12128): Elaborating entity "suma" for hierarchy "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[0].sum_instance" File: C:/Users/Bryan Gomez/Documents/Lab3/P1/NbitMultiplier.sv Line: 105
+Info (12128): Elaborating entity "NbitMultiplier" for hierarchy "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance" File: C:/Users/Bryan Gomez/Documents/Lab3/P1/ArithmeticUnit.sv Line: 37
+Warning (10230): Verilog HDL assignment warning at NbitMultiplier.sv(94): truncated value with size 32 to match size of target (16) File: C:/Users/Bryan Gomez/Documents/Lab3/P1/NbitMultiplier.sv Line: 94
+Info (12128): Elaborating entity "suma" for hierarchy "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[0].sum_instance" File: C:/Users/Bryan Gomez/Documents/Lab3/P1/NbitMultiplier.sv Line: 109
 Warning (10036): Verilog HDL or VHDL warning at Conexion.sv(115): object "carry_out" assigned a value but never read File: C:/Users/Bryan Gomez/Documents/Lab3/P1/Conexion.sv Line: 115
 Warning (10036): Verilog HDL or VHDL warning at Conexion.sv(116): object "carry_in" assigned a value but never read File: C:/Users/Bryan Gomez/Documents/Lab3/P1/Conexion.sv Line: 116
 Warning (10230): Verilog HDL assignment warning at Conexion.sv(143): truncated value with size 17 to match size of target (1) File: C:/Users/Bryan Gomez/Documents/Lab3/P1/Conexion.sv Line: 143
@@ -3307,14 +2934,14 @@ Warning (10230): Verilog HDL assignment warning at Conexion.sv(152): truncated v
 Info (12128): Elaborating entity "AndGate" for hierarchy "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[0].sum_instance|AndGate:generate_gates[0].and_gates" File: C:/Users/Bryan Gomez/Documents/Lab3/P1/Conexion.sv Line: 127
 Info (12128): Elaborating entity "XorGate2" for hierarchy "ArithmeticUnit:arith_unit|NbitMultiplier:NbitMultiplierInstance|suma:generate_partial_sums[0].sum_instance|XorGate2:generate_gates[0].xor_gates" File: C:/Users/Bryan Gomez/Documents/Lab3/P1/Conexion.sv Line: 132
 Info (12128): Elaborating entity "LogicalUnit" for hierarchy "LogicalUnit:logic_unit" File: C:/Users/Bryan Gomez/Documents/Lab3/P1/ALU.sv Line: 40
-Info (12128): Elaborating entity "XorGate" for hierarchy "LogicalUnit:logic_unit|XorGate:XorGateInstance[0]" File: C:/Users/Bryan Gomez/Documents/Lab3/P1/LogicalUnit.sv Line: 30
-Info (12128): Elaborating entity "shift_left" for hierarchy "LogicalUnit:logic_unit|shift_left:shift_leftInstance" File: C:/Users/Bryan Gomez/Documents/Lab3/P1/LogicalUnit.sv Line: 41
-Info (12128): Elaborating entity "shift_right" for hierarchy "LogicalUnit:logic_unit|shift_right:shift_rightInstance" File: C:/Users/Bryan Gomez/Documents/Lab3/P1/LogicalUnit.sv Line: 52
-Warning (12241): 11 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 4791 megabytes
-    Info: Processing ended: Sun Sep 10 05:17:30 2023
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:40
+Info (12128): Elaborating entity "XorGate" for hierarchy "LogicalUnit:logic_unit|XorGate:XorGateInstance[0]" File: C:/Users/Bryan Gomez/Documents/Lab3/P1/LogicalUnit.sv Line: 35
+Info (12128): Elaborating entity "shift_left" for hierarchy "LogicalUnit:logic_unit|shift_left:shift_leftInstance" File: C:/Users/Bryan Gomez/Documents/Lab3/P1/LogicalUnit.sv Line: 47
+Info (12128): Elaborating entity "shift_right" for hierarchy "LogicalUnit:logic_unit|shift_right:shift_rightInstance" File: C:/Users/Bryan Gomez/Documents/Lab3/P1/LogicalUnit.sv Line: 59
+Warning (12241): 10 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 4788 megabytes
+    Info: Processing ended: Mon Sep 11 20:52:50 2023
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:43
 
 

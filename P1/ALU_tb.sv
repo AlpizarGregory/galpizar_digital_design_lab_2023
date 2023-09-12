@@ -15,9 +15,9 @@ module ALU_tb();
 	//always #20 clk = ~clk;
 	initial begin
 	
-	A = 4'b0111;
-	B = 4'b0010;
-	operation = 4'b1100;
+	A = 4'b0010;
+	B = 4'b1011;
+	operation = 4'b0010;
 
 
 

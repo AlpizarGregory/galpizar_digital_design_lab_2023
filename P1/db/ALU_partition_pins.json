@@ -36,18 +36,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "A[0]",
-					"strict" : false
-				},
-				{
-					"name" : "B[0]",
-					"strict" : false
-				},
-				{
-					"name" : "operation[0]",
-					"strict" : false
-				},
-				{
 					"name" : "operation[3]",
 					"strict" : false
 				},
@@ -60,7 +48,31 @@
 					"strict" : false
 				},
 				{
+					"name" : "A[0]",
+					"strict" : false
+				},
+				{
+					"name" : "B[0]",
+					"strict" : false
+				},
+				{
+					"name" : "operation[0]",
+					"strict" : false
+				},
+				{
+					"name" : "B[3]",
+					"strict" : false
+				},
+				{
 					"name" : "B[1]",
+					"strict" : false
+				},
+				{
+					"name" : "B[2]",
+					"strict" : false
+				},
+				{
+					"name" : "A[1]",
 					"strict" : false
 				},
 				{
@@ -72,19 +84,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "A[1]",
-					"strict" : false
-				},
-				{
-					"name" : "B[2]",
-					"strict" : false
-				},
-				{
-					"name" : "B[3]",
-					"strict" : false
-				},
-				{
-					"name" : "B[4]",
+					"name" : "A[5]",
 					"strict" : false
 				},
 				{
@@ -100,7 +100,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "A[5]",
+					"name" : "B[4]",
 					"strict" : false
 				},
 				{

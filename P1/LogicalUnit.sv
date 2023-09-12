@@ -8,6 +8,11 @@ module LogicalUnit #(parameter Nbit = 8)(
   output logic C, // Bandera Acarreo
   output logic V // Bandera Desbordamiento
 );
+	logic [Nbit-1:0] and_result;
+   logic and_N, and_Z, and_C, and_V;
+
+	logic [Nbit-1:0] or_result;
+   logic or_N, or_Z, or_C, or_V;
 
 	logic [Nbit-1:0] xor_result;
    logic xor_N, xor_Z, xor_C, xor_V;
@@ -32,6 +37,7 @@ module LogicalUnit #(parameter Nbit = 8)(
 	shift_left #(Nbit) shift_leftInstance(
 		 .data_in(A),
 		 .shift_count(B),
+		 .V(slV),
 		 .data_out(sl_result)
 		 /*
 		 .N(N),
@@ -43,6 +49,7 @@ module LogicalUnit #(parameter Nbit = 8)(
 	shift_right #(Nbit) shift_rightInstance(
 		 .data_in(A),
 		 .shift_count(B),
+		 .V(srV),
 		 .data_out(sr_result)
 		 /*
 		 .N(N),
@@ -74,7 +81,7 @@ module LogicalUnit #(parameter Nbit = 8)(
         N = 0;
         Z = 0;
         C = 0;
-        V = 0;
+        V = slV;
         end
 		
 		
@@ -83,7 +90,7 @@ module LogicalUnit #(parameter Nbit = 8)(
         N = 0;
         Z = 0;
         C = 0;
-        V = 0;
+        V = srV;
         end
  
       default: begin// Caso por defecto si la operación no se reconoce
