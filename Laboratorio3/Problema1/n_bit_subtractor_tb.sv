@@ -1,6 +1,6 @@
 module n_bit_subtractor_tb;
 
-	localparam N = 16;
+	localparam N = 32;
 	
 	logic [N-1:0] a, b;
 	
@@ -20,17 +20,17 @@ module n_bit_subtractor_tb;
 	
 	initial begin
     $display("Testing %d-bit Subtractor", N);
-    a = 4'b1100; // Puedes cambiar estos valores
-    b = 4'b1010; // para realizar diferentes pruebas
-	doit = 1'b1;
+    a = 32'b00000000001110100010001011010000; // Puedes cambiar estos valores
+    b = 32'b00000000001100000011000011101101; // para realizar diferentes pruebas
+	 doit = 1'b1;
 
     // Realizar sumas con diferentes valores de entrada
     repeat (8) begin
       #10;
-      $display("a = %b, b = %b, doit = %b, res = %b, negout = %b", a, b, doit, res, negout);
+      $display("a = %d, b = %d, doit = %d, res = %d, negout = %d", a, b, doit, res, negout);
       a = a + 1'b1;
       b = b + 1'b1;
-	  doit = doit + 1'b1;
+	   doit = doit + 1'b1;
 		
     end
   end

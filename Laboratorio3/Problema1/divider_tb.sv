@@ -1,6 +1,6 @@
 module divider_tb;
 
-  parameter N = 32;
+  parameter N = 4;
 
   logic [N-1:0] numerator;
   logic [N-1:0] denominator;
@@ -15,8 +15,8 @@ module divider_tb;
   );
 
   initial begin
-    numerator = 32'b0000001000011100;
-    denominator = 32'b0000000000000110;
+    numerator = 4'b1011;
+    denominator = 4'b0011;
 
     #10;
 

@@ -1,6 +1,6 @@
 module mod_tb;
 	
-	parameter N = 8;
+	parameter N = 2;
 
   logic [N-1:0] a;
   logic [N-1:0] b;
@@ -13,8 +13,8 @@ module mod_tb;
   );
 
   initial begin
-    a = 16'b0000100111011011; 
-    b = 16'b0000000000000010; 
+    a = 16'b01; 
+    b = 16'b01; 
 
     #10;
 

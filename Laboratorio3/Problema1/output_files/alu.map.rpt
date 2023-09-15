@@ -1,5 +1,5 @@
 Analysis & Elaboration report for alu
-Mon Sep 11 21:33:31 2023
+Thu Sep 14 22:35:58 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -9,8 +9,9 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   1. Legal Notice
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
+  4. Parameter Settings for User Entity Instance: Top-level Entity: |n_bit_subtractor
+  5. Analysis & Elaboration Settings
+  6. Analysis & Elaboration Messages
 
 
 
@@ -37,10 +38,10 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                 ;
 +-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Mon Sep 11 21:33:31 2023          ;
+; Analysis & Elaboration Status ; Successful - Thu Sep 14 22:35:58 2023          ;
 ; Quartus Prime Version         ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                 ; alu                                            ;
-; Top-level Entity Name         ; full_adder_1bit                                ;
+; Top-level Entity Name         ; n_bit_subtractor                               ;
 ; Family                        ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)   ; N/A until Partition Merge                      ;
 ; Total registers               ; N/A until Partition Merge                      ;
@@ -68,13 +69,23 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |n_bit_subtractor ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; N              ; 4     ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +---------------------------------------------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; full_adder_1bit    ; alu                ;
+; Top-level entity name                                                           ; n_bit_subtractor   ; alu                ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -161,7 +172,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Mon Sep 11 21:33:23 2023
+    Info: Processing started: Thu Sep 14 22:35:49 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu -c alu --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -193,11 +204,12 @@ Info (12021): Found 1 design units, including 1 entities, in source file mod.sv
     Info (12023): Found entity 1: mod File: C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/mod.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mod_tb.sv
     Info (12023): Found entity 1: mod_tb File: C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/mod_tb.sv Line: 1
-Info (12127): Elaborating entity "full_adder_1bit" for the top level hierarchy
+Info (12127): Elaborating entity "n_bit_subtractor" for the top level hierarchy
+Info (12128): Elaborating entity "full_adder_1bit" for hierarchy "full_adder_1bit:adder_gen[0].adder_inst" File: C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/n_bit_subtractor.sv Line: 32
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4781 megabytes
-    Info: Processing ended: Mon Sep 11 21:33:31 2023
-    Info: Elapsed time: 00:00:08
+    Info: Processing ended: Thu Sep 14 22:35:58 2023
+    Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:16
 
 

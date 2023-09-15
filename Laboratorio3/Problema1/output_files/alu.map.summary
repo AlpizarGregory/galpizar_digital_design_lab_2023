@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Successful - Mon Sep 11 21:33:31 2023
+Analysis & Elaboration Status : Successful - Thu Sep 14 22:35:58 2023
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : alu
-Top-level Entity Name : full_adder_1bit
+Top-level Entity Name : n_bit_subtractor
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A until Partition Merge
 Total registers : N/A until Partition Merge

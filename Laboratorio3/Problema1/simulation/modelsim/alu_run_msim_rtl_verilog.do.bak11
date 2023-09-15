@@ -46,15 +46,11 @@ vlib rtl_work
 vmap work rtl_work
 
 vlog -sv -work work +incdir+C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1 {C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/full_adder_1bit.sv}
-vlog -sv -work work +incdir+C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1 {C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/n_bit_adder.sv}
 vlog -sv -work work +incdir+C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1 {C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/n_bit_subtractor.sv}
-vlog -sv -work work +incdir+C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1 {C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/bit_comparator.sv}
-vlog -sv -work work +incdir+C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1 {C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/comparator.sv}
-vlog -sv -work work +incdir+C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1 {C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/divider.sv}
 
-vlog -sv -work work +incdir+C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1 {C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/divider_tb.sv}
+vlog -sv -work work +incdir+C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1 {C:/intelFPGA_lite/galpizar_digital_design_lab_2023/Laboratorio3/Problema1/n_bit_subtractor_tb.sv}
 
-vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  divider_tb
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  n_bit_subtractor_tb
 
 add wave *
 view structure

@@ -55,7 +55,7 @@ module divider #(parameter N = 4) (
         
       n_bit_adder #(N) add_inst(
         .a(quotient_temp[i*N+(N-1):i*N]),
-        .b({!lower[i], zeros}),
+        .b({zeros, !lower[i]}),
         .cin(1'b0),
         .sum(quotient_temp[(i+1)*N+(N-1):(i+1)*N]),
         .cout(uselessvar[i+N**2])
