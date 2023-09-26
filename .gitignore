@@ -1,0 +1,15 @@
+*.bak
+*.jdi
+*.log
+*.rpt
+*.smsg
+*.summary
+*.sopcinfo
+*.qws
+*.qdf
+*.qws.*
+db/
+incremental_db/
+output_files/
+simulation/
+synthesis/
