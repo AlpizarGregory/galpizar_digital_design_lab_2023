@@ -1,0 +1,55 @@
+module RandomBombs(
+  input logic clk,
+  input logic rst,
+  input logic [7:0] num_bombs,
+  output logic [7:0] bomb_locations
+);
+
+  logic [7:0] bombs_remaining;
+  logic [7:0] bomb_board [7:0]; // Array para representar el tablero
+  logic [7:0] bomb_x;
+  logic [7:0] bomb_y;
+  logic [7:0] lfsr_state = 8'hFF; // Estado inicial del LFSR
+  
+  // Lógica para el LFSR (generador de números aleatorios)
+  always @(posedge clk) begin
+    if (rst) begin
+      lfsr_state <= 8'hFF;
+    end else begin
+      lfsr_state <= {lfsr_state[6:0], lfsr_state[7]} ^ (lfsr_state & 1'b1);
+    end
+  end
+  
+  initial begin
+    bombs_remaining = num_bombs;
+    bomb_x = 8'h00;
+    bomb_y = 8'h00;
+    for (int i = 0; i < 8; i = i + 1) begin
+      for (int j = 0; j < 8; j = j + 1) begin
+        bomb_board[i][j] = 8'h00; // Inicializa el tablero con celdas vacías
+      end
+    end
+  end
+  
+  always @(posedge clk or posedge rst) begin
+    if (rst) begin
+      bombs_remaining <= num_bombs;
+      bomb_x <= 8'h00;
+      bomb_y <= 8'h00;
+    end else if (bombs_remaining > 0) begin
+      // Genera una nueva ubicación aleatoria de bomba y verifica si ya está ocupada
+      bomb_x = lfsr_state[3:0]; // Utiliza los 4 bits menos significativos del LFSR para X
+      bomb_y = lfsr_state[7:4]; // Utiliza los 4 bits más significativos del LFSR para Y
+      
+      // Verifica si la ubicación ya está ocupada
+      if (bomb_board[bomb_x][bomb_y] == 8'h00) begin
+        bomb_board[bomb_x][bomb_y] = 8'h01; // Marca la casilla como ocupada por una bomba
+        bombs_remaining = bombs_remaining - 1; // Reduce la cantidad de bombas restantes
+      end
+    end
+  end
+
+  assign bomb_locations = (bombs_remaining == 0) ? 8'h00 : {1'b1, bomb_x, bomb_y};
+  
+endmodule
+

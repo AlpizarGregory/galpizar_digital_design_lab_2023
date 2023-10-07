@@ -1,0 +1,5 @@
+
+State Machine - |Buscaminas|state
+Name state.PLAY 
+state.CONFIGURE 0 
+state.PLAY 1 
