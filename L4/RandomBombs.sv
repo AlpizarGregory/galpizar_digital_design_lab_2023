@@ -2,7 +2,8 @@ module RandomBombs #(parameter N = 8)(
   input logic rst,
   input logic [7:0] bomb_count,  // Número de bombas a generar
   input logic [7:0] board_in [0:7][0:7],           // Tablero de entrada
-  output logic [7:0] board_out [0:7][0:7]          // Tablero de salida con bombas marcadas
+  output logic [7:0] board_out [0:7][0:7],          // Tablero de salida con bombas marcadas
+  output logic start
 );
 
 // Variables locales
@@ -201,7 +202,8 @@ module RandomBombs #(parameter N = 8)(
 			  board_out[o][w] = board_out[o][w] + nearBombsCounter;
 			  nearBombsCounter = 0;
          end
-       end	 
+       end
+		 start = 1;
     end		 
  end
 

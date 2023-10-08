@@ -9,57 +9,84 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/Bryan Gomez/Documents/L4/simulation/modelsim
-vRandomBombs
+vBuscaminas
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-!s110 1696551249
+Z2 !s110 1696722674
 !i10b 1
-!s100 aRQj`jX[b`B4>?Ob?;Sg>1
-Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-In4_I2FB<^VIGQaBgKL=;f2
-Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s100 VK:Jc@RR^XLJ]EF<i67^z1
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I4fb=dYNfV?HeURhIVg:[U1
+Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1696551029
+w1696721602
+8C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv
+FC:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv
+!i122 1
+L0 1 73
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1696722674.000000
+!s107 C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/L4|C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv|
+!i113 1
+Z7 o-sv -work work
+Z8 !s92 -sv -work work {+incdir+C:/Users/Bryan Gomez/Documents/L4}
+Z9 tCvgOpt 0
+n@buscaminas
+vBuscaminas_TB
+R1
+R2
+!i10b 1
+!s100 SL^iFH?7bND5fTe[g8R9M1
+R3
+I<ZZ>DYPlc1:So4n9Bb[M02
+R4
+S1
+R0
+w1696721065
+8C:/Users/Bryan Gomez/Documents/L4/Buscaminas_TB.sv
+FC:/Users/Bryan Gomez/Documents/L4/Buscaminas_TB.sv
+!i122 2
+L0 1 47
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Bryan Gomez/Documents/L4/Buscaminas_TB.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/L4|C:/Users/Bryan Gomez/Documents/L4/Buscaminas_TB.sv|
+!i113 1
+R7
+R8
+R9
+n@buscaminas_@t@b
+vRandomBombs
+R1
+R2
+!i10b 1
+!s100 jh2Al[NnEn^OU@iO@P@H53
+R3
+I89S]L99M85g?b_V^A1SkE2
+R4
+S1
+R0
+w1696721645
 8C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv
 FC:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv
 !i122 0
-L0 1 211
-Z4 OV;L;2020.1;71
+L0 1 213
+R5
 r1
 !s85 0
 31
-Z5 !s108 1696551249.000000
+!s108 1696722673.000000
 !s107 C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/L4|C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv|
 !i113 1
-Z6 o-sv -work work
-Z7 !s92 -sv -work work {+incdir+C:/Users/Bryan Gomez/Documents/L4}
-Z8 tCvgOpt 0
-n@random@bombs
-vRandomBombs_Testbench
-R1
-!s110 1696551250
-!i10b 1
-!s100 77DVBkdT3F?DNJ?66i7VL0
-R2
-I[`be1GcfW9S?44Jb]aJzX3
-R3
-S1
-R0
-w1696550867
-8C:/Users/Bryan Gomez/Documents/L4/RandomBombs_Testbench.sv
-FC:/Users/Bryan Gomez/Documents/L4/RandomBombs_Testbench.sv
-!i122 1
-L0 1 54
-R4
-r1
-!s85 0
-31
-R5
-!s107 C:/Users/Bryan Gomez/Documents/L4/RandomBombs_Testbench.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/L4|C:/Users/Bryan Gomez/Documents/L4/RandomBombs_Testbench.sv|
-!i113 1
-R6
 R7
 R8
-n@random@bombs_@testbench
+R9
+n@random@bombs

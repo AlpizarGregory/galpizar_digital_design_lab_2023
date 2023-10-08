@@ -1,43 +1,39 @@
 module Buscaminas_TB;
 
   // Parámetros de simulación
-  logic clk = 0;
-  logic rst = 0;
-  logic [7:0] sw = 8'h00;
-  logic [7:0] btn = 8'h00;
-  logic [7:0] led;
-  logic [7:0] [7:0] vga_pixel;
-  logic vga_clk;
-  logic vga_hsync;
-  logic vga_vsync;
+  logic clk;
+  logic rst;
+  logic [7:0] bombs;  // Entrada de interruptores para configurar el número de bombas
+  logic move, select, mark; // Entrada de botones para selección de casillas y marcar como posible bomba
+  logic [1:0] course;
+  logic str;
+  logic [7:0] board_out [0:7][0:7];
 
   // Instancia del módulo Buscaminas
   Buscaminas buscaminas (
     .clk(clk),
     .rst(rst),
-    .sw(sw),
-    .btn(btn),
-    .led(led),
-    .vga_pixel(vga_pixel),
-    .vga_clk(vga_clk),
-    .vga_hsync(vga_hsync),
-    .vga_vsync(vga_vsync)
+    .bombs(bombs),
+    .move(move),
+    .select(select),
+    .mark(mark),
+    .course(course),
+	 .str(str),
+    .board_out(board_out)
   );
-
-  // Generación de clock
-  always #5 clk = ~clk;
 
   // Testbench
   initial begin
     // Inicialización de entradas
-    rst = 1; // Activamos el reset
-    sw = 8'h00;
-    btn = 8'h00;
-    #10 rst = 0; // Desactivamos el reset después de 10 unidades de tiempo
-
-    // Esperamos un poco para asegurarnos de que el estado se haya configurado
-    #20;
-
+	 rst = 0;
+	 clk = 0;
+	 # 50
+	 rst = 1;
+	 #50
+	 rst = 0;
+	 clk = 1;
+    #50;
+	 clk = 0;
     // Imprimimos el tablero
     $display("Tablero Inicial:");
     for (int i = 0; i < 8; i = i + 1) begin

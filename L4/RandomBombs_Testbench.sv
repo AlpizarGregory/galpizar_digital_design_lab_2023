@@ -8,6 +8,7 @@ module RandomBombs_Testbench;
   logic [7:0] bomb_count = BOMB_COUNT;
   logic [7:0] board_in [0:7][0:7];
   logic [7:0] board_out [0:7][0:7];
+  logic start = 0;
 
 
   // Instantiate the RandomBombs module
@@ -15,7 +16,8 @@ module RandomBombs_Testbench;
     .rst(rst),
 	 .bomb_count(bomb_count),
     .board_in(board_in),
-    .board_out(board_out)
+    .board_out(board_out),
+	 .start(start)
   );
 
   // Initialize board_in with your desired values (example)
