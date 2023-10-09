@@ -3,7 +3,9 @@ module RandomBombs #(parameter N = 8)(
   input logic [7:0] bomb_count,  // Número de bombas a generar
   input logic [7:0] board_in [0:7][0:7],           // Tablero de entrada
   output logic [7:0] board_out [0:7][0:7],          // Tablero de salida con bombas marcadas
-  output logic start
+  output logic start,
+  output logic random_gen_done, // Señal de control para indicar finalización
+  input logic enable // Señal de habilitación
 );
 
 // Variables locales
@@ -14,14 +16,15 @@ module RandomBombs #(parameter N = 8)(
   logic [2:0] random_seed = 3'b101; // Semilla inicial para generación de números aleatorios
   logic [2:0] random_seed2 = 3'b001;
 	
-  always_ff @(posedge rst) begin
+  always_ff @(posedge rst or posedge enable) begin
     if (rst) begin
 		for (int i = 0; i < 8; i = i + 1) begin
         for (int j = 0; j < 8; j = j + 1) begin
           board_out[i][j] = board_in[i][j]; // Asigna el valor 0 (casilla vacía) a cada elemento
         end
       end
-	 
+	 end 
+	 if (enable) begin
 		for (int i = 0; i < N; i = i + 1) begin
 		 
 			// Genera números aleatorios para las posiciones X e Y

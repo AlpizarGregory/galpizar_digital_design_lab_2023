@@ -11,24 +11,24 @@ cModel Technology
 Z0 dC:/Users/Bryan Gomez/Documents/L4/simulation/modelsim
 vBuscaminas
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1696722674
+Z2 !s110 1696876255
 !i10b 1
-!s100 VK:Jc@RR^XLJ]EF<i67^z1
+!s100 ?FS>9SI^_c_@BikQa2ANJ1
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I4fb=dYNfV?HeURhIVg:[U1
+I>F=cFX4N13=FW30[d165R1
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1696721602
+w1696876149
 8C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv
 FC:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv
 !i122 1
-L0 1 73
+L0 1 102
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1696722674.000000
+Z6 !s108 1696876255.000000
 !s107 C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/L4|C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv|
 !i113 1
@@ -38,19 +38,19 @@ Z9 tCvgOpt 0
 n@buscaminas
 vBuscaminas_TB
 R1
-R2
+!s110 1696876256
 !i10b 1
-!s100 SL^iFH?7bND5fTe[g8R9M1
+!s100 eiFHEJO3jSd6TN_9Q8Xoa3
 R3
-I<ZZ>DYPlc1:So4n9Bb[M02
+IR57>HEeNPlnF@naP`F@eT0
 R4
 S1
 R0
-w1696721065
+w1696829606
 8C:/Users/Bryan Gomez/Documents/L4/Buscaminas_TB.sv
 FC:/Users/Bryan Gomez/Documents/L4/Buscaminas_TB.sv
-!i122 2
-L0 1 47
+!i122 3
+L0 1 54
 R5
 r1
 !s85 0
@@ -63,26 +63,53 @@ R7
 R8
 R9
 n@buscaminas_@t@b
-vRandomBombs
+vMovement
 R1
 R2
 !i10b 1
-!s100 jh2Al[NnEn^OU@iO@P@H53
+!s100 UY8:Q0@C@fYzI:T<b50PN3
 R3
-I89S]L99M85g?b_V^A1SkE2
+IjC1MeIIham0d=oLg=FgNP0
 R4
 S1
 R0
-w1696721645
-8C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv
-FC:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv
-!i122 0
-L0 1 213
+w1696875914
+8C:/Users/Bryan Gomez/Documents/L4/Movement.sv
+FC:/Users/Bryan Gomez/Documents/L4/Movement.sv
+!i122 2
+L0 1 56
 R5
 r1
 !s85 0
 31
-!s108 1696722673.000000
+R6
+!s107 C:/Users/Bryan Gomez/Documents/L4/Movement.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/L4|C:/Users/Bryan Gomez/Documents/L4/Movement.sv|
+!i113 1
+R7
+R8
+R9
+n@movement
+vRandomBombs
+R1
+R2
+!i10b 1
+!s100 dQ7dN566AdU5n:IIOW<6Q1
+R3
+INS:Z9zf7PQZY2nzNcb?<Z0
+R4
+S1
+R0
+w1696826649
+8C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv
+FC:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv
+!i122 0
+L0 1 216
+R5
+r1
+!s85 0
+31
+R6
 !s107 C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/L4|C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv|
 !i113 1

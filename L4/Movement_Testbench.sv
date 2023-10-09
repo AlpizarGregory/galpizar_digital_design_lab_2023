@@ -3,11 +3,14 @@ module Movement_Testbench;
  
 
   // Signals
+  logic flagMovement;
   logic clk;
   logic rst;
   logic [1:0] direction;
   logic [7:0] board_in [0:7][0:7];
   logic [7:0] board_out [0:7][0:7];
+  logic movement_done; // Señal de control para indicar finalización
+  logic enable; // Señal de habilitación
   /*
   logic [2:0] board_in [0:7][0:7][0:2];
   logic [2:0] board_out [0:7][0:7][0:2];
@@ -15,11 +18,14 @@ module Movement_Testbench;
 
   // Instantiate the RandomBombs module
   Movement Movement_instance (
+    .flagMovement(flagMovement),
     .clk(clk),
     .rst(rst),
 	 .direction(direction),
     .board_in(board_in),
-    .board_out(board_out)
+    .board_out(board_out),
+	 .movement_done(movement_done),
+	 .enable(enable)
   );
 
     // Initial block
@@ -34,19 +40,14 @@ module Movement_Testbench;
     end
 	 
 	 // Initialize signals and board_in
-    clk = 0;
-    rst = 1;
-	 
+	 enable = 1;
 	 direction = 2'b00;
-	 #10;
-	 rst = 0;
-	 clk = 1;
-    // Reset and apply clock
-    #10;
-	 clk = 0;
+	 #50;
+	 enable = 0;
+    #50;
+	 enable = 1;
 	 direction = 2'b01;
-	 #10;
-	 clk = 1;
+
 
   end
 

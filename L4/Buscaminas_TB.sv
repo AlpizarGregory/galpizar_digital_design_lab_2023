@@ -33,7 +33,14 @@ module Buscaminas_TB;
 	 rst = 0;
 	 clk = 1;
     #50;
+	 str = 1;
 	 clk = 0;
+	 #50;
+	 clk = 1;
+	 move = 1;
+	 course = 00;
+	 #50;
+	 
     // Imprimimos el tablero
     $display("Tablero Inicial:");
     for (int i = 0; i < 8; i = i + 1) begin

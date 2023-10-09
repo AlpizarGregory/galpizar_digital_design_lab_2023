@@ -17,6 +17,7 @@ module Buscaminas(
 
   // Matriz bidimensional para representar el tablero (8x8)
   logic [7:0] board [0:7][0:7];
+  logic [7:0] board2 [0:7][0:7];
 	/*
   // Estado de la máquina de estados finitos
   typedef enum logic [2:0] {
@@ -25,10 +26,16 @@ module Buscaminas(
     WIN,        // Estado de victoria
     LOSE        // Estado de derrota
   } GameState;*/
+  logic randombombs_enable;  // Señal de habilitación para RandomBombs_MainInstance
+  logic movement_enable;     // Señal de habilitación para Movement_MainInstance
+  logic random_gen_done;     // Señal de control para indicar finalización de RandomBombs_MainInstance
+  logic movement_done;       // Señal de control para indicar finalización de Movement_MainInstance
+
 
   logic [2:0] state;      // Estado actual
   logic [2:0] next_state; // Siguiente estado
   logic start = 0;
+  
 
   // Otras variables auxiliares
   int i, j;
@@ -38,8 +45,21 @@ module Buscaminas(
 	 .bomb_count(8),
     .board_in(board),
     .board_out(board),
-	 .start(start)
+	 .start(start),
+	 .random_gen_done(random_gen_done), // Señal de control para indicar finalización
+    .enable(randombombs_enable) // Señal de habilitación para controlar la instancia
   );
+  Movement Movement_instance (
+    .flagMovement(move),
+    .clk(clk),
+    .rst(rst),
+	 .direction(course),
+    .board_in(board2),
+    .board_out(board2),
+	 .movement_done(movement_done),
+	 .enable(move)
+  );
+  
 
   // Inicialización del tablero con casillas vacías
   initial begin
@@ -54,21 +74,33 @@ module Buscaminas(
   always_ff @(posedge clk or posedge rst) begin
     if (rst) begin
       state = 3'b000;
+		randombombs_enable = 1;
+		//board_out = board;
     end else begin
       state <= next_state;
+		randombombs_enable = 0;
     end
   end
   
   //next state logic
   always_comb begin
     case(state)
-		3'b000: if (str) next_state = 3'b001; else next_state = 3'b000; 
-		3'b001: if (str) next_state = 3'b001; else next_state = 1'b001;
+		3'b000: if (str) next_state = 3'b001; else next_state = 3'b000;  //SETUP
+		3'b001: if (move) next_state = 3'b010; else next_state = 3'b001; //wAIT
+		3'b010: if (move) next_state = 3'b010; else next_state = 3'b001; //MOVE
 		default: next_state = 3'b001;
 	 endcase
   end
   
-  assign board_out = board;
+  
+  
+  always_comb begin
+	  for (int i = 0; i < 8; i = i + 1) begin
+		 for (int j = 0; j < 8; j = j + 1) begin
+			board_out[i][j] = board[i][j] | board2[i][j]; // Perform OR operation element-wise
+		 end
+	  end
+	end
 
 endmodule
 

@@ -1,5 +1,5 @@
 Flow report for Laboratorio4
-Sat Oct  7 17:37:19 2023
+Mon Oct  9 12:29:50 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------+
 ; Flow Summary                                                                 ;
 +-----------------------------+------------------------------------------------+
-; Flow Status                 ; Successful - Sat Oct  7 17:37:19 2023          ;
+; Flow Status                 ; Successful - Mon Oct  9 12:29:50 2023          ;
 ; Quartus Prime Version       ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name               ; Laboratorio4                                   ;
 ; Top-level Entity Name       ; Buscaminas                                     ;
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/07/2023 17:34:07 ;
+; Start date & time ; 10/09/2023 12:29:11 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Laboratorio4        ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 251756431378667.169672164756888        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 251756431378667.169687615138896        ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; RandomBombs_Testbench             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Movement_Testbench                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Buscaminas_TB                     ;
@@ -113,8 +113,8 @@ https://fpgasoftware.intel.com/eula.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:03:13     ; 1.0                     ; 4883 MB             ; 00:03:00                           ;
-; Total                  ; 00:03:13     ; --                      ; --                  ; 00:03:00                           ;
+; Analysis & Elaboration ; 00:00:40     ; 1.0                     ; 4888 MB             ; 00:00:42                           ;
+; Total                  ; 00:00:40     ; --                      ; --                  ; 00:00:42                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
