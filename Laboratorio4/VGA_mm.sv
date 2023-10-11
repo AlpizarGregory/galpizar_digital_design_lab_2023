@@ -2,8 +2,9 @@ module VGA_mm
 (
 
 	input logic clk,
-	//input logic rst,win,lose,
-	//input logic [15:0][3:0] cell_matrix,
+	//input logic rst,
+	input logic win,lose,
+	//input logic [63:0][5:0] cell_matrix,
 	output logic vga_hsync,vga_vsync,sync_blank,sync_b,
 	output logic [7:0]red,green,blue,
 	output logic clk_25

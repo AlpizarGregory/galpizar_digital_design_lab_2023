@@ -1,9 +1,14 @@
 module CheckPos(input logic [9:0] hs,vs,
 				output logic [63:0]pos);
-		//logic paint;		  
-		//for (i = 0; i < 64; i++) begin
-		//	paint = 
-		//end
+		generate
+			genvar iter;
+
+			for (iter = 0; iter < 64; iter++) begin : pos_gen
+				assign pos[iter] = ((5 + (iter % 8)*5 + (iter % 8)*74 < hs) & (5 + (iter % 8)*5 + ((iter % 8)+1)*74) & (5 + (iter / 8)*5 + (iter / 8)*54 < vs) & (5 + (iter / 8)*5 + ((iter / 8)+1)*54 > vs)) ? 1:0;
+				
+			end
+		endgenerate
+			
 
 		//assign pos[0]  = ((5   < hs)&(151 > hs)&(5   < vs)&(110 > vs))? 1:0;
 		//assign pos[1]  = ((171 < hs)&(311 > hs)&(5   < vs)&(110 > vs))? 1:0;
