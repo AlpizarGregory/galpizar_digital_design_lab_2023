@@ -8,9 +8,8 @@ module colores( input logic [3:0]state,
 		 
 		//assign inpos = ((minx < hs)&(maxx > hs)&(miny < vs)&(maxy > vs))? 1:0;
 		
-		always @(*)
-			begin
-				case({state})
+		always @(*) begin
+			case({state})
 				
 				4'h0 : out_rgb <= 24'h88B0B1; // una bomba adyacente 		aqua gris
 				4'h1 : out_rgb <= 24'h88B19F; // dos bombas adyacentes 		esmeralda gris
@@ -21,12 +20,12 @@ module colores( input logic [3:0]state,
 				4'h6 : out_rgb <= 24'hB18888; // siete bombas adyacentes 	rojo gris
 				4'h7 : out_rgb <= 24'hB1B1B1; // casilla limpia 			gris
 				4'h8 : out_rgb <= 24'h818181; // casilla seleccionada 		gris oscuro
-				4'h9 : out_rgb <= 24'hFF0000; // juego terminado 			perdido
-				4'hA : out_rgb <= 24'h00FF00; // juego terminado 			ganado
+				4'h9 : out_rgb <= 24'h8E3030; // juego perdido 				rojo
+				4'hA : out_rgb <= 24'h43C043; // juego ganado	 			verde
 				default : out_rgb <= 24'h000000; // negro
 				
-				endcase
-			end
+			endcase
+		end
 			
 		assign rgb = out_rgb; 
 			

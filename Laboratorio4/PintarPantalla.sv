@@ -2,14 +2,14 @@ module PintarPantalla(
 	input logic reset,win,lose,
 	input logic [9:0]hs,vs,
 	input logic [63:0][3:0]states,
+	input logic [3:0] state,
 	output logic [7:0] r,g,b);
 	
-	//logic [3:0] states[15:0];
 	logic [23:0] rgb[63:0];
 	logic [63:0]pos;
 	
 	
-	
+	// Dibuja las líneas de la cuadrícula
 	assign lines = ((hs < 5) | 
 	(hs > 79) & (hs < 84) | 
 	(hs > 158) & (hs < 163) | 
@@ -31,48 +31,16 @@ module PintarPantalla(
 	
 	// pinta los cuadros
 	
-	//CheckPos check(hs,vs,pos);
+	CheckPos check(hs,vs,pos);
 	
 	generate
 		genvar i;
 
 		for(i=0;i<64;i++) begin : cuadros
-			//colores cuadro(states[i],pos[i],rgb[i])
-			colores cuadro(4'b0010,pos[i],rgb[i]);
+			colores cuadro(state,pos[i],rgb[i]);
 		end
 
 	endgenerate
-	//colores space0(states[0],pos[0],rgb[0]);
-	//
-	//colores space1(states[1],pos[1],rgb[1]);
-	//
-	//colores space2(states[2],pos[2],rgb[2]);
-	//
-	//colores space3(states[3],pos[3],rgb[3]);
-	//
-	//colores space4(states[4],pos[4],rgb[4]);
-	//
-	//colores space5(states[5],pos[5],rgb[5]);
-	//
-	//colores space6(states[6],pos[6],rgb[6]);
-	//
-	//colores space7(states[7],pos[7],rgb[7]);
-	//
-	//colores space8(states[8],pos[8],rgb[8]);
-	//
-	//colores space9(states[9],pos[9],rgb[9]);
-	//
-	//colores space10(states[10],pos[10],rgb[10]);
-	//
-	//colores space11(states[11],pos[11],rgb[11]);
-	//
-	//colores space12(states[12],pos[12],rgb[12]);
-	//
-	//colores space13(states[13],pos[13],rgb[13]);
-	//
-	//colores space14(states[14],pos[14],rgb[14]);
-	//
-	//colores space15(states[15],pos[15],rgb[15]);
 	
 	mux_dibujar mux_dib(lines,rgb[0],rgb[1],rgb[2],rgb[3],rgb[4],rgb[5],rgb[6],rgb[7],rgb[8],rgb[9],rgb[10],rgb[11],rgb[12],rgb[13],rgb[14],rgb[15],rgb[16],rgb[17],rgb[18],rgb[19],rgb[20],rgb[21],rgb[22],rgb[23],rgb[24],rgb[25],rgb[26],rgb[27],rgb[28],rgb[29],rgb[30],rgb[31],rgb[32],rgb[33],rgb[34],rgb[35],rgb[36],rgb[37],rgb[38],rgb[39],rgb[40],rgb[41],rgb[42],rgb[43],rgb[44],rgb[45],rgb[46],rgb[47],rgb[48],rgb[49],rgb[50],rgb[51],rgb[52],rgb[35],rgb[54],rgb[55],rgb[56],rgb[57],rgb[58],rgb[59],rgb[60],rgb[61],rgb[62],rgb[63],pos[0],pos[1],pos[2],pos[3],pos[4],pos[5],pos[6],pos[7],pos[8],pos[9],pos[10],pos[11],pos[12],pos[13],pos[14],pos[15],pos[16],pos[17],pos[18],pos[19],pos[20],pos[21],pos[22],pos[23],pos[24],pos[25],pos[26],pos[27],pos[28],pos[29],pos[30],pos[31],pos[32],pos[33],pos[34],pos[35],pos[36],pos[37],pos[38],pos[39],pos[40],pos[41],pos[42],pos[43],pos[44],pos[45],pos[46],pos[47],pos[48],pos[49],pos[50],pos[51],pos[52],pos[53],pos[54],pos[55],pos[56],pos[57],pos[58],pos[59],pos[60],pos[61],pos[62],pos[63],win,lose,r,g,b);
 	

@@ -14,8 +14,8 @@ module mux_dibujar(
 
 		case({line,pos0,pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,pos10,pos11,pos12,pos13,pos14,pos15,pos16,pos17,pos18,pos19,pos20,pos21,pos22,pos23,pos24,pos25,pos26,pos27,pos28,pos29,pos30,pos31,pos32,pos33,pos34,pos35,pos36,pos37,pos38,pos39,pos40,pos41,pos42,pos43,pos44,pos45,pos46,pos47,pos48,pos49,pos50,pos51,pos52,pos53,pos54,pos55,pos56,pos57,pos58,pos59,pos60,pos61,pos62,pos63,win,lose})
 		
-			67'b0000000000000000000000000000000000000000000000000000000000000000010 : out_rgb <= 24'h00FF00;
-			67'b0000000000000000000000000000000000000000000000000000000000000000001 : out_rgb <= 24'hFF0000;
+			67'bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx1x : out_rgb <= 24'h00FF00;
+			67'bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx1 : out_rgb <= 24'hFF0000;
 			67'b0000000000000000000000000000000000000000000000000000000000000000000 : out_rgb <= 24'h000000;
 			67'b1000000000000000000000000000000000000000000000000000000000000000000 : out_rgb <= 24'hffffff;
 			67'b0100000000000000000000000000000000000000000000000000000000000000000 : out_rgb <= rgb0;
@@ -82,36 +82,8 @@ module mux_dibujar(
 			67'b0000000000000000000000000000000000000000000000000000000000000010000 : out_rgb <= rgb61;
 			67'b0000000000000000000000000000000000000000000000000000000000000001000 : out_rgb <= rgb62;
 			67'b0000000000000000000000000000000000000000000000000000000000000000100 : out_rgb <= rgb63;
-		
-
-				 // 0    1    2    3     4   5    6    7    8    9    A     B     C     D     E     F     G
-			//case ({line,pos0,pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,pos10,pos11,pos12,pos13,pos14,pos15,win,lose})
-			//
-			//19'b0000000000000000000 : out_rgb     <= 24'h000000;
-			//19'b1000000000000000000 : out_rgb     <= 24'hffffff;
-			//19'b0100000000000000000 : out_rgb     <= rgb0;
-			//19'b0010000000000000000 : out_rgb     <= rgb1;
-			//19'b0001000000000000000 : out_rgb     <= rgb2;
-			//19'b0000100000000000000 : out_rgb     <= rgb3;
-			//19'b0000010000000000000 : out_rgb     <= rgb4;
-			//19'b0000001000000000000 : out_rgb     <= rgb5;
-			//19'b0000000100000000000 : out_rgb     <= rgb6;
-			//19'b0000000010000000000 : out_rgb     <= rgb7;
-			//19'b0000000001000000000 : out_rgb     <= rgb8;
-			//19'b0000000000100000000 : out_rgb     <= rgb9;
-			//19'b0000000000010000000 : out_rgb     <= rgb10;
-			//19'b0000000000001000000 : out_rgb     <= rgb11;
-			//19'b0000000000000100000 : out_rgb     <= rgb12;
-			//19'b0000000000000010000 : out_rgb     <= rgb13;
-			//19'b0000000000000001000 : out_rgb     <= rgb14;
-			//19'b0000000000000000100 : out_rgb     <= rgb15;
-			//  //0123456789ABCDEFG
-			//
-			////Casos win/lose
-			//19'b1000000000000000010 : out_rgb     <= 24'b000000000000000011111111;
-			//19'b1000000000000000001 : out_rgb     <= 24'b111111110000000000000000;
 			
-			default  : out_rgb <= 24'hA7A200;
+			default  : out_rgb <= 24'h000000;
 			
 		endcase
 	end
