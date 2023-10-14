@@ -14,8 +14,7 @@ module mux_dibujar(
 
 		case({line,pos0,pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,pos10,pos11,pos12,pos13,pos14,pos15,pos16,pos17,pos18,pos19,pos20,pos21,pos22,pos23,pos24,pos25,pos26,pos27,pos28,pos29,pos30,pos31,pos32,pos33,pos34,pos35,pos36,pos37,pos38,pos39,pos40,pos41,pos42,pos43,pos44,pos45,pos46,pos47,pos48,pos49,pos50,pos51,pos52,pos53,pos54,pos55,pos56,pos57,pos58,pos59,pos60,pos61,pos62,pos63,win,lose})
 		
-			67'bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx1x : out_rgb <= 24'h00FF00;
-			67'bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx1 : out_rgb <= 24'hFF0000;
+
 			67'b0000000000000000000000000000000000000000000000000000000000000000000 : out_rgb <= 24'h000000;
 			67'b1000000000000000000000000000000000000000000000000000000000000000000 : out_rgb <= 24'hffffff;
 			67'b0100000000000000000000000000000000000000000000000000000000000000000 : out_rgb <= rgb0;
