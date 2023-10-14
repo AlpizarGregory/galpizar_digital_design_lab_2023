@@ -1,7 +1,7 @@
 module Buscaminas(
   input logic clk,       // Señal de reloj
   input logic rst,       // Señal de reinicio
-  input logic [7:0] bombs,  // Entrada de interruptores para configurar el número de bombas
+  input logic [5:0] bombs,  // Entrada de interruptores para configurar el número de bombas
   input logic move, select, mark, // Entrada de botones para selección de casillas y marcar como posible bomba
   input logic [1:0] course,
   input logic str,
@@ -96,9 +96,16 @@ module Buscaminas(
   //next state logic
   always_comb begin
     case(state)
-		3'b000: if (str) next_state = 3'b001; else next_state = 3'b000;  //SETUP
-		3'b001: if (move) next_state = 3'b010; else next_state = 3'b001; //wAIT
-		3'b010: if (move) next_state = 3'b010; else next_state = 3'b001; //MOVE
+	   // SET UP
+		3'b000: if (str) next_state = 3'b001; else next_state = 3'b000;
+		// WAIT
+		3'b001: if (move) next_state = 3'b010; else if (select) next_state = 3'b011; else next_state = 3'b001;
+		// MOVE
+		3'b010: if (move==0) next_state = 3'b001; else next_state = 3'b010;
+		// SELECT
+		3'b011: if (select==0) next_state = 3'b001; else next_state = 3'b011;
+		// MARK
+		3'b100: if (mark==0) next_state = 3'b001; else next_state = 3'b100;
 		default: next_state = 3'b001;
 	 endcase
   end

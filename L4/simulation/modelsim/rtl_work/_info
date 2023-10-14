@@ -11,24 +11,24 @@ cModel Technology
 Z0 dC:/Users/Bryan Gomez/Documents/L4/simulation/modelsim
 vBuscaminas
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1697232443
+Z2 !s110 1697251196
 !i10b 1
-!s100 T>hMce4YzW;P`f5T>cG6h0
+!s100 1Amg`B^31^JVZMMI<`lmm3
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I]3jL<eeSzV@Ia0d=fbn_D1
+IM^OclY9<AF1nU0:We<<1H3
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1697232371
+w1697243854
 8C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv
 FC:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv
 !i122 1
-L0 1 116
+L0 1 123
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1697232443.000000
+Z6 !s108 1697251196.000000
 !s107 C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/L4|C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv|
 !i113 1
@@ -38,15 +38,15 @@ Z9 tCvgOpt 0
 n@buscaminas
 vBuscaminas_TB
 R1
-Z10 !s110 1697232444
+Z10 !s110 1697251197
 !i10b 1
-!s100 >Ae9==A<SdQlMi5dRKhBH1
+!s100 ::i12WGfZ<<5:Ko`RF9OG1
 R3
-IkHUO@j2bOkWnBED?8ToaA1
+I>3BHKn;`3i^5Z`3B>=S;U0
 R4
 S1
 R0
-w1697229887
+w1697243857
 8C:/Users/Bryan Gomez/Documents/L4/Buscaminas_TB.sv
 FC:/Users/Bryan Gomez/Documents/L4/Buscaminas_TB.sv
 !i122 4
@@ -55,7 +55,7 @@ R5
 r1
 !s85 0
 31
-!s108 1697232444.000000
+Z11 !s108 1697251197.000000
 !s107 C:/Users/Bryan Gomez/Documents/L4/Buscaminas_TB.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/L4|C:/Users/Bryan Gomez/Documents/L4/Buscaminas_TB.sv|
 !i113 1
@@ -109,7 +109,7 @@ R5
 r1
 !s85 0
 31
-!s108 1697232442.000000
+!s108 1697251195.000000
 !s107 C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/L4|C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv|
 !i113 1
@@ -136,7 +136,7 @@ R5
 r1
 !s85 0
 31
-R6
+R11
 !s107 C:/Users/Bryan Gomez/Documents/L4/Selection.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/L4|C:/Users/Bryan Gomez/Documents/L4/Selection.sv|
 !i113 1

@@ -3,7 +3,7 @@ module Buscaminas_TB;
   // Parámetros de simulación
   logic clk;
   logic rst;
-  logic [7:0] bombs;  // Entrada de interruptores para configurar el número de bombas
+  logic [5:0] bombs;  // Entrada de interruptores para configurar el número de bombas
   logic move, select, mark; // Entrada de botones para selección de casillas y marcar como posible bomba
   logic [1:0] course;
   logic str;
@@ -27,7 +27,7 @@ module Buscaminas_TB;
     // Inicialización de entradas
 	 rst = 0;
 	 clk = 0;
-	 bombs = 9'b000001000;
+	 bombs = 6'b001000;
 	 # 50
 	 rst = 1;
 	 #50
