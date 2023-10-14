@@ -7,7 +7,7 @@ module Buscaminas_TB;
   logic move, select, mark; // Entrada de botones para selección de casillas y marcar como posible bomba
   logic [1:0] course;
   logic str;
-  logic [7:0] board_out [0:7][0:7];
+  logic [8:0] board_out [0:7][0:7];
 
   // Instancia del módulo Buscaminas
   Buscaminas buscaminas (
@@ -27,6 +27,7 @@ module Buscaminas_TB;
     // Inicialización de entradas
 	 rst = 0;
 	 clk = 0;
+	 bombs = 9'b000001000;
 	 # 50
 	 rst = 1;
 	 #50
@@ -40,7 +41,20 @@ module Buscaminas_TB;
 	 move = 1;
 	 course = 00;
 	 #50;
-	 
+	 move = 0;
+	 clk = 0;
+	 #50;
+	 clk = 1;
+	 move = 1;
+	 course = 01;
+	 #50;
+	 move = 0;
+	 clk = 0;
+	 #50;
+	 clk = 1;
+	 select = 1;
+	 #50;
+	 clk = 0;
     // Imprimimos el tablero
     $display("Tablero Inicial:");
     for (int i = 0; i < 8; i = i + 1) begin

@@ -7,8 +7,8 @@ module Movement_Testbench;
   logic clk;
   logic rst;
   logic [1:0] direction;
-  logic [7:0] board_in [0:7][0:7];
-  logic [7:0] board_out [0:7][0:7];
+  logic [8:0] board_in [0:7][0:7];
+  logic [8:0] board_out [0:7][0:7];
   logic movement_done; // Señal de control para indicar finalización
   logic enable; // Señal de habilitación
   /*
@@ -35,7 +35,7 @@ module Movement_Testbench;
     // Inicializa board_in con los valores deseados (ejemplo)
     for (int i = 0; i < 8; i = i + 1) begin
       for (int j = 0; j < 8; j = j + 1) begin
-        board_in[i][j] = 8'b00000000; // Asigna el valor 0 (casilla vacía) a cada elemento
+        board_in[i][j] = 9'b000000000; // Asigna el valor 0 (casilla vacía) a cada elemento
       end
     end
 	 

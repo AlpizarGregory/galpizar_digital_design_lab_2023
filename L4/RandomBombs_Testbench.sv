@@ -6,8 +6,8 @@ module RandomBombs_Testbench;
   // Signals
   logic rst;
   logic [7:0] bomb_count = BOMB_COUNT;
-  logic [7:0] board_in [0:7][0:7];
-  logic [7:0] board_out [0:7][0:7];
+  logic [8:0] board_in [0:7][0:7];
+  logic [8:0] board_out [0:7][0:7];
   logic start = 0;
   logic random_gen_done; // Señal de control para indicar finalización
   logic enable; // Señal de habilitación
@@ -31,7 +31,7 @@ module RandomBombs_Testbench;
 	 rst = 0;
     for (int i = 0; i < 8; i = i + 1) begin
       for (int j = 0; j < 8; j = j + 1) begin
-        board_in[i][j] = 8'b00000000; // Asigna el valor 0 (casilla vacía) a cada elemento
+        board_in[i][j] = 9'b000000000; // Asigna el valor 0 (casilla vacía) a cada elemento
       end
     end
 	 

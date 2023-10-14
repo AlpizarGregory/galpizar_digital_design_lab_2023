@@ -3,8 +3,8 @@ module Movement(
   input logic clk,
   input logic rst,
   input logic [1:0] direction,  // Número de bombas a generar
-  input logic [7:0] board_in [0:7][0:7],           // Tablero de entrada
-  output logic [7:0] board_out [0:7][0:7],          // Tablero de salida con bombas marcadas
+  input logic [8:0] board_in [0:7][0:7],           // Tablero de entrada
+  output logic [8:0] board_out [0:7][0:7],          // Tablero de salida con bombas marcadas
   output logic movement_done, // Señal de control para indicar finalización
   input logic enable // Señal de habilitación
 );
@@ -20,7 +20,7 @@ module Movement(
 	   for (int i = 0; i < 8; i = i + 1) begin
         for (int j = 0; j < 8; j = j + 1) begin
           board_out[i][j] = board_in[i][j]; // Asigna el valor 0 (casilla vacía) a cada elemento
-			 board_out[i][j] = 8'b00000000;
+			 board_out[i][j] = 9'b000000000;
 			 board_out[positionY][positionX][4] = 1;
         end
       end

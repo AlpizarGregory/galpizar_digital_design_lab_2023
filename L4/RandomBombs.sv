@@ -1,8 +1,8 @@
 module RandomBombs #(parameter N = 8)(
   input logic rst,
   input logic [7:0] bomb_count,  // Número de bombas a generar
-  input logic [7:0] board_in [0:7][0:7],           // Tablero de entrada
-  output logic [7:0] board_out [0:7][0:7],          // Tablero de salida con bombas marcadas
+  input logic [8:0] board_in [0:7][0:7],           // Tablero de entrada
+  output logic [8:0] board_out [0:7][0:7],          // Tablero de salida con bombas marcadas
   output logic start,
   output logic random_gen_done, // Señal de control para indicar finalización
   input logic enable // Señal de habilitación
@@ -15,8 +15,11 @@ module RandomBombs #(parameter N = 8)(
   
   logic [2:0] random_seed = 3'b101; // Semilla inicial para generación de números aleatorios
   logic [2:0] random_seed2 = 3'b001;
-	
+  logic [7:0] bomb_count2;
+  
+  
   always_ff @(posedge rst or posedge enable) begin
+    //bomb_count2 = bomb_count;
     if (rst) begin
 		for (int i = 0; i < 8; i = i + 1) begin
         for (int j = 0; j < 8; j = j + 1) begin
@@ -25,7 +28,11 @@ module RandomBombs #(parameter N = 8)(
       end
 	 end 
 	 if (enable) begin
-		for (int i = 0; i < N; i = i + 1) begin
+		for (int i = 0; i < N; i = i + 1) begin : bombs_random_gen
+		/*
+			if (bomb_count2==9'b000000000) begin
+				disable bombs_random_gen;
+			end*/
 		 
 			// Genera números aleatorios para las posiciones X e Y
 			if (N<15) begin
@@ -37,7 +44,7 @@ module RandomBombs #(parameter N = 8)(
 			end
 			
 			for (int u = 0; u < 64; u = u + 1) begin : random_gen
-				if (board_out[random_seed[2:0]][random_seed2[2:0]] != 8'b00000000) begin
+				if (board_out[random_seed[2:0]][random_seed2[2:0]] != 9'b000000000) begin
 					// Actualiza la variable de datos en cada iteración
 					random_seed = random_seed + 1; // Puedes usar una técnica más avanzada para actualizar la semilla
 					random_seed2 = random_seed2 + 1;
@@ -45,8 +52,9 @@ module RandomBombs #(parameter N = 8)(
 					disable random_gen;
 				end
 			end
-			board_out[random_seed[2:0]][random_seed2[2:0]] = 8'b00100000;
+			board_out[random_seed[2:0]][random_seed2[2:0]] = 9'b000100000;
 			added_bombs = added_bombs + 1;
+			bomb_count2 = bomb_count2 - 1;
 
 			// Actualiza la semilla para el próximo número aleatorio
 			random_seed = random_seed % 8; // Puedes usar una técnica más avanzada para actualizar la semilla

@@ -5,7 +5,7 @@ module Buscaminas(
   input logic move, select, mark, // Entrada de botones para selección de casillas y marcar como posible bomba
   input logic [1:0] course,
   input logic str,
-  output logic [7:0] board_out [0:7][0:7]
+  output logic [8:0] board_out [0:7][0:7]
   
   /*
   output logic [7:0] led, // Salida para mostrar el estado del juego en LEDs
@@ -16,8 +16,9 @@ module Buscaminas(
 );
 
   // Matriz bidimensional para representar el tablero (8x8)
-  logic [7:0] board [0:7][0:7];
-  logic [7:0] board2 [0:7][0:7];
+  logic [8:0] board [0:7][0:7];
+  logic [8:0] board2 [0:7][0:7];
+  logic [8:0] boardSelection [0:7][0:7];
 	/*
   // Estado de la máquina de estados finitos
   typedef enum logic [2:0] {
@@ -35,6 +36,7 @@ module Buscaminas(
   logic [2:0] state;      // Estado actual
   logic [2:0] next_state; // Siguiente estado
   logic start = 0;
+  logic lose = 0;
   
 
   // Otras variables auxiliares
@@ -42,7 +44,7 @@ module Buscaminas(
 
   RandomBombs #(8) RandomBombs_MainInstance (
     .rst(rst),
-	 .bomb_count(8),
+	 .bomb_count(bombs),
     .board_in(board),
     .board_out(board),
 	 .start(start),
@@ -59,14 +61,23 @@ module Buscaminas(
 	 .movement_done(movement_done),
 	 .enable(move)
   );
+  Selection Selection_instance (
+    .rst(rst),
+    .board_in(board2),
+    .board_out(boardSelection),
+	 .lose(lose),
+	 .enable(select)
+  );
   
 
   // Inicialización del tablero con casillas vacías
   initial begin
     for (i = 0; i < 8; i = i + 1) begin
       for (j = 0; j < 8; j = j + 1) begin
-        board[i][j] = 8'b00000000; // Asigna el valor 0 (casilla vacía) a cada elemento
-      end
+        board[i][j] = 9'b000000000; // Asigna el valor 0 (casilla vacía) a cada elemento
+        board2[i][j] = 9'b000000000;
+		  boardSelection[i][j] = 9'b000000000;
+		end
     end
   end  
 
@@ -97,7 +108,7 @@ module Buscaminas(
   always_comb begin
 	  for (int i = 0; i < 8; i = i + 1) begin
 		 for (int j = 0; j < 8; j = j + 1) begin
-			board_out[i][j] = board[i][j] | board2[i][j]; // Perform OR operation element-wise
+			board_out[i][j] = board[i][j] | board2[i][j] | boardSelection[i][j]; // Perform OR operation element-wise
 		 end
 	  end
 	end

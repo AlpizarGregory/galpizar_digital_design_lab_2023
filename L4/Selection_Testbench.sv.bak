@@ -1,0 +1,38 @@
+module Selection_Testbench;
+
+  logic rst;
+  logic [7:0] board_in [0:7][0:7];
+  logic [7:0] board_out [0:7][0:7];
+  logic enable; // Señal de habilitación
+  
+
+  // Instantiate the RandomBombs module
+  Selection Selection_instance (
+    .rst(rst),
+    .board_in(board_in),
+    .board_out(board_out),
+	 .enable(enable)
+  );
+
+    // Initial block
+    // Initial block
+  initial begin
+    
+    // Inicializa board_in con los valores deseados (ejemplo)
+    for (int i = 0; i < 8; i = i + 1) begin
+      for (int j = 0; j < 8; j = j + 1) begin
+        board_in[i][j] = 8'b00000000; // Asigna el valor 0 (casilla vacía) a cada elemento
+      end
+    end
+	 board_in[3][6][4]=1; 
+	 
+	 // Initialize signals and board_in
+	 enable = 1;
+	 #50;
+	 enable = 0;
+
+  end
+
+
+
+endmodule
