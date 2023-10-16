@@ -49,6 +49,7 @@ vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/L4 {C:/Users/Bryan G
 vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/L4 {C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv}
 vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/L4 {C:/Users/Bryan Gomez/Documents/L4/Movement.sv}
 vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/L4 {C:/Users/Bryan Gomez/Documents/L4/Selection.sv}
+vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/L4 {C:/Users/Bryan Gomez/Documents/L4/ColorMatrix.sv}
 
 vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/L4 {C:/Users/Bryan Gomez/Documents/L4/Buscaminas_TB.sv}
 

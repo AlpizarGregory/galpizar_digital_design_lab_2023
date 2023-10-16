@@ -5,8 +5,9 @@ module Buscaminas(
   input logic move, select, mark, // Entrada de botones para selección de casillas y marcar como posible bomba
   input logic [1:0] course,
   input logic str,
-  output logic [8:0] board_out [0:7][0:7]
-  
+  output logic [8:0] board_out [0:7][0:7],
+  output logic [3:0] boardColors [0:7][0:7]
+   
   /*
   output logic [7:0] led, // Salida para mostrar el estado del juego en LEDs
   output logic [7:0] [7:0] vga_pixel, // Salida para la pantalla VGA
@@ -19,6 +20,7 @@ module Buscaminas(
   logic [8:0] board [0:7][0:7];
   logic [8:0] board2 [0:7][0:7];
   logic [8:0] boardSelection [0:7][0:7];
+  logic [3:0] boardColors2 [0:7][0:7];
 	/*
   // Estado de la máquina de estados finitos
   typedef enum logic [2:0] {
@@ -68,6 +70,11 @@ module Buscaminas(
 	 .lose(lose),
 	 .enable(select)
   );
+  ColorMatrix ColorMatrix_instance (
+    .rst(rst),
+    .board_in(board_out),
+    .board_out(boardColors2)
+  );
   
 
   // Inicialización del tablero con casillas vacías
@@ -116,6 +123,7 @@ module Buscaminas(
 	  for (int i = 0; i < 8; i = i + 1) begin
 		 for (int j = 0; j < 8; j = j + 1) begin
 			board_out[i][j] = board[i][j] | board2[i][j] | boardSelection[i][j]; // Perform OR operation element-wise
+		   boardColors[i][j] = boardColors2[i][j];
 		 end
 	  end
 	end

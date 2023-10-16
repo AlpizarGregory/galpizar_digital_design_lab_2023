@@ -8,6 +8,7 @@ module Buscaminas_TB;
   logic [1:0] course;
   logic str;
   logic [8:0] board_out [0:7][0:7];
+  logic [3:0] boardColors [0:7][0:7];
 
   // Instancia del módulo Buscaminas
   Buscaminas buscaminas (
@@ -19,7 +20,8 @@ module Buscaminas_TB;
     .mark(mark),
     .course(course),
 	 .str(str),
-    .board_out(board_out)
+    .board_out(board_out),
+	 .boardColors(boardColors)
   );
 
   // Testbench
