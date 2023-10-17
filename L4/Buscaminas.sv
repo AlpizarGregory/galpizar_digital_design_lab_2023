@@ -19,6 +19,7 @@ module Buscaminas(
   logic [8:0] board [0:7][0:7];
   logic [8:0] board2 [0:7][0:7];
   logic [8:0] boardSelection [0:7][0:7];
+  logic [8:0] boardFlags [0:7][0:7];
 	/*
   // Estado de la máquina de estados finitos
   typedef enum logic [2:0] {
@@ -37,10 +38,11 @@ module Buscaminas(
   logic [2:0] next_state; // Siguiente estado
   logic start = 0;
   logic lose = 0;
+  logic win = 0;
   
 
   // Otras variables auxiliares
-  int i, j;
+  int i, j, win_aux;
 
   RandomBombs #(8) RandomBombs_MainInstance (
     .rst(rst),
@@ -68,6 +70,12 @@ module Buscaminas(
 	 .lose(lose),
 	 .enable(select)
   );
+  BombFlag BombFlag_instance (
+    .rst(rst),
+    .board_in(board2),
+    .board_out(boardFlags),
+	 .enable(mark)
+  );
   
 
   // Inicialización del tablero con casillas vacías
@@ -77,6 +85,7 @@ module Buscaminas(
         board[i][j] = 9'b000000000; // Asigna el valor 0 (casilla vacía) a cada elemento
         board2[i][j] = 9'b000000000;
 		  boardSelection[i][j] = 9'b000000000;
+		  boardFlags[i][j] = 9'b000000000;
 		end
     end
   end  
@@ -108,9 +117,29 @@ module Buscaminas(
   always_comb begin
 	  for (int i = 0; i < 8; i = i + 1) begin
 		 for (int j = 0; j < 8; j = j + 1) begin
-			board_out[i][j] = board[i][j] | board2[i][j] | boardSelection[i][j]; // Perform OR operation element-wise
+			board_out[i][j] = board[i][j] | board2[i][j] | boardSelection[i][j] | boardFlags[i][j]; // Perform OR operation element-wise
 		 end
 	  end
+	  win_aux = 1;
+	  for (int i = 0; i < 8; i = i + 1) begin : win_check_loop
+	    for (int j = 0; j < 8; j = j + 1) begin
+		   if (board_out[i][j][5] == 1) begin // La casilla contiene bomba
+				if (board_out[i][j][6] == 0) begin // La casilla no esta marcada como posible bomba
+					win_aux = 0;
+					disable win_check_loop;
+				end
+			end else if (board_out[i][j][8] == 0) begin // Si no la casilla tampoco ha sido seleccionada
+				win_aux = 0;
+				disable win_check_loop;
+			end
+		 end
+	  end
+	  
+	  if (win_aux == 1) begin
+	    win = 1;
+	  end
+	  $display("Win:");
+	  $display(win);
 	end
 
 endmodule
