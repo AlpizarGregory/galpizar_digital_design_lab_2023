@@ -36,6 +36,7 @@ module Buscaminas_TB;
 	 clk = 0;
 	 bombs = 6'b001000;
 	 # 50
+	 assert (bombs === 6'b001000) else $error("Entrada de bombas incorrecta");
 	 rst = 1;
 	 #50
 	 rst = 0;
@@ -51,6 +52,8 @@ module Buscaminas_TB;
 	 course = 00;
 	 $display("Valor de estado = %d", buscaminas.state);
 	 #50;
+	 assert (course === 2'b00) else $error("Entrada de direccion incorrecta");
+	 assert (move === 1) else $error("Movimiento no activado");
 	 move = 0;
 	 clk = 0;
 	 #50;
@@ -59,6 +62,8 @@ module Buscaminas_TB;
 	 course = 01;
 	 $display("Valor de estado = %d", buscaminas.state);
 	 #50;
+	 assert (course === 2'b01) else $error("Entrada de direccion incorrecta");
+	 assert (move === 1) else $error("Movimiento no activado");
 	 move = 0;
 	 clk = 0;
 	 #50;
@@ -66,6 +71,7 @@ module Buscaminas_TB;
 	 
 	 select = 1;
 	 $display("Valor de lose = %d", buscaminas.lose);
+	 assert (select === 1) else $error("Seleccion no activada");
 	 #50;
 	 clk = 0;
 	 select = 0;

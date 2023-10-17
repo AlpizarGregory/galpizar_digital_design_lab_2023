@@ -13,7 +13,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work altera_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_primitives.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 08:14:11 on Oct 17,2023
+# Start time: 08:57:50 on Oct 17,2023
 # vlog -reportprogress 300 -vlog01compat -work altera_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_primitives.v 
 # -- Compiling module global
 # -- Compiling module carry
@@ -95,7 +95,7 @@
 # 	alt_iobuf_diff
 # 	alt_bidir_diff
 # 	alt_bidir_buf
-# End time: 08:14:13 on Oct 17,2023, Elapsed time: 0:00:02
+# End time: 08:57:53 on Oct 17,2023, Elapsed time: 0:00:03
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/lpm_ver
@@ -106,7 +106,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work lpm_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/220model.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 08:14:14 on Oct 17,2023
+# Start time: 08:57:53 on Oct 17,2023
 # vlog -reportprogress 300 -vlog01compat -work lpm_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/220model.v 
 # -- Compiling module LPM_MEMORY_INITIALIZATION
 # -- Compiling module LPM_HINT_EVALUATION
@@ -170,7 +170,7 @@
 # 	lpm_inpad
 # 	lpm_outpad
 # 	lpm_bipad
-# End time: 08:14:15 on Oct 17,2023, Elapsed time: 0:00:01
+# End time: 08:57:54 on Oct 17,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/sgate_ver
@@ -181,7 +181,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work sgate_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/sgate.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 08:14:15 on Oct 17,2023
+# Start time: 08:57:55 on Oct 17,2023
 # vlog -reportprogress 300 -vlog01compat -work sgate_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/sgate.v 
 # -- Compiling module oper_add
 # -- Compiling module oper_addsub
@@ -223,7 +223,7 @@
 # 	oper_decoder
 # 	oper_bus_mux
 # 	oper_latch
-# End time: 08:14:16 on Oct 17,2023, Elapsed time: 0:00:01
+# End time: 08:57:55 on Oct 17,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_mf_ver
@@ -234,7 +234,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work altera_mf_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_mf.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 08:14:16 on Oct 17,2023
+# Start time: 08:57:56 on Oct 17,2023
 # vlog -reportprogress 300 -vlog01compat -work altera_mf_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_mf.v 
 # -- Compiling module lcell
 # -- Compiling module ALTERA_MF_MEMORY_INITIALIZATION
@@ -364,7 +364,7 @@
 # 	alt_fault_injection
 # 	sld_virtual_jtag_basic
 # 	altsource_probe
-# End time: 08:14:20 on Oct 17,2023, Elapsed time: 0:00:04
+# End time: 08:57:59 on Oct 17,2023, Elapsed time: 0:00:03
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_lnsim_ver
@@ -375,7 +375,7 @@
 # Modifying modelsim.ini
 # vlog -sv -work altera_lnsim_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_lnsim.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 08:14:20 on Oct 17,2023
+# Start time: 08:57:59 on Oct 17,2023
 # vlog -reportprogress 300 -sv -work altera_lnsim_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_lnsim.sv 
 # -- Compiling package altera_lnsim_functions
 # -- Compiling package altera_generic_pll_functions
@@ -458,7 +458,7 @@
 # 	altera_iopll
 # 	fourteennm_altera_iopll
 # 	fourteennm_simple_iopll
-# End time: 08:14:22 on Oct 17,2023, Elapsed time: 0:00:02
+# End time: 08:58:01 on Oct 17,2023, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_ver
@@ -469,7 +469,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclonev_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 08:14:23 on Oct 17,2023
+# Start time: 08:58:02 on Oct 17,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_atoms_ncrypt.v 
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
@@ -483,19 +483,19 @@
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # 
 # Top level modules:
-# End time: 08:14:28 on Oct 17,2023, Elapsed time: 0:00:05
+# End time: 08:58:08 on Oct 17,2023, Elapsed time: 0:00:06
 # Errors: 0, Warnings: 10
 # vlog -vlog01compat -work cyclonev_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hmi_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 08:14:28 on Oct 17,2023
+# Start time: 08:58:08 on Oct 17,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hmi_atoms_ncrypt.v 
 # 
 # Top level modules:
-# End time: 08:14:32 on Oct 17,2023, Elapsed time: 0:00:04
+# End time: 08:58:13 on Oct 17,2023, Elapsed time: 0:00:05
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work cyclonev_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 08:14:32 on Oct 17,2023
+# Start time: 08:58:13 on Oct 17,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_atoms.v 
 # -- Compiling UDP CYCLONEV_PRIM_DFFE
 # -- Compiling UDP CYCLONEV_PRIM_DFFEAS
@@ -635,7 +635,7 @@
 # 	cyclonev_mem_phy
 # 	cyclonev_oscillator
 # 	cyclonev_hps_interface_fpga2sdram
-# End time: 08:14:34 on Oct 17,2023, Elapsed time: 0:00:02
+# End time: 08:58:17 on Oct 17,2023, Elapsed time: 0:00:04
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_hssi_ver
@@ -646,15 +646,15 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclonev_hssi_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hssi_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 08:14:35 on Oct 17,2023
+# Start time: 08:58:17 on Oct 17,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_hssi_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hssi_atoms_ncrypt.v 
 # 
 # Top level modules:
-# End time: 08:14:40 on Oct 17,2023, Elapsed time: 0:00:05
+# End time: 08:58:32 on Oct 17,2023, Elapsed time: 0:00:15
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work cyclonev_hssi_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_hssi_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 08:14:40 on Oct 17,2023
+# Start time: 08:58:32 on Oct 17,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_hssi_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_hssi_atoms.v 
 # -- Compiling module cyclonev_hssi_8g_pcs_aggregate
 # -- Compiling module cyclonev_hssi_8g_rx_pcs
@@ -754,7 +754,7 @@
 # 	arriav_hssi_avmm_interface
 # 	arriav_hssi_pma_hi_pmaif
 # 	arriav_hssi_pma_hi_xcvrif
-# End time: 08:14:41 on Oct 17,2023, Elapsed time: 0:00:01
+# End time: 08:58:34 on Oct 17,2023, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_pcie_hip_ver
@@ -765,7 +765,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclonev_pcie_hip_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_pcie_hip_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 08:14:42 on Oct 17,2023
+# Start time: 08:58:35 on Oct 17,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_pcie_hip_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_pcie_hip_atoms_ncrypt.v 
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
@@ -775,18 +775,18 @@
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # 
 # Top level modules:
-# End time: 08:14:48 on Oct 17,2023, Elapsed time: 0:00:06
+# End time: 08:58:42 on Oct 17,2023, Elapsed time: 0:00:07
 # Errors: 0, Warnings: 6
 # vlog -vlog01compat -work cyclonev_pcie_hip_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_pcie_hip_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 08:14:48 on Oct 17,2023
+# Start time: 08:58:42 on Oct 17,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_pcie_hip_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_pcie_hip_atoms.v 
 # -- Compiling module cyclonev_hd_altpe2_hip_top
 # -- Compiling module arriav_hd_altpe2_hip_top
 # 
 # Top level modules:
 # 	cyclonev_hd_altpe2_hip_top
-# End time: 08:14:49 on Oct 17,2023, Elapsed time: 0:00:01
+# End time: 08:58:43 on Oct 17,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # if {[file exists rtl_work]} {
@@ -800,27 +800,107 @@
 # 
 # vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/L4 {C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 08:14:50 on Oct 17,2023
+# Start time: 08:58:44 on Oct 17,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Bryan Gomez/Documents/L4" C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv 
 # -- Compiling module RandomBombs
 # ** Warning: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv(4): (vlog-13314) Defaulting port 'board_in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
 # 
 # Top level modules:
 # 	RandomBombs
-# End time: 08:14:50 on Oct 17,2023, Elapsed time: 0:00:00
+# End time: 08:58:44 on Oct 17,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
 # vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/L4 {C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 08:14:50 on Oct 17,2023
+# Start time: 08:58:44 on Oct 17,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Bryan Gomez/Documents/L4" C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv 
 # -- Compiling module Buscaminas
-# ** Error (suppressible): C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv(140): (vlog-7033) Variable 'crray' driven in a combinational block, may not be driven by any other process. See C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv(93).
-# ** Error (suppressible): C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv(141): (vlog-7033) Variable 'rtw' driven in a combinational block, may not be driven by any other process. See C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv(94).
-# ** Warning: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv(138): (vlog-2182) 'rtw' might be read before written in always_comb or always @* block.
-# End time: 08:14:50 on Oct 17,2023, Elapsed time: 0:00:00
-# Errors: 2, Warnings: 1
-# ** Error: C:/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./Laboratorio4_run_msim_rtl_verilog.do line 49
-# C:/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/L4 {C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv}"
+# ** Warning: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv(135): (vlog-2182) 'rtw' might be read before written in always_comb or always @* block.
+# 
+# Top level modules:
+# 	Buscaminas
+# End time: 08:58:44 on Oct 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/L4 {C:/Users/Bryan Gomez/Documents/L4/Movement.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:58:45 on Oct 17,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Bryan Gomez/Documents/L4" C:/Users/Bryan Gomez/Documents/L4/Movement.sv 
+# -- Compiling module Movement
+# ** Warning: C:/Users/Bryan Gomez/Documents/L4/Movement.sv(6): (vlog-13314) Defaulting port 'board_in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# 
+# Top level modules:
+# 	Movement
+# End time: 08:58:45 on Oct 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/L4 {C:/Users/Bryan Gomez/Documents/L4/Selection.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:58:45 on Oct 17,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Bryan Gomez/Documents/L4" C:/Users/Bryan Gomez/Documents/L4/Selection.sv 
+# -- Compiling module Selection
+# ** Warning: C:/Users/Bryan Gomez/Documents/L4/Selection.sv(3): (vlog-13314) Defaulting port 'board_in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# 
+# Top level modules:
+# 	Selection
+# End time: 08:58:45 on Oct 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/L4 {C:/Users/Bryan Gomez/Documents/L4/ColorMatrix.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:58:45 on Oct 17,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Bryan Gomez/Documents/L4" C:/Users/Bryan Gomez/Documents/L4/ColorMatrix.sv 
+# -- Compiling module ColorMatrix
+# ** Warning: C:/Users/Bryan Gomez/Documents/L4/ColorMatrix.sv(3): (vlog-13314) Defaulting port 'board_in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# 
+# Top level modules:
+# 	ColorMatrix
+# End time: 08:58:45 on Oct 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# 
+# vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/L4 {C:/Users/Bryan Gomez/Documents/L4/Buscaminas_TB.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:58:45 on Oct 17,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Bryan Gomez/Documents/L4" C:/Users/Bryan Gomez/Documents/L4/Buscaminas_TB.sv 
+# -- Compiling module Buscaminas_TB
+# 
+# Top level modules:
+# 	Buscaminas_TB
+# End time: 08:58:46 on Oct 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  Buscaminas_TB
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" Buscaminas_TB 
+# Start time: 08:58:46 on Oct 17,2023
+# Loading sv_std.std
+# Loading work.Buscaminas_TB
+# Loading work.Buscaminas
+# Loading work.RandomBombs
+# Loading work.Movement
+# Loading work.Selection
+# Loading work.ColorMatrix
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Bryan  Hostname: DESKTOP-QM4H88K  ProcessID: 285608
+#           Attempting to use alternate WLF file "./wlftmjk84m".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftmjk84m
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Valor de estado = 0
+# Valor de estado = 0
+# Valor de estado = 0
+# Valor de estado = 1
+# Valor de lose = x
+# Valor de lose = x
+# Tablero Inicial:
+# 01 01 01 00 01 20 01 00 
+# 01 20 01 00 02 02 02 00 
+# 02 02 02 00 01 20 01 00 
+# 01 20 01 00 02 02 02 00 
+# 02 02 02 00 01 20 01 00 
+# 01 20 01 00 02 02 02 00 
+# 02 02 02 00 01 20 01 00 
+# 01 20 01 00 01 01 01 00 
+# End time: 08:59:09 on Oct 17,2023, Elapsed time: 0:00:23
+# Errors: 0, Warnings: 2
