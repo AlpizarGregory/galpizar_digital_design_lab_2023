@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Successful - Sun Oct 15 20:37:10 2023
+Analysis & Elaboration Status : Successful - Mon Oct 16 20:16:19 2023
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : Laboratorio4
-Top-level Entity Name : Buscaminas
+Top-level Entity Name : RandomBombs
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A until Partition Merge
 Total registers : N/A until Partition Merge

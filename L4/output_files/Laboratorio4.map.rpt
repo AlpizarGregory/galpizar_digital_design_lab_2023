@@ -1,5 +1,5 @@
 Analysis & Elaboration report for Laboratorio4
-Sun Oct 15 20:37:10 2023
+Mon Oct 16 20:16:19 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -9,13 +9,10 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   1. Legal Notice
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
-  4. Parameter Settings for User Entity Instance: RandomBombs:RandomBombs_MainInstance
+  4. Parameter Settings for User Entity Instance: Top-level Entity: |RandomBombs
   5. Analysis & Elaboration Settings
-  6. Port Connectivity Checks: "Selection:Selection_instance"
-  7. Port Connectivity Checks: "Movement:Movement_instance"
-  8. Port Connectivity Checks: "RandomBombs:RandomBombs_MainInstance"
-  9. Analysis & Elaboration Messages
- 10. Analysis & Elaboration Suppressed Messages
+  6. Analysis & Elaboration Messages
+  7. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -42,10 +39,10 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                 ;
 +-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Sun Oct 15 20:37:10 2023          ;
+; Analysis & Elaboration Status ; Successful - Mon Oct 16 20:16:19 2023          ;
 ; Quartus Prime Version         ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                 ; Laboratorio4                                   ;
-; Top-level Entity Name         ; Buscaminas                                     ;
+; Top-level Entity Name         ; RandomBombs                                    ;
 ; Family                        ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)   ; N/A until Partition Merge                      ;
 ; Total registers               ; N/A until Partition Merge                      ;
@@ -73,13 +70,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: RandomBombs:RandomBombs_MainInstance ;
-+----------------+-------+----------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                     ;
-+----------------+-------+----------------------------------------------------------+
-; N              ; 8     ; Signed Integer                                           ;
-+----------------+-------+----------------------------------------------------------+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |RandomBombs ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; N              ; 8     ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -89,7 +86,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; Buscaminas         ; Laboratorio4       ;
+; Top-level entity name                                                           ; RandomBombs        ; Laboratorio4       ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -170,42 +167,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Selection:Selection_instance"                                                       ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; lose ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Movement:Movement_instance"                                                                  ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port          ; Type   ; Severity ; Details                                                                             ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; movement_done ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "RandomBombs:RandomBombs_MainInstance"                                                           ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port             ; Type   ; Severity ; Details                                                                             ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; bomb_count[7..6] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; start            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; random_gen_done  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +---------------------------------+
 ; Analysis & Elaboration Messages ;
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Sun Oct 15 20:36:31 2023
+    Info: Processing started: Mon Oct 16 20:11:42 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Laboratorio4 -c Laboratorio4 --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -231,22 +199,12 @@ Info (12021): Found 1 design units, including 1 entities, in source file colorma
     Info (12023): Found entity 1: ColorMatrix File: C:/Users/Bryan Gomez/Documents/L4/ColorMatrix.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file colormatrix_testbench.sv
     Info (12023): Found entity 1: ColorMatrix_Testbench File: C:/Users/Bryan Gomez/Documents/L4/ColorMatrix_Testbench.sv Line: 1
-Info (12127): Elaborating entity "Buscaminas" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at Buscaminas.sv(40): object "start" assigned a value but never read File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 40
-Warning (10036): Verilog HDL or VHDL warning at Buscaminas.sv(41): object "lose" assigned a value but never read File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 41
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board_out" into its bus
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "boardColors" into its bus
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board2" into its bus
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "boardSelection" into its bus
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "boardColors2" into its bus
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board_out" into its bus
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "boardColors" into its bus
-Info (12128): Elaborating entity "RandomBombs" for hierarchy "RandomBombs:RandomBombs_MainInstance" File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 55
+Info (12127): Elaborating entity "RandomBombs" for the top level hierarchy
 Warning (10230): Verilog HDL assignment warning at RandomBombs.sv(39): truncated value with size 32 to match size of target (3) File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 39
 Warning (10230): Verilog HDL assignment warning at RandomBombs.sv(40): truncated value with size 32 to match size of target (3) File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 40
 Warning (10230): Verilog HDL assignment warning at RandomBombs.sv(49): truncated value with size 32 to match size of target (3) File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 49
 Warning (10230): Verilog HDL assignment warning at RandomBombs.sv(50): truncated value with size 32 to match size of target (3) File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 50
+Warning (10230): Verilog HDL assignment warning at RandomBombs.sv(56): truncated value with size 32 to match size of target (6) File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 56
 Warning (10230): Verilog HDL assignment warning at RandomBombs.sv(57): truncated value with size 32 to match size of target (8) File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 57
 Warning (10230): Verilog HDL assignment warning at RandomBombs.sv(60): truncated value with size 32 to match size of target (3) File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 60
 Warning (10230): Verilog HDL assignment warning at RandomBombs.sv(61): truncated value with size 32 to match size of target (3) File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 61
@@ -291,6 +249,12 @@ Info (10041): Inferred latch for "nearBombsCounter[28]" at RandomBombs.sv(30) Fi
 Info (10041): Inferred latch for "nearBombsCounter[29]" at RandomBombs.sv(30) File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 30
 Info (10041): Inferred latch for "nearBombsCounter[30]" at RandomBombs.sv(30) File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 30
 Info (10041): Inferred latch for "nearBombsCounter[31]" at RandomBombs.sv(30) File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 30
+Info (10041): Inferred latch for "added_bombs[0]" at RandomBombs.sv(30) File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 30
+Info (10041): Inferred latch for "added_bombs[1]" at RandomBombs.sv(30) File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 30
+Info (10041): Inferred latch for "added_bombs[2]" at RandomBombs.sv(30) File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 30
+Info (10041): Inferred latch for "added_bombs[3]" at RandomBombs.sv(30) File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 30
+Info (10041): Inferred latch for "added_bombs[4]" at RandomBombs.sv(30) File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 30
+Info (10041): Inferred latch for "added_bombs[5]" at RandomBombs.sv(30) File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 30
 Info (10041): Inferred latch for "board_out[7][7][0]" at RandomBombs.sv(30) File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 30
 Info (10041): Inferred latch for "board_out[7][7][1]" at RandomBombs.sv(30) File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 30
 Info (10041): Inferred latch for "board_out[7][7][2]" at RandomBombs.sv(30) File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 30
@@ -877,28 +841,12 @@ Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board_out" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board_in" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board_out" into its bus
-Info (12128): Elaborating entity "Movement" for hierarchy "Movement:Movement_instance" File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 65
-Warning (10034): Output port "movement_done" at Movement.sv(8) has no driver File: C:/Users/Bryan Gomez/Documents/L4/Movement.sv Line: 8
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board_in" into its bus
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board_out" into its bus
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board_in" into its bus
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board_out" into its bus
-Info (12128): Elaborating entity "Selection" for hierarchy "Selection:Selection_instance" File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 72
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board_in" into its bus
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board_out" into its bus
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board_in" into its bus
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board_out" into its bus
-Info (12128): Elaborating entity "ColorMatrix" for hierarchy "ColorMatrix:ColorMatrix_instance" File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 77
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board_in" into its bus
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board_out" into its bus
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board_in" into its bus
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board_out" into its bus
 Info (144001): Generated suppressed messages file C:/Users/Bryan Gomez/Documents/L4/output_files/Laboratorio4.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 4896 megabytes
-    Info: Processing ended: Sun Oct 15 20:37:11 2023
-    Info: Elapsed time: 00:00:40
-    Info: Total CPU time (on all processors): 00:00:33
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 17 warnings
+    Info: Peak virtual memory: 4899 megabytes
+    Info: Processing ended: Mon Oct 16 20:16:19 2023
+    Info: Elapsed time: 00:04:37
+    Info: Total CPU time (on all processors): 00:03:09
 
 
 +--------------------------------------------+

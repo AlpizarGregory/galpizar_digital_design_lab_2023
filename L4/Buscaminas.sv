@@ -44,7 +44,7 @@ module Buscaminas(
   // Otras variables auxiliares
   int i, j;
 
-  RandomBombs #(8) RandomBombs_MainInstance (
+  RandomBombs #(16) RandomBombs_MainInstance (
     .rst(rst),
 	 .bomb_count(bombs),
     .board_in(board),

@@ -46,14 +46,10 @@ vlib rtl_work
 vmap work rtl_work
 
 vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/L4 {C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv}
-vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/L4 {C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv}
-vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/L4 {C:/Users/Bryan Gomez/Documents/L4/Movement.sv}
-vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/L4 {C:/Users/Bryan Gomez/Documents/L4/Selection.sv}
-vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/L4 {C:/Users/Bryan Gomez/Documents/L4/ColorMatrix.sv}
 
-vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/L4 {C:/Users/Bryan Gomez/Documents/L4/Buscaminas_TB.sv}
+vlog -sv -work work +incdir+C:/Users/Bryan\ Gomez/Documents/L4 {C:/Users/Bryan Gomez/Documents/L4/RandomBombs_Testbench.sv}
 
-vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  Buscaminas_TB
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  RandomBombs_Testbench
 
 add wave *
 view structure
