@@ -14,7 +14,7 @@ module BombFlag (
 				for (int j = 0; j < 8; j = j + 1) begin
 					board_out[i][j] = board_in[i][j];
 					if (board_out[i][j][4] == 1) begin
-						board_out[i][j][6] = 1;
+						board_out[i][j][6] = ~board_out[i][j][6];
 					end
 				end
 			end

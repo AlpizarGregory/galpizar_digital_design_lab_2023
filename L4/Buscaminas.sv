@@ -138,8 +138,6 @@ module Buscaminas(
 	  if (win_aux == 1) begin
 	    win = 1;
 	  end
-	  $display("Win:");
-	  $display(win);
 	end
 
 endmodule
