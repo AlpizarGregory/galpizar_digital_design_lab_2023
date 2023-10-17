@@ -5,8 +5,10 @@ module Buscaminas(
   input logic move, select, mark, // Entrada de botones para selección de casillas y marcar como posible bomba
   input logic [1:0] course,
   input logic str,
-  output logic [8:0] board_out [0:7][0:7],
-  output logic [3:0] boardColors [0:7][0:7]
+  //output logic [8:0] board_out [0:7][0:7],
+  //output logic [3:0] boardColors [0:7][0:7],
+  output logic [7:0] red,green,blue,
+  output logic hsync,vsync,sync_b,sync_n
    
   /*
   output logic [7:0] led, // Salida para mostrar el estado del juego en LEDs
@@ -15,6 +17,9 @@ module Buscaminas(
   output logic vga_hsync, // Salida para la señal de sincronización horizontal de VGA
   output logic vga_vsync  // Salida para la señal de sincronización vertical de VGA*/
 );
+
+  logic [3:0] boardColors [0:7][0:7];
+  logic [8:0] board_out [0:7][0:7];
 
   // Matriz bidimensional para representar el tablero (8x8)
   logic [8:0] board [0:7][0:7];
@@ -117,7 +122,7 @@ module Buscaminas(
 	 endcase
   end
   
-  
+  VGA_mm VGA_instance(clk, matrix, hsync, vsync, sync_b, sync_n, red, green, blue);
   
   always_comb begin
 	  for (int i = 0; i < 8; i = i + 1) begin

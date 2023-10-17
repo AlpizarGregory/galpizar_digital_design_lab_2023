@@ -20,8 +20,8 @@ module Buscaminas_TB;
     .mark(mark),
     .course(course),
 	 .str(str),
-    .board_out(board_out),
-	 .boardColors(boardColors)
+    //.board_out(board_out),
+	 //.boardColors(boardColors)
   );
 
   // Testbench
