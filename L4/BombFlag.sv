@@ -13,7 +13,7 @@ module BombFlag (
 			for (int i = 0; i < 8; i = i + 1) begin
 				for (int j = 0; j < 8; j = j + 1) begin
 					board_out[i][j] = board_in[i][j];
-					if (board_out[i][j][4] == 1) begin
+					if (board_out[i][j][4] == 1) begin // Posición del jugador
 						board_out[i][j][6] = ~board_out[i][j][6];
 					end
 				end
