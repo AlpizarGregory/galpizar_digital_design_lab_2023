@@ -15,7 +15,9 @@ module ColorMatrix (
 		 for (int i = 0; i < 8; i = i + 1) begin
 			 for (int j = 0; j < 8; j = j + 1) begin
 				 board_out[i][j] = 4'b0000;
-				 if (board_in[i][j][8] == 1) begin
+				 if (board_in[i][j] == 9'b111111111) begin
+				   board_out[i][j] = 4'b1100;
+				 end else if (board_in[i][j][8] == 1) begin
 					board_out[i][j] = 4'b1001;
 				 end else if (board_in[i][j][4] == 1) begin
 					board_out[i][j] = 4'b1010;//--------------------------

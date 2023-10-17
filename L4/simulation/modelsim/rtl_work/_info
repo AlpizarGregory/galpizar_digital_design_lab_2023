@@ -10,56 +10,29 @@ z2
 cModel Technology
 Z0 dC:/Users/Bryan Gomez/Documents/L4/simulation/modelsim
 vRandomBombs
-Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1697509226
+DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1697552090
 !i10b 1
-!s100 hd]8azm6^3JNLQ6;8J08P0
-Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I7gfMYoVhnLW;ICLC^Dg?83
-Z4 VDg1SIo80bB@j0V0VzS_@n1
+!s100 k3f?4j>BGI>oBVWmKfnaA0
+!s11b Dg1SIo80bB@j0V0VzS_@n1
+I>6JQeTRW@dV_h_eMeX?<A3
+VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1697509163
+w1697524703
 8C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv
 FC:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv
 !i122 0
 L0 1 224
-Z5 OV;L;2020.1;71
+OV;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1697509225.000000
+!s108 1697552090.000000
 !s107 C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/L4|C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv|
 !i113 1
-Z6 o-sv -work work
-Z7 !s92 -sv -work work {+incdir+C:/Users/Bryan Gomez/Documents/L4}
-Z8 tCvgOpt 0
+o-sv -work work
+!s92 -sv -work work {+incdir+C:/Users/Bryan Gomez/Documents/L4}
+tCvgOpt 0
 n@random@bombs
-vRandomBombs_Testbench
-R1
-R2
-!i10b 1
-!s100 jLUzC`A>e7j?`9z8lYha40
-R3
-IgoTzOVB?zVzYG0:R=gTG12
-R4
-S1
-R0
-w1697508701
-8C:/Users/Bryan Gomez/Documents/L4/RandomBombs_Testbench.sv
-FC:/Users/Bryan Gomez/Documents/L4/RandomBombs_Testbench.sv
-!i122 1
-L0 1 64
-R5
-r1
-!s85 0
-31
-!s108 1697509226.000000
-!s107 C:/Users/Bryan Gomez/Documents/L4/RandomBombs_Testbench.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bryan Gomez/Documents/L4|C:/Users/Bryan Gomez/Documents/L4/RandomBombs_Testbench.sv|
-!i113 1
-R6
-R7
-R8
-n@random@bombs_@testbench

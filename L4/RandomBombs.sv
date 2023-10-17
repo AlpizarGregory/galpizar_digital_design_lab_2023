@@ -15,7 +15,7 @@ module RandomBombs #(parameter N = 8)(
   
   logic [2:0] random_seed = 3'b101; // Semilla inicial para generación de números aleatorios
   logic [2:0] random_seed2 = 3'b001;
-  logic [7:0] bomb_count2;
+  logic bmb = 9'b000100000;
   
   
   always_ff @(posedge rst or posedge enable) begin
@@ -28,19 +28,19 @@ module RandomBombs #(parameter N = 8)(
       end
 	 end 
 	 if (enable) begin
-		for (int i = 0; i < 63; i = i + 1) begin : bombs_random_gen
+		for (int i = 0; i < N; i = i + 1) begin : bombs_random_gen22
 		
 			if (added_bombs==bomb_count) begin
-				disable bombs_random_gen;
+			  disable bombs_random_gen22;
 			end
 		 
 			// Genera números aleatorios para las posiciones X e Y
-			if (bomb_count<15) begin
-				random_seed = random_seed + bomb_count+3/2;
-				random_seed2 = random_seed2 + bomb_count+7/2;
+			if (N<15) begin
+				random_seed = random_seed + N+3/2;
+				random_seed2 = random_seed2 + N+7/2;
 			end else begin
-				random_seed = random_seed + bomb_count/3;
-				random_seed2 = random_seed2 + bomb_count/4;
+				random_seed = random_seed + N/3;
+				random_seed2 = random_seed2 + N/4;
 			end
 			
 			for (int u = 0; u < 64; u = u + 1) begin : random_gen
@@ -54,7 +54,7 @@ module RandomBombs #(parameter N = 8)(
 			end
 			board_out[random_seed[2:0]][random_seed2[2:0]] = 9'b000100000;
 			added_bombs = added_bombs + 1;
-			bomb_count2 = bomb_count2 - 1;
+			//bomb_count2 = bomb_count2 - 1;
 
 			// Actualiza la semilla para el próximo número aleatorio
 			random_seed = random_seed % 8; // Puedes usar una técnica más avanzada para actualizar la semilla

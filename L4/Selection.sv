@@ -23,6 +23,13 @@ module Selection (
 			   if (board_out[o][w][5] == 1) begin  // Si hay bomba
 				  // PIERDE
 				  lose = 1;
+				  
+				  for (int q = 0; q < 8; q = q + 1) begin
+					 for (int g = 0; g < 8; g = g + 1) begin
+					   board_out[q][g] = 9'b111111111; 
+					 end
+				  end
+				  
 				  disable selection_loap;
 				end else begin
 			     board_out[o][w][8] = 1;	

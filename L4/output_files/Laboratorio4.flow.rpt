@@ -1,5 +1,5 @@
 Flow report for Laboratorio4
-Mon Oct 16 22:59:20 2023
+Tue Oct 17 08:09:54 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -38,29 +38,24 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+----------------------------------------------------------------------------------+
-; Flow Summary                                                                     ;
-+---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Mon Oct 16 22:59:20 2023          ;
-; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
-; Revision Name                   ; Laboratorio4                                   ;
-; Top-level Entity Name           ; Buscaminas                                     ;
-; Family                          ; Cyclone V                                      ;
-; Device                          ; 5CSEMA5F31C6                                   ;
-; Timing Models                   ; Final                                          ;
-; Logic utilization (in ALMs)     ; 166 / 32,070 ( < 1 % )                         ;
-; Total registers                 ; 24                                             ;
-; Total pins                      ; 42 / 457 ( 9 % )                               ;
-; Total virtual pins              ; 0                                              ;
-; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                          ;
-; Total DSP Blocks                ; 0 / 87 ( 0 % )                                 ;
-; Total HSSI RX PCSs              ; 0                                              ;
-; Total HSSI PMA RX Deserializers ; 0                                              ;
-; Total HSSI TX PCSs              ; 0                                              ;
-; Total HSSI PMA TX Serializers   ; 0                                              ;
-; Total PLLs                      ; 0 / 6 ( 0 % )                                  ;
-; Total DLLs                      ; 0 / 4 ( 0 % )                                  ;
-+---------------------------------+------------------------------------------------+
++------------------------------------------------------------------------------+
+; Flow Summary                                                                 ;
++-----------------------------+------------------------------------------------+
+; Flow Status                 ; Successful - Tue Oct 17 08:09:54 2023          ;
+; Quartus Prime Version       ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
+; Revision Name               ; Laboratorio4                                   ;
+; Top-level Entity Name       ; Buscaminas                                     ;
+; Family                      ; Cyclone V                                      ;
+; Device                      ; 5CGXFC7C7F23C8                                 ;
+; Timing Models               ; Final                                          ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                      ;
+; Total registers             ; N/A until Partition Merge                      ;
+; Total pins                  ; N/A until Partition Merge                      ;
+; Total virtual pins          ; N/A until Partition Merge                      ;
+; Total block memory bits     ; N/A until Partition Merge                      ;
+; Total PLLs                  ; N/A until Partition Merge                      ;
+; Total DLLs                  ; N/A until Partition Merge                      ;
++-----------------------------+------------------------------------------------+
 
 
 +-----------------------------------------+
@@ -68,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/16/2023 22:57:59 ;
+; Start date & time ; 10/17/2023 08:09:23 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Laboratorio4        ;
 +-------------------+---------------------+
@@ -79,7 +74,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 238300910873173.169751867907380        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 251756431378667.169755176203436        ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; RandomBombs_Testbench             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; ColorMatrix_Testbench             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Selection_Testbench               ;
@@ -121,41 +116,29 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                        ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4914 MB             ; 00:00:12                           ;
-; Fitter               ; 00:00:57     ; 1.0                     ; 6952 MB             ; 00:01:05                           ;
-; Assembler            ; 00:00:05     ; 1.0                     ; 4883 MB             ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.3                     ; 5203 MB             ; 00:00:04                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4732 MB             ; 00:00:01                           ;
-; Total                ; 00:01:17     ; --                      ; --                  ; 00:01:26                           ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                          ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Elaboration ; 00:00:32     ; 1.0                     ; 5028 MB             ; 00:00:47                           ;
+; Total                  ; 00:00:32     ; --                      ; --                  ; 00:00:47                           ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                    ;
-+----------------------+------------------+------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; Tiquillo         ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; Tiquillo         ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; Tiquillo         ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; Tiquillo         ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; Tiquillo         ; Windows 10 ; 10.0       ; x86_64         ;
-+----------------------+------------------+------------+------------+----------------+
++--------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                      ;
++------------------------+------------------+------------+------------+----------------+
+; Module Name            ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++------------------------+------------------+------------+------------+----------------+
+; Analysis & Elaboration ; DESKTOP-QM4H88K  ; Windows 10 ; 10.0       ; x86_64         ;
++------------------------+------------------+------------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
-quartus_map --read_settings_files=on --write_settings_files=off Laboratorio4 -c Laboratorio4
-quartus_fit --read_settings_files=off --write_settings_files=off Laboratorio4 -c Laboratorio4
-quartus_asm --read_settings_files=off --write_settings_files=off Laboratorio4 -c Laboratorio4
-quartus_sta Laboratorio4 -c Laboratorio4
-quartus_eda --read_settings_files=off --write_settings_files=off Laboratorio4 -c Laboratorio4
+quartus_map --read_settings_files=on --write_settings_files=off Laboratorio4 -c Laboratorio4 --analysis_and_elaboration
 
 
 

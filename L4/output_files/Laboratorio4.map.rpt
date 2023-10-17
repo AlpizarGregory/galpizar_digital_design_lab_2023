@@ -1,5 +1,5 @@
 Analysis & Elaboration report for Laboratorio4
-Mon Oct 16 20:16:19 2023
+Tue Oct 17 08:09:54 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -9,10 +9,12 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   1. Legal Notice
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
-  4. Parameter Settings for User Entity Instance: Top-level Entity: |RandomBombs
+  4. Parameter Settings for User Entity Instance: RandomBombs:RandomBombs_MainInstance
   5. Analysis & Elaboration Settings
-  6. Analysis & Elaboration Messages
-  7. Analysis & Elaboration Suppressed Messages
+  6. Port Connectivity Checks: "Movement:Movement_instance"
+  7. Port Connectivity Checks: "RandomBombs:RandomBombs_MainInstance"
+  8. Analysis & Elaboration Messages
+  9. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -39,10 +41,10 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                 ;
 +-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Mon Oct 16 20:16:19 2023          ;
+; Analysis & Elaboration Status ; Successful - Tue Oct 17 08:09:54 2023          ;
 ; Quartus Prime Version         ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                 ; Laboratorio4                                   ;
-; Top-level Entity Name         ; RandomBombs                                    ;
+; Top-level Entity Name         ; Buscaminas                                     ;
 ; Family                        ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)   ; N/A until Partition Merge                      ;
 ; Total registers               ; N/A until Partition Merge                      ;
@@ -70,13 +72,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |RandomBombs ;
-+----------------+-------+----------------------------------------------------+
-; Parameter Name ; Value ; Type                                               ;
-+----------------+-------+----------------------------------------------------+
-; N              ; 8     ; Signed Integer                                     ;
-+----------------+-------+----------------------------------------------------+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RandomBombs:RandomBombs_MainInstance ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; N              ; 16    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -86,7 +88,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; RandomBombs        ; Laboratorio4       ;
+; Top-level entity name                                                           ; Buscaminas         ; Laboratorio4       ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -167,13 +169,32 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Movement:Movement_instance"                                                                  ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; movement_done ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RandomBombs:RandomBombs_MainInstance"                                                          ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; start           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; random_gen_done ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +---------------------------------+
 ; Analysis & Elaboration Messages ;
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Mon Oct 16 20:11:42 2023
+    Info: Processing started: Tue Oct 17 08:09:22 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Laboratorio4 -c Laboratorio4 --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -199,20 +220,289 @@ Info (12021): Found 1 design units, including 1 entities, in source file colorma
     Info (12023): Found entity 1: ColorMatrix File: C:/Users/Bryan Gomez/Documents/L4/ColorMatrix.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file colormatrix_testbench.sv
     Info (12023): Found entity 1: ColorMatrix_Testbench File: C:/Users/Bryan Gomez/Documents/L4/ColorMatrix_Testbench.sv Line: 1
-Info (12127): Elaborating entity "RandomBombs" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at RandomBombs.sv(39): truncated value with size 32 to match size of target (3) File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 39
-Warning (10230): Verilog HDL assignment warning at RandomBombs.sv(40): truncated value with size 32 to match size of target (3) File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 40
+Info (12127): Elaborating entity "Buscaminas" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at Buscaminas.sv(24): object "board3" assigned a value but never read File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 24
+Warning (10036): Verilog HDL or VHDL warning at Buscaminas.sv(27): object "colorsArray" assigned a value but never read File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 27
+Warning (10036): Verilog HDL or VHDL warning at Buscaminas.sv(45): object "start" assigned a value but never read File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 45
+Info (10041): Inferred latch for "crray[63][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[63][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[63][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[63][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[62][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[62][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[62][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[62][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[61][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[61][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[61][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[61][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[60][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[60][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[60][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[60][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[59][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[59][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[59][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[59][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[58][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[58][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[58][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[58][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[57][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[57][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[57][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[57][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[56][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[56][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[56][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[56][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[55][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[55][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[55][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[55][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[54][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[54][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[54][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[54][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[53][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[53][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[53][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[53][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[52][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[52][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[52][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[52][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[51][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[51][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[51][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[51][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[50][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[50][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[50][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[50][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[49][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[49][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[49][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[49][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[48][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[48][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[48][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[48][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[47][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[47][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[47][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[47][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[46][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[46][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[46][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[46][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[45][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[45][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[45][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[45][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[44][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[44][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[44][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[44][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[43][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[43][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[43][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[43][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[42][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[42][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[42][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[42][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[41][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[41][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[41][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[41][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[40][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[40][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[40][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[40][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[39][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[39][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[39][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[39][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[38][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[38][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[38][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[38][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[37][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[37][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[37][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[37][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[36][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[36][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[36][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[36][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[35][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[35][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[35][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[35][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[34][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[34][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[34][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[34][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[33][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[33][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[33][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[33][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[32][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[32][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[32][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[32][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[31][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[31][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[31][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[31][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[30][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[30][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[30][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[30][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[29][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[29][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[29][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[29][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[28][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[28][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[28][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[28][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[27][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[27][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[27][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[27][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[26][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[26][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[26][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[26][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[25][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[25][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[25][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[25][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[24][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[24][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[24][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[24][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[23][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[23][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[23][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[23][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[22][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[22][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[22][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[22][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[21][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[21][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[21][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[21][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[20][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[20][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[20][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[20][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[19][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[19][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[19][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[19][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[18][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[18][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[18][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[18][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[17][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[17][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[17][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[17][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[16][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[16][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[16][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[16][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[15][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[15][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[15][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[15][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[14][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[14][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[14][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[14][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[13][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[13][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[13][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[13][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[12][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[12][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[12][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[12][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[11][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[11][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[11][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[11][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[10][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[10][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[10][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[10][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[9][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[9][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[9][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[9][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[8][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[8][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[8][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[8][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[7][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[7][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[7][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[7][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[6][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[6][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[6][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[6][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[5][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[5][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[5][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[5][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[4][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[4][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[4][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[4][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[3][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[3][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[3][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[3][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[2][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[2][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[2][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[2][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[1][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[1][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[1][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[1][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[0][0]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[0][1]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[0][2]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10041): Inferred latch for "crray[0][3]" at Buscaminas.sv(131) File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 131
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board_out" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "boardColors" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board2" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board3" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "boardSelection" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "boardColors2" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board_out" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "boardColors" into its bus
+Info (12128): Elaborating entity "RandomBombs" for hierarchy "RandomBombs:RandomBombs_MainInstance" File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 60
+Warning (10036): Verilog HDL or VHDL warning at RandomBombs.sv(18): object "bmb" assigned a value but never read File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 18
+Warning (10230): Verilog HDL assignment warning at RandomBombs.sv(18): truncated value with size 9 to match size of target (1) File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 18
+Warning (10230): Verilog HDL assignment warning at RandomBombs.sv(42): truncated value with size 32 to match size of target (3) File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 42
+Warning (10230): Verilog HDL assignment warning at RandomBombs.sv(43): truncated value with size 32 to match size of target (3) File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 43
 Warning (10230): Verilog HDL assignment warning at RandomBombs.sv(49): truncated value with size 32 to match size of target (3) File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 49
 Warning (10230): Verilog HDL assignment warning at RandomBombs.sv(50): truncated value with size 32 to match size of target (3) File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 50
 Warning (10230): Verilog HDL assignment warning at RandomBombs.sv(56): truncated value with size 32 to match size of target (6) File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 56
-Warning (10230): Verilog HDL assignment warning at RandomBombs.sv(57): truncated value with size 32 to match size of target (8) File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 57
 Warning (10230): Verilog HDL assignment warning at RandomBombs.sv(60): truncated value with size 32 to match size of target (3) File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 60
 Warning (10230): Verilog HDL assignment warning at RandomBombs.sv(61): truncated value with size 32 to match size of target (3) File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 61
 Warning (10230): Verilog HDL assignment warning at RandomBombs.sv(213): truncated value with size 32 to match size of target (9) File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 213
 Warning (10240): Verilog HDL Always Construct warning at RandomBombs.sv(21): inferring latch(es) for variable "random_seed", which holds its previous value in one or more paths through the always construct File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 21
 Warning (10240): Verilog HDL Always Construct warning at RandomBombs.sv(21): inferring latch(es) for variable "random_seed2", which holds its previous value in one or more paths through the always construct File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 21
 Warning (10240): Verilog HDL Always Construct warning at RandomBombs.sv(21): inferring latch(es) for variable "added_bombs", which holds its previous value in one or more paths through the always construct File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 21
-Warning (10240): Verilog HDL Always Construct warning at RandomBombs.sv(21): inferring latch(es) for variable "bomb_count2", which holds its previous value in one or more paths through the always construct File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 21
 Warning (10240): Verilog HDL Always Construct warning at RandomBombs.sv(21): inferring latch(es) for variable "nearBombsCounter", which holds its previous value in one or more paths through the always construct File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 21
 Warning (10240): Verilog HDL Always Construct warning at RandomBombs.sv(21): inferring latch(es) for variable "start", which holds its previous value in one or more paths through the always construct File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 21
 Warning (10034): Output port "random_gen_done" at RandomBombs.sv(7) has no driver File: C:/Users/Bryan Gomez/Documents/L4/RandomBombs.sv Line: 7
@@ -841,12 +1131,28 @@ Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board_out" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board_in" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board_out" into its bus
+Info (12128): Elaborating entity "Movement" for hierarchy "Movement:Movement_instance" File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 70
+Warning (10034): Output port "movement_done" at Movement.sv(8) has no driver File: C:/Users/Bryan Gomez/Documents/L4/Movement.sv Line: 8
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board_in" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board_out" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board_in" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board_out" into its bus
+Info (12128): Elaborating entity "Selection" for hierarchy "Selection:Selection_instance" File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 77
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board_in" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board_out" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board_in" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board_out" into its bus
+Info (12128): Elaborating entity "ColorMatrix" for hierarchy "ColorMatrix:ColorMatrix_instance" File: C:/Users/Bryan Gomez/Documents/L4/Buscaminas.sv Line: 82
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board_in" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board_out" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board_in" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board_out" into its bus
 Info (144001): Generated suppressed messages file C:/Users/Bryan Gomez/Documents/L4/output_files/Laboratorio4.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 17 warnings
-    Info: Peak virtual memory: 4899 megabytes
-    Info: Processing ended: Mon Oct 16 20:16:19 2023
-    Info: Elapsed time: 00:04:37
-    Info: Total CPU time (on all processors): 00:03:09
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 21 warnings
+    Info: Peak virtual memory: 5028 megabytes
+    Info: Processing ended: Tue Oct 17 08:09:55 2023
+    Info: Elapsed time: 00:00:33
+    Info: Total CPU time (on all processors): 00:00:47
 
 
 +--------------------------------------------+
