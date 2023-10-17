@@ -1,6 +1,6 @@
 module RandomBombs #(parameter N = 8)(
   input logic rst,
-  input logic [7:0] bomb_count,  // Número de bombas a generar
+  input logic [5:0] bomb_count,  // Número de bombas a generar
   input logic [8:0] board_in [0:7][0:7],           // Tablero de entrada
   output logic [8:0] board_out [0:7][0:7],          // Tablero de salida con bombas marcadas
   output logic start,
@@ -10,7 +10,7 @@ module RandomBombs #(parameter N = 8)(
 
 // Variables locales
   int x, y;
-  int added_bombs = 0;
+  logic [5:0] added_bombs = 6'b000000;
   int nearBombsCounter = 0;
   
   logic [2:0] random_seed = 3'b101; // Semilla inicial para generación de números aleatorios
@@ -28,19 +28,19 @@ module RandomBombs #(parameter N = 8)(
       end
 	 end 
 	 if (enable) begin
-		for (int i = 0; i < N; i = i + 1) begin : bombs_random_gen
-		/*
-			if (bomb_count2==9'b000000000) begin
+		for (int i = 0; i < 63; i = i + 1) begin : bombs_random_gen
+		
+			if (added_bombs==bomb_count) begin
 				disable bombs_random_gen;
-			end*/
+			end
 		 
 			// Genera números aleatorios para las posiciones X e Y
-			if (N<15) begin
-				random_seed = random_seed + N+3/2;
-				random_seed2 = random_seed2 + N+7/2;
+			if (bomb_count<15) begin
+				random_seed = random_seed + bomb_count+3/2;
+				random_seed2 = random_seed2 + bomb_count+7/2;
 			end else begin
-				random_seed = random_seed + N/3;
-				random_seed2 = random_seed2 + N/4;
+				random_seed = random_seed + bomb_count/3;
+				random_seed2 = random_seed2 + bomb_count/4;
 			end
 			
 			for (int u = 0; u < 64; u = u + 1) begin : random_gen

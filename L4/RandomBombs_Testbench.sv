@@ -5,7 +5,7 @@ module RandomBombs_Testbench;
 
   // Signals
   logic rst;
-  logic [7:0] bomb_count = BOMB_COUNT;
+  logic [5:0] bomb_count = 6'b001000;
   logic [8:0] board_in [0:7][0:7];
   logic [8:0] board_out [0:7][0:7];
   logic start = 0;
@@ -46,6 +46,8 @@ module RandomBombs_Testbench;
 	 rst = 1;
 	 #100
 	 rst = 0;
+	 enable = 1;
+	 #100
     // Display the resulting board_out
 	 /*
     $display("Resulting board_out:");
@@ -54,6 +56,8 @@ module RandomBombs_Testbench;
         $display("board_out[%0d][%0d] = %b", x, y, board_out[x][y]);
       end
     end*/
+	 // Muestra el valor de added_bombs
+    $display("Valor de added_bombs = %d", RandomBombs_instance.added_bombs);
 
   end
 
