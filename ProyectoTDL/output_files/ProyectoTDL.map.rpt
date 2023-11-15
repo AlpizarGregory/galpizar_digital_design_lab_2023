@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ProyectoTDL
-Wed Nov 15 14:33:48 2023
+Wed Nov 15 14:44:23 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -45,7 +45,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Nov 15 14:33:48 2023          ;
+; Analysis & Synthesis Status     ; Successful - Wed Nov 15 14:44:23 2023          ;
 ; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                   ; ProyectoTDL                                    ;
 ; Top-level Entity Name           ; mux2                                           ;
@@ -269,7 +269,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Wed Nov 15 14:33:10 2023
+    Info: Processing started: Wed Nov 15 14:43:42 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProyectoTDL -c ProyectoTDL
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -287,6 +287,13 @@ Info (12021): Found 1 design units, including 1 entities, in source file adder.s
     Info (12023): Found entity 1: adder File: C:/Users/Bryan Gomez/Documents/ProyectoTDL/adder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file datapath.sv
     Info (12023): Found entity 1: datapath File: C:/Users/Bryan Gomez/Documents/ProyectoTDL/datapath.sv Line: 1
+Info (12021): Found 2 design units, including 2 entities, in source file condlogic.sv
+    Info (12023): Found entity 1: condlogic File: C:/Users/Bryan Gomez/Documents/ProyectoTDL/condlogic.sv Line: 1
+    Info (12023): Found entity 2: condcheck File: C:/Users/Bryan Gomez/Documents/ProyectoTDL/condlogic.sv Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file decoder.sv
+    Info (12023): Found entity 1: decoder File: C:/Users/Bryan Gomez/Documents/ProyectoTDL/decoder.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file controller.sv
+    Info (12023): Found entity 1: controller File: C:/Users/Bryan Gomez/Documents/ProyectoTDL/controller.sv Line: 1
 Info (12127): Elaborating entity "mux2" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/Bryan Gomez/Documents/ProyectoTDL/output_files/ProyectoTDL.map.smsg
@@ -297,10 +304,10 @@ Info (21057): Implemented 33 device resources after synthesis - the final resour
     Info (21059): Implemented 8 output pins
     Info (21061): Implemented 8 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4821 megabytes
-    Info: Processing ended: Wed Nov 15 14:33:48 2023
-    Info: Elapsed time: 00:00:38
-    Info: Total CPU time (on all processors): 00:00:57
+    Info: Peak virtual memory: 4820 megabytes
+    Info: Processing ended: Wed Nov 15 14:44:23 2023
+    Info: Elapsed time: 00:00:41
+    Info: Total CPU time (on all processors): 00:00:53
 
 
 +------------------------------------------+
