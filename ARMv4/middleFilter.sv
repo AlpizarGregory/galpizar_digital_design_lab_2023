@@ -12,8 +12,8 @@ module middleFilter(input logic clk,output logic [7:0] board_out [0:99][0:99], o
 	ram1 memm(count, clk, data, wren, q);
 	
 	
-	logic [6:0] countMedianY = 7'b0000000;
-	logic [6:0] countMedian = 7'b0000000;
+	logic [6:0] countMedianY = 7'b0000001;
+	logic [6:0] countMedian = 7'b0000001;
 	Median men(countMedianY, countMedian, en, board_out,resultFinal);
 	
 	always_ff @(negedge clk) begin
@@ -39,8 +39,8 @@ module middleFilter(input logic clk,output logic [7:0] board_out [0:99][0:99], o
 			
 			
 		end else begin
-			if (countMedian < 7'b1100011 && countMedianY < 7'b1100011) begin
-				
+			if (countMedian < 7'b1100010 && countMedianY < 7'b1100010) begin
+				/*
 				for (int i = 0; i < 3; i = i + 1) begin
 					$write("Row %0d: ", i);
 					for (int j = 0; j < 3; j = j + 1) begin
@@ -49,14 +49,16 @@ module middleFilter(input logic clk,output logic [7:0] board_out [0:99][0:99], o
 						end
 					end
 					$display(""); // Move to the next line after printing a row
-				end
+				end*/
 
-				board_out[countMedianY+1][countMedian+1] = resultFinal;
-				countMedian = countMedian + 3;
-			end else if (countMedian < 7'b1100011) begin
-				countMedian = 7'b0000000;
-				countMedianY = countMedianY + 3;
-				
+				board_out[countMedianY][countMedian] = resultFinal;
+				countMedian = countMedian + 1;
+				en = 1;
+				en = 0;
+			end else if (countMedian < 7'b1100010) begin
+				countMedian = 7'b0000001;
+				countMedianY = countMedianY + 1;
+				/*
 				for (int i = 0; i < 3; i = i + 1) begin
 					$write("Row %0d: ", i);
 					for (int j = 0; j < 3; j = j + 1) begin
@@ -65,9 +67,11 @@ module middleFilter(input logic clk,output logic [7:0] board_out [0:99][0:99], o
 						end
 					end
 					$display(""); // Move to the next line after printing a row
-				end
-				board_out[countMedianY+1][countMedian+1] = resultFinal;
-				countMedian = countMedian + 3;
+				end*/
+				board_out[countMedianY][countMedian] = resultFinal;
+				countMedian = countMedian + 1;
+				en = 1;
+				en = 0;
 			end	
 			
 		end
@@ -86,31 +90,23 @@ module Median(
    // Ejemplo de obtener la mediana sin funciones
 	logic [7:0] m1, m2, m3, m4, m5, m6, m7, m8, m9;
 	logic [7:0] temp;
-	always_ff @(negedge enable) begin
-	
-			m1 = 8'h00;
-			m2 = 8'h00;
-			m3 = 8'h00;
-			m4 = 8'h00;
-			m5 = 8'h00;
-			m6 = 8'h00;
-			m7 = 8'h00;
-			m8 = 8'h00;
-			m9 = 8'h00;
+	always_ff @ (negedge enable) begin 
+		//if (enable) begin
 			
-			m1 = matrix[countMedianY][countMedian];
-			m2 = matrix[countMedianY][countMedian+1];
-			m3 = matrix[countMedianY][countMedian+2];
-			m4 = matrix[countMedianY+1][countMedian];
-			m5 = matrix[countMedianY+1][countMedian+1];
-			m6 = matrix[countMedianY+1][countMedian+2];
-			m7 = matrix[countMedianY+2][countMedian];
-			m8 = matrix[countMedianY+2][countMedian+1];
-			m9 = matrix[countMedianY+2][countMedian+2];
+			m1 = matrix[countMedianY-1][countMedian-1];
+			m2 = matrix[countMedianY-1][countMedian];
+			m3 = matrix[countMedianY-1][countMedian+1];
+			m4 = matrix[countMedianY][countMedian-1];
+			m5 = matrix[countMedianY][countMedian];
+			m6 = matrix[countMedianY][countMedian+1];
+			m7 = matrix[countMedianY+1][countMedian-1];
+			m8 = matrix[countMedianY+1][countMedian];
+			m9 = matrix[countMedianY+1][countMedian+1];
 			$display("Before sorting: m1=%h, m2=%h, m3=%h, m4=%h, m5=%h, m6=%h, m7=%h, m8=%h, m9=%h", m1, m2, m3, m4, m5, m6, m7, m8, m9);
 
 			
 			// Ordenar valores (burbuja)
+			/*
 			if (m1 > m2) begin temp = m1; m1 = m2; m2 = temp; end
 			if (m2 > m3) begin temp = m2; m2 = m3; m3 = temp; end
 			if (m3 > m4) begin temp = m3; m3 = m4; m4 = temp; end
@@ -126,12 +122,56 @@ module Median(
 			if (m5 > m6) begin temp = m5; m5 = m6; m6 = temp; end
 			if (m6 > m7) begin temp = m6; m6 = m7; m7 = temp; end
 			if (m7 > m8) begin temp = m7; m7 = m8; m8 = temp; end
+			if (m8 > m9) begin temp = m8; m8 = m9; m9 = temp; end*/
+			if (m1 > m2) begin temp = m1; m1 = m2; m2 = temp; end
+			if (m2 > m3) begin temp = m2; m2 = m3; m3 = temp; end
+			if (m3 > m4) begin temp = m3; m3 = m4; m4 = temp; end
+			if (m4 > m5) begin temp = m4; m4 = m5; m5 = temp; end
+			if (m5 > m6) begin temp = m5; m5 = m6; m6 = temp; end
+			if (m6 > m7) begin temp = m6; m6 = m7; m7 = temp; end
+			if (m7 > m8) begin temp = m7; m7 = m8; m8 = temp; end
 			if (m8 > m9) begin temp = m8; m8 = m9; m9 = temp; end
+			
+			if (m1 > m2) begin temp = m1; m1 = m2; m2 = temp; end
+			if (m2 > m3) begin temp = m2; m2 = m3; m3 = temp; end
+			if (m3 > m4) begin temp = m3; m3 = m4; m4 = temp; end
+			if (m4 > m5) begin temp = m4; m4 = m5; m5 = temp; end
+			if (m5 > m6) begin temp = m5; m5 = m6; m6 = temp; end
+			if (m6 > m7) begin temp = m6; m6 = m7; m7 = temp; end
+			if (m7 > m8) begin temp = m7; m7 = m8; m8 = temp; end
+			
+			if (m1 > m2) begin temp = m1; m1 = m2; m2 = temp; end
+			if (m2 > m3) begin temp = m2; m2 = m3; m3 = temp; end
+			if (m3 > m4) begin temp = m3; m3 = m4; m4 = temp; end
+			if (m4 > m5) begin temp = m4; m4 = m5; m5 = temp; end
+			if (m5 > m6) begin temp = m5; m5 = m6; m6 = temp; end
+			if (m6 > m7) begin temp = m6; m6 = m7; m7 = temp; end
+			
+			if (m1 > m2) begin temp = m1; m1 = m2; m2 = temp; end
+			if (m2 > m3) begin temp = m2; m2 = m3; m3 = temp; end
+			if (m3 > m4) begin temp = m3; m3 = m4; m4 = temp; end
+			if (m4 > m5) begin temp = m4; m4 = m5; m5 = temp; end
+			if (m5 > m6) begin temp = m5; m5 = m6; m6 = temp; end
+			
+			if (m1 > m2) begin temp = m1; m1 = m2; m2 = temp; end
+			if (m2 > m3) begin temp = m2; m2 = m3; m3 = temp; end
+			if (m3 > m4) begin temp = m3; m3 = m4; m4 = temp; end
+			if (m4 > m5) begin temp = m4; m4 = m5; m5 = temp; end
+			
+			if (m1 > m2) begin temp = m1; m1 = m2; m2 = temp; end
+			if (m2 > m3) begin temp = m2; m2 = m3; m3 = temp; end
+			if (m3 > m4) begin temp = m3; m3 = m4; m4 = temp; end
+			
+			if (m1 > m2) begin temp = m1; m1 = m2; m2 = temp; end
+			if (m2 > m3) begin temp = m2; m2 = m3; m3 = temp; end
+			
+			if (m1 > m2) begin temp = m1; m1 = m2; m2 = temp; end
 			$display("After sorting: m1=%h, m2=%h, m3=%h, m4=%h, m5=%h, m6=%h, m7=%h, m8=%h, m9=%h", m1, m2, m3, m4, m5, m6, m7, m8, m9);
 
-			result = m6;
+			result = m5;
 			$display("Result: %h", result);
+		end
 
-	end
+	//end
 endmodule	 
   
