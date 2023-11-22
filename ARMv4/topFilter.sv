@@ -1,8 +1,9 @@
 module topFilter(
     input logic clk,
-    input logic [1:0] filterSelector,
-    output logic [7:0] board_out [0:99][0:99]
+    input logic [1:0] filterSelector//,
+    //output logic [7:0] board_out [0:99][0:99]
 );
+	 logic [7:0] board_out [0:99][0:99];
 
     logic [7:0] board_outAUX [0:99][0:99];
     // logic [7:0] resultFinal;

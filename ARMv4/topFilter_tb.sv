@@ -8,8 +8,8 @@ module topFilter_tb;
 
     topFilter topFilterInstance (
         .clk(clk),
-		  .filterSelector(filterSelector),
-        .board_out(board_out)
+		  .filterSelector(filterSelector)//,
+        //.board_out(board_out)
     );
 
     initial begin

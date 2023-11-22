@@ -23,7 +23,7 @@ module middleFilter(input logic clk,output logic [7:0] board_out [0:99][0:99]);
 	//Median men(countMedianY, countMedian, en, board_out,resultFinal);
 	
 	always_ff @(negedge clk) begin
-	   $display("count = %0d, x = %0d, y = %0d, q = %h", count, x, y, q);
+	    //$display("count = %0d, x = %0d, y = %0d, q = %h", count, x, y, q);
 		m1 = board_out[countMedianY-1][countMedian-1];
 		m2 = board_out[countMedianY-1][countMedian];
 		m3 = board_out[countMedianY-1][countMedian+1];
@@ -33,7 +33,7 @@ module middleFilter(input logic clk,output logic [7:0] board_out [0:99][0:99]);
 		m7 = board_out[countMedianY+1][countMedian-1];
 		m8 = board_out[countMedianY+1][countMedian];
 		m9 = board_out[countMedianY+1][countMedian+1];
-		$display("Before sorting: m1=%h, m2=%h, m3=%h, m4=%h, m5=%h, m6=%h, m7=%h, m8=%h, m9=%h", m1, m2, m3, m4, m5, m6, m7, m8, m9);
+		//$display("Before sorting: m1=%h, m2=%h, m3=%h, m4=%h, m5=%h, m6=%h,=%h, m8=%h, m9=%h", m1, m2, m3, m4, m5, m6, m7, m8, m9);
 		if (m1 > m2) begin temp = m1; m1 = m2; m2 = temp; end
 		if (m2 > m3) begin temp = m2; m2 = m3; m3 = temp; end
 		if (m3 > m4) begin temp = m3; m3 = m4; m4 = temp; end
