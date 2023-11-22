@@ -18,7 +18,7 @@ module middleFilter_tb;
         #10; // Wait a bit before starting the clock
 
         // Simulate until the counter reaches 64
-        repeat (22004) begin
+        repeat (49804) begin
             #5 clk = ~clk;
         end
 
