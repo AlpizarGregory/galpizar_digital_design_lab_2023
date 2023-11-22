@@ -1,18 +1,21 @@
 `timescale 1 ps / 1 ps
-module middleFilter_tb;
+module topFilter_tb;
 
-    logic clk, wren;
+    logic clk;
     logic [7:0] board_out [0:99][0:99];
+	 logic [1:0] filterSelector;
 	 //logic [7:0] resultFinal;
 
-    middleFilter dut (
+    topFilter topFilterInstance (
         .clk(clk),
-        .board_out(board_out),
+		  .filterSelector(filterSelector),
+        .board_out(board_out)
     );
 
     initial begin
+		  filterSelector = 2'b10;
         clk = 1;
-        wren = 0;//49804
+        //wren = 0;//49804
 
         #10; // Wait a bit before starting the clock
 
